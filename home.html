@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&E Máxima Limpieza - Bienvenidos</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Specific inline styles for the splash page to keep it clean */
+        body.home-page-body {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: var(--color-white);
+            margin: 0;
+            font-family: var(--font-heading);
+        }
+
+        .splash-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 50px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .splash-logo {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+            filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.3));
+        }
+
+        .btn-enter-store {
+            display: inline-block;
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+            padding: 15px 40px;
+            font-size: 20px;
+            font-weight: 800;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(230, 0, 0, 0.4);
+        }
+
+        .btn-enter-store:hover {
+            transform: translateY(-3px);
+            background-color: var(--color-secondary-hover);
+            box-shadow: 0 8px 20px rgba(230, 0, 0, 0.6);
+            color: white;
+        }
+
+        .visitor-counter {
+            margin-bottom: 30px;
+        }
+
+        .visitor-counter p {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .counter-digits {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .digit {
+            background-color: #000;
+            color: #0f0; /* Terminal green for that classic counter look, or gold/white */
+            color: var(--color-accent); /* Using the brand's gold color */
+            font-size: 32px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 2px solid rgba(255,255,255,0.2);
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.8);
+            font-family: monospace;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icon {
+            color: var(--color-white);
+            font-size: 30px;
+            background-color: rgba(255,255,255,0.1);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-5px) scale(1.1);
+            color: white;
+        }
+
+        /* Specific Brand Colors for Hover */
+        .social-icon.fb:hover { background-color: #1877F2; }
+        .social-icon.ig:hover { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .social-icon.wa:hover { background-color: #25D366; }
+        .social-icon.tt:hover { background-color: #000000; }
+    </style>
+</head>
+<body class="home-page-body">
+
+    <div class="splash-container">
+        
+        <!-- Logo Grande -->
+        <!-- Usamos un placeholder atractivo en caso de no tener el logo.png en la carpeta -->
+        <img src="logo.png" alt="A&E Máxima Limpieza Logo" class="splash-logo" onerror="this.onerror=null; this.src='https://placehold.co/500x200/ffffff/0a2540?text=A%26E+M%C3%A1xima+Limpieza'">
+        
+        <br>
+
+        <!-- Botón para ir a la página de la tienda -->
+        <a href="index.html" class="btn-enter-store">
+            <i class="fa-solid fa-store"></i> Ingresar a la Tienda
+        </a>
+
+        <!-- Contador de Visitas -->
+        <div class="visitor-counter">
+            <p><i class="fa-solid fa-users"></i> Visitas Totales</p>
+            <div class="counter-digits" id="counterBox">
+                <!-- Se llenará con JavaScript -->
+            </div>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="social-links">
+            <a href="#" class="social-icon fb" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon ig" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon wa" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="social-icon tt" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+    </div>
+
+    <script>
+        // Simulador de contador de visitas
+        document.addEventListener('DOMContentLoaded', () => {
+            // Leer visitas de LocalStorage o empezar en un número inicial ficticio creíble (ej. 14,258)
+            let currentVisits = localStorage.getItem('ae_visits');
+            
+            if (!currentVisits) {
+                currentVisits = 14258;
+            } else {
+                currentVisits = parseInt(currentVisits) + 1; // Aumenta 1 por visita nueva
+            }
+            
+            // Guardar el nuevo valor
+            localStorage.setItem('ae_visits', currentVisits);
+
+            // Formatear a 6 dígitos (ej: 014259)
+            const visitsString = currentVisits.toString().padStart(6, '0');
+            const counterBox = document.getElementById('counterBox');
+
+            // Crear los cuadros de los dígitos
+            for (let i = 0; i < visitsString.length; i++) {
+                const digitSpan = document.createElement('span');
+                digitSpan.classList.add('digit');
+                digitSpan.textContent = visitsString[i];
+                counterBox.appendChild(digitSpan);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&E Máxima Limpieza - Distribuidora Mayorista</title>
+    <meta name="description" content="Distribuidora de productos de aseo por mayor y unidad.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Home Splash Section -->
+    <div id="home-section" class="home-new-layout">
+        
+        <!-- Top Banner Video -->
+        <div class="top-video-banner">
+            <video autoplay muted loop playsinline class="banner-video">
+                <source src="videoaseo1.mp4.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Black Bottom Content -->
+        <div class="bottom-black-content">
+            
+            <div class="counter-row">
+                <img src="logo_AE_transparente.jpg.png" alt="A&E Logo Izquierdo" class="side-logo animated-logo">
+                <div class="counter-container">
+                    <h4>VISITAS</h4>
+                    <div class="counter-digits-dark" id="counterBox">
+                        <!-- Se llenará con JavaScript -->
+                    </div>
+                </div>
+                <img src="logo_AE_transparente.jpg.png" alt="A&E Logo Derecho" class="side-logo animated-logo">
+            </div>
+
+            <div class="branch-buttons">
+                <button class="btn-branch btnEnterStore">
+                    <i class="fa-solid fa-store"></i> SUCURSAL CERRO NAVIA
+                </button>
+                <button class="btn-branch btnEnterStore">
+                    <i class="fa-solid fa-store"></i> SUCURSAL LAGUNA SUR
+                </button>
+            </div>
+
+            <div class="social-section-dark">
+                <p>Síguenos en nuestras redes:</p>
+                <div class="social-links-dark">
+                    <a href="#" class="social-icon-d fb" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon-d ig" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon-d wa" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon-d tt" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Main Store Section -->
+    <div id="store-section" style="display: none;">
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="logo-container">
+                <!-- Replace src with your actual logo path -->
+                <img src="logo_AE_transparente.jpg.png" alt="A&E Máxima Limpieza Logo" class="logo animated-logo" onerror="this.onerror=null; this.src='https://placehold.co/200x80/white/0a2540?text=A%26E+M%C3%A1xima+Limpieza'">
+            </div>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Buscar productos...">
+                <button class="search-btn">
+                    <span class="material-icons">search</span>
+                </button>
+            </div>
+            
+            <div class="user-actions" style="display: flex; gap: 20px; align-items: center;">
+                <button class="icon-btn cart-btn" aria-label="Carrito de Compras" style="display: flex; align-items: center; gap: 8px; color: white; background: none; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: bold;">
+                    <div style="position: relative;">
+                        <span class="material-icons" style="font-size: 28px;">shopping_cart</span>
+                        <span class="cart-badge" style="position: absolute; top: -8px; right: -8px; background: #e74c3c; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; font-weight: bold;">0</span>
+                    </div>
+                    Carro Compras
+                </button>
+                <a href="pedidos.html" style="display: flex; align-items: center; gap: 8px; color: #f1c40f; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: bold;">
+                    <i class="fa-solid fa-clipboard-list" style="font-size: 20px;"></i> Pedidos
+                </a>
+                <a href="ventas.html" style="display: flex; align-items: center; gap: 8px; color: #2ecc71; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: bold;">
+                    <i class="fa-solid fa-chart-line" style="font-size: 20px;"></i> Ventas
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#" class="highlight">¡OFERTAS!!! <span class="material-icons arrow">arrow_drop_down</span></a></li>
+                <li><a href="#">PAÑALES ADULTO MAYOR <span class="material-icons arrow">arrow_drop_down</span></a></li>
+                <li><a href="#">BEBE <span class="material-icons arrow">arrow_drop_down</span></a></li>
+                <li><a href="#">PROTECCION FEMENINA <span class="material-icons arrow">arrow_drop_down</span></a></li>
+                <li><a href="#">ASEO HOGAR <span class="material-icons arrow">arrow_drop_down</span></a></li>
+                <li><a href="#">HIGIENE PERSONAL <span class="material-icons arrow">arrow_drop_down</span></a></li>
+                <li><a href="#">DESINFECCION</a></li>
+                <li><a href="#">HIGIENE EMPRESAS <span class="material-icons arrow">arrow_drop_down</span></a></li>
+                <li><a href="#" style="color: #e74c3c; font-weight: 800;"><i class="fa-solid fa-address-book"></i> CONTACTO</a></li>
+                <li><a href="catalogo" style="color: #3498db; font-weight: 800;"><i class="fa-solid fa-file-pdf"></i> CATÁLOGO PDF</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Hero Slider -->
+    <div class="swiper mainHeroSwiper">
+        <div class="swiper-wrapper">
+            <!-- Slide 1: Video -->
+            <div class="swiper-slide">
+                <video autoplay muted loop playsinline class="slide-video">
+                    <source src="videoaseo1.mp4.mp4" type="video/mp4">
+                </video>
+                <div class="slide-caption">Calidad en cada gota</div>
+            </div>
+            <!-- Slide 2: Logo / Image -->
+            <div class="swiper-slide slide-image-bg">
+                <img src="logo_AE_transparente.jpg.png" alt="A&E Logo" class="slide-img animated-logo">
+            </div>
+        </div>
+        <!-- Pagination & Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Main Content: Product Page -->
+    <main class="container main-content">
+        <div class="product-layout">
+            
+            <!-- Left Column: Product Image -->
+            <div class="product-image-section">
+                <div class="promo-banner">AHORRAS MAS!!!!! ..</div>
+                <div class="image-wrapper">
+                    <!-- Fictitious cleaning product image from Unsplash -->
+                    <img src="imagen1.jpg" alt="Lavaloza Limon 1 Lt" class="main-image" onerror="this.onerror=null; this.src='imagen2.jpg'">
+                    <div class="sticker-left">LAVALOZA LIMON</div>
+                    <div class="sticker-right">1 Lt</div>
+                </div>
+                <div class="box-offer">
+                    Caja x 12 Un
+                </div>
+            </div>
+
+            <!-- Right Column: Product Details -->
+            <div class="product-details-section">
+                <h1 class="product-title">LAVALOZA FUZOL LIMON 1 LT</h1>
+                <p class="sku">SKU: 16003355</p>
+                <p class="limit-info"><strong>Hasta 50 Cj x Cliente</strong></p>
+                
+                <div class="brand-logo-small">
+                    <!-- Brand small logo placeholder -->
+                    <img src="fuzol_logo.png" alt="Fuzol" onerror="this.onerror=null; this.src='https://placehold.co/80x40/white/e53e3e?text=FUZOL'">
+                </div>
+
+                <!-- Stock Info Table -->
+                <div class="stock-table">
+                    <div class="table-header">
+                        <span class="th-branch">Sucursal</span>
+                        <span class="th-stock">Stock</span>
+                    </div>
+                    <div class="table-row">
+                        <span class="td-branch">SUCURSAL 1 (RETIRO EN BODEGA EN 1 HR)</span>
+                        <span class="td-stock out-of-stock">Agotado</span>
+                    </div>
+                    <div class="table-row">
+                        <span class="td-branch">SUCURSAL 2 (CASA MATRIZ)</span>
+                        <span class="td-stock in-stock">Disponible</span>
+                    </div>
+                </div>
+
+                <!-- Pricing -->
+                <div class="pricing-section">
+                    <p class="normal-price">Precio normal: <del>$ 12.310</del></p>
+                    <div class="discount-price-container">
+                        <span class="discount-label">Precio con Descuento:</span>
+                        <span class="discount-price">$ 11.070</span>
+                    </div>
+                </div>
+
+                <!-- Action -->
+                <div class="add-to-cart-section">
+                    <button class="btn-add-to-cart" id="addToCartBtn">
+                        <span class="material-icons">shopping_cart_checkout</span>
+                        AÑADIR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Fictitious Products Grid -->
+        <section class="related-products">
+            <h2 class="section-title">PRODUCTOS DESTACADOS</h2>
+            <div class="product-grid" id="productGrid">
+                <!-- Productos inyectados por JavaScript -->
+            </div>
+        </section>
+
+    </main>
+    </div> <!-- End of store-section -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

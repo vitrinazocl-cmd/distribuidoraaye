@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos Pendientes - A&E Máxima Limpieza</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_AE_transparente.jpg.png" alt="A&E Máxima Limpieza" style="max-height: 60px;">
+                </a>
+            </div>
+            <div>
+                <h1 style="color: #333; font-size: 24px; text-transform: uppercase;">Administración de Pedidos</h1>
+            </div>
+            <div class="user-actions">
+                <a href="index.html" style="color: #0044cc; font-weight: bold; text-decoration: none;"><i class="fa-solid fa-arrow-left"></i> Volver a la tienda</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content container pedidos-container" style="display: block;">
+        <h2 class="section-title">Pedidos por Despachar</h2>
+        
+        <div style="overflow-x: auto;">
+            <table class="pedidos-table" id="pedidos-table">
+                <thead>
+                    <tr>
+                        <th>ID Pedido</th>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Dirección</th>
+                        <th>Productos</th>
+                        <th>Total</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="pedidos-body">
+                    <!-- Orders will be injected here -->
+                </tbody>
+            </table>
+        </div>
+        <p id="no-pedidos-msg" style="text-align: center; color: #888; margin-top: 30px; display: none;">No hay pedidos pendientes por despachar.</p>
+    </main>
+
+    <footer class="main-footer" style="margin-top: auto;">
+        <div class="footer-bottom">
+            <p>&copy; 2026 A&E Máxima Limpieza. Sistema Interno.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const pedidosBody = document.getElementById('pedidos-body');
+            const noPedidosMsg = document.getElementById('no-pedidos-msg');
+            const table = document.getElementById('pedidos-table');
+            
+            function renderPedidos() {
+                const pedidos = JSON.parse(localStorage.getItem('pedidosPendientes')) || [];
+                
+                if(pedidos.length === 0) {
+                    table.style.display = 'none';
+                    noPedidosMsg.style.display = 'block';
+                    return;
+                } else {
+                    table.style.display = 'table';
+                    noPedidosMsg.style.display = 'none';
+                }
+                
+                let html = '';
+                pedidos.forEach(pedido => {
+                    let productosHtml = '<ul style="margin:0; padding-left:20px; font-size:13px;">';
+                    pedido.items.forEach(item => {
+                        productosHtml += `<li>${item.quantity}x ${item.name} ${item.flavor ? `(Sabor: ${item.flavor})` : ''}</li>`;
+                    });
+                    productosHtml += '</ul>';
+                    
+                    html += `
+                        <tr style="color: #333;">
+                            <td><strong>${pedido.id}</strong></td>
+                            <td>${pedido.date}</td>
+                            <td>${pedido.customerName}</td>
+                            <td>${pedido.customerAddress}</td>
+                            <td>${productosHtml}</td>
+                            <td style="color:#d32f2f; font-weight:bold;">$${pedido.total.toLocaleString('es-CL')}</td>
+                            <td>
+                                <button class="btn-despachar" onclick="despacharPedido('${pedido.id}')">
+                                    <i class="fa-solid fa-truck-fast"></i> Despachar
+                                </button>
+                            </td>
+                        </tr>
+                    `;
+                });
+                
+                pedidosBody.innerHTML = html;
+            }
+            
+            window.despacharPedido = function(id) {
+                if(confirm('¿Estás seguro que deseas marcar este pedido como despachado?')) {
+                    let pedidos = JSON.parse(localStorage.getItem('pedidosPendientes')) || [];
+                    pedidos = pedidos.filter(p => p.id !== id);
+                    localStorage.setItem('pedidosPendientes', JSON.stringify(pedidos));
+                    renderPedidos();
+                }
+            };
+            
+            renderPedidos();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+Error en CACHANTUN 1.6 LT DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en CACHANTUN 2.5LT DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en CACHANTUN 500ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en CCU 600ML DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en EXPRESS CCU : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en GATORADE 1LT DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en GATORADE 750ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en CCU 1.25LT RETORNABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en CCU 2LT RETORNABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en CCU 2.5 LT RETORNABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en CCU 3LT DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en LATA CCU X 6 UNIDAD. : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en TE LIPTON 1.5 LT DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en AGUA MAS 600ML X12 UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en CACHANTUN MAS 1.6 LT DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en REDBULL 250ML x12 unid : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en RED BULL 355CC X 12 UNIDADES : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en RED BULL 473CC X 12 UNIDADES : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en ROCKSTAR 500 ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en WATTS 1.5LT DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en WATTS BOCA ANCHA 300 ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   en System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+Error en COCA COLA 125 RETORNABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ANDINA 1.5LT DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ANDINA 2LT RETORNABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ANDINA 3LT RETORNABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ANDINA 3LT DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ANDINA DEL VALLE 400ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ANDINA 591ML DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ANDINA DEL VALLE DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en BENECDITINO 500ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en BENECDITINO 3LT : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en BOMBILLIN 200CC X24 : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en JUGO ANDINA 340ML X 6UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ANDINA LATA 350ML 6 UNID. : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en LATA MINI 200ML 6 UNIDAD : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en MONSTER 473ML X6 UNID. : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en POWERADE 1.1LT : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en VITAL 330 ML VIDRIO X 12UNID. : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en VITAL 1LT : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en VITAL 1.6LT : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en VITAL 600ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ALOE VERA 500ML X CAJA : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ENERGY DRINK 250ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ENERGY DRYNK 500ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en Fruna 2.0 LT : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en Fruna 500ml : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en SCORE 473ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en SOPA MOLINOVA 94G X CAJA : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en CAFE HELADO NESCAFE X 6 UNID. : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en CRISTAL LATA 470CC : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en CRISTAL LATA 470cc X12UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en PISCO ALTO DEL CARMEN 1LT : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en WHISKY BUCHANANS DELUXE 750 CC : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en WHISKY SANDY MAC 1LT : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en WHISKY JW GOLD LABEL 750 ml - Copa : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en WHISKY JW BLACK 750 ml - BLACK 200ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en VINO FLORESTA CAR 13.3g 750cc : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en VINO FLORESTA CHARDONNAY 13.4g 750CC : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en VINO M. REAL RVA X2 CS-MER 13.5G 750CC : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ESPUMANTE AMARANTA BRUT 12.4g 750 : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en SPRITE 1.25 DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ESPUMANTE CARMEN FK MOSCATO 12g 250 : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en VINO 120 3 MEDLLA L.HARVEST 12g 750 X3 UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en VINO CARM FK/MREAL CS 13.5g 750 X 3 UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en VINO 120 1.5 LT X6 UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en MALTIN 355 ML X 24 UNIDAD : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en WHISKY WHITE HOR 750 cc 40G X1 : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en GIN GORDONS 750 cc : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en GIN TANQUERAY SEVI 700 cc : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en GIN TANQUERAY ROYALE 700cc : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en GIN TANQUERAY BOSSA NOVA 700cc : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en RON MADDERO DORADO 750 cc : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en RON MADDERO ANEJO 750 cc : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en RON MADDERO BLANCO 750 cc : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en RON MADDERO DORADO 1LT : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en BAVARIA 470 ML X24 UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en CCU 1.25 DESECHABLE : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en CORONA 330ML X18 UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en CORONA 620CC X12 UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en LATA ESCUDO 710ML X 24 UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en COCTEL CAPEL ICE 275 ML X 24 : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ISOTONICA IRONADE 1LT : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en JUGO CYRO 2LT : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en JUMEX 355 X BANDEJA : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en KAPO X24 UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en AGUA LIFE 3 LT : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ENCENDEDOR LIN : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ROYAL 470 X 24 UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en SOL 650 : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en SUEROX 630ML SURTIDO : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en FASTYLE 630ML X 6UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ENERGY ZOOM 473 ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en WHISKY RED LABEL 750 CC : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en WHISKY JACK DANIEL 50ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en EXPORTACION VINO 500ML : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en GIN TANQUERAY LON D 700CC : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en ARROZ MANGA 10 UNID : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en HUEVO EXTRA : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
+Error en HUEVO 1ERA : System.Management.Automation.RuntimeException: Error en la invocación del método porque [System.Object[]] no contiene ningún método llamado 'op_Subtraction'.
+   en System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   en lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )
