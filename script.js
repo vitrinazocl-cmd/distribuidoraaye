@@ -818,7 +818,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const user = loginUser.value.trim();
             const pass = loginPass.value.trim();
 
-            if (user === 'eleodoro' && pass === '123456') {
+            if (user === 'admin' && pass === 'admin123') {
                 // Credenciales correctas, redirigir a la página correspondiente
                 window.location.href = loginTarget;
             } else {
@@ -856,8 +856,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Usamos una API gratuita para llevar el conteo real global
-    // Namespace: distribuidora_eleodoro_2026_oficial
-    fetch('https://api.counterapi.dev/v1/distribuidora_eleodoro_2026_oficial/visits/up')
+    // Namespace: distribuidora_ae_limpieza_2026
+    fetch('https://api.counterapi.dev/v1/distribuidora_ae_limpieza_2026/visits/up')
         .then(response => response.json())
         .then(data => {
             // data.count nos da el número real de visitas desde que se creó el contador
