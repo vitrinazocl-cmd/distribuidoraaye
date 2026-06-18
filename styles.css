@@ -761,13 +761,75 @@ ul {
 @media (max-width: 768px) {
     .top-bar-inner {
         flex-direction: column;
+        gap: 15px;
     }
     
     .search-container {
         width: 100%;
     }
     
+    .user-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    
     .nav-links {
-        display: none; /* In a real app, implement a hamburger menu here */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        padding: 10px 0;
+    }
+    
+    .nav-links li a {
+        padding: 8px 10px;
+        font-size: 10px;
+        background-color: rgba(255,255,255,0.05);
+        border-radius: 4px;
+    }
+
+    .counter-digits-dark .digit {
+        font-size: 24px;
+        padding: 5px 10px;
+    }
+
+    .counter-container h4 {
+        font-size: 18px;
+    }
+
+    .btn-branch {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .slide-caption {
+        font-size: 24px;
+        bottom: 10%;
+        left: 5%;
+    }
+
+    .product-title {
+        font-size: 24px;
+    }
+    
+    .sticker-left {
+        font-size: 14px;
+        padding: 3px 10px;
+    }
+    
+    .sticker-right {
+        font-size: 24px;
+        padding: 5px 10px;
+    }
+    
+    .box-offer {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .product-layout {
+        padding: 20px;
+        gap: 30px;
     }
 }
