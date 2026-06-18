@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #d4af37; /* Premium Gold */
-    --bg-color: #0d0d0d; /* Very dark gray/black */
-    --dark-bg: #1a1a1a; /* Slightly lighter dark */
-    --text-dark: #f5f5f5; /* Light text for dark background */
-    --text-light: #ffffff;
-    --border-color: #333333;
-    --warning-bg: #2a0808;
-    --warning-red: #ff4d4d;
-    --accent-color: #00d4ff; /* Neon Cyan */
+    --primary-color: #0071ce; /* Clean Blue */
+    --bg-color: #f4f9f9; /* Light clean background */
+    --dark-bg: #ffffff; /* White blocks instead of dark blocks */
+    --text-dark: #333333; /* Dark text for readability */
+    --text-light: #005bb5; /* Darker blue for contrast on white */
+    --border-color: #d0e8f2;
+    --warning-bg: #e6f7ff;
+    --warning-red: #0071ce;
+    --accent-color: #00bfff; /* Bright Cyan */
 }
 
 * {
@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: #050505;
+    background-color: var(--bg-color);
     color: var(--text-dark);
 }
 
@@ -345,7 +345,7 @@ a {
 .home-banner {
     width: 100%;
     /* Keep banner constrained but big */
-    max-height: 40vh;
+    /* max-height: 40vh; REMOVED so video isn't cut off */
     overflow: hidden;
     background-color: var(--dark-bg);
     position: relative;

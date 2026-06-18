@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!prod) return;
             const priceStr = (prod.price !== undefined && prod.price !== null) ? prod.price.toLocaleString('es-CL') : '0';
             const nameStr = prod.name || 'Sin Nombre';
-            const imageStr = prod.image || 'logo.jpg.jpeg';
+            const imageStr = prod.image || 'nuevo%20catalogo/logo.jpg.jpeg';
 
             // Generar "opiniones" aleatorias para darle el estilo de Falabella
             const rating = (Math.random() * (5 - 4) + 4).toFixed(1);
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
             html += `
             <div class="product-card falabella-style" data-id="${prod.id}">
                 <div class="product-image-container">
-                    <img class="mini-logo-overlay" src="logo_transparente.png" alt="Logo">
+                    <img class="mini-logo-overlay" src="nuevo%20catalogo/logo.jpg.jpeg" alt="Logo">
                     <img src="${imageStr}" alt="${nameStr}">
                 </div>
                 <div class="product-info-container">

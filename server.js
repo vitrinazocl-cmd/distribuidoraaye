@@ -12,7 +12,7 @@ const ordenesPendientes = new Map();
 
 // Webpay ya viene configurado para el entorno de pruebas (Integration) por defecto.
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Configuración de middlewares
 app.use(cors());

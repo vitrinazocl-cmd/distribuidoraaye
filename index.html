@@ -14,45 +14,41 @@
     <!-- Branch Selection Overlay (Home) -->
     <div id="branch-selector" class="branch-selector-overlay">
         <div class="branch-home-content">
-            <div class="home-banner" style="margin-bottom: 5px; display: flex; align-items: center; justify-content: center; background-color: #000; border-radius: 8px; overflow: hidden; width: 100%; max-height: 45vh;">
-                <img src="https://placehold.co/800x400?text=Banner+A&E+Limpieza" alt="Banner A&E Limpieza" style="height: 100%; object-fit: cover; width: 100%;">
-            </div>
-            
-            <div class="home-selection" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; margin-top: -30px; position: relative; z-index: 10;">
-                <div class="home-social-links" style="margin-bottom: 0;">
-                    <p style="margin-bottom: 5px; font-weight: bold; font-size: 0.9rem;">Síguenos en nuestras redes:</p>
-                    <div class="social-icons" style="gap: 10px;">
-                        <a href="#" target="_blank" class="social-facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" class="social-instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" target="_blank" class="social-whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="#" target="_blank" class="social-tiktok"><i class="fa-brands fa-tiktok"></i></a>
+            <div class="home-banner" style="margin-bottom: 5px; display: flex; align-items: center; justify-content: center; background-color: #000; border-radius: 8px; overflow: hidden; width: 100%; position: relative;">
+                <video autoplay muted loop playsinline style="width: 100%; height: auto; display: block;">
+                    <source src="nuevo%20catalogo/babysecvideo.mp4.mp4" type="video/mp4">
+                </video>
+                
+                <!-- Controles Flotantes sobre el video -->
+                <div style="position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 15px; z-index: 20; width: 100%;">
+                    <button class="branch-btn enter-btn" onclick="selectBranch('Principal')" style="padding: 15px 40px; font-size: 1.4rem; background: linear-gradient(135deg, #0071ce, #005bb5); color: white; border: 2px solid white; border-radius: 50px; box-shadow: 0 8px 25px rgba(0,0,0,0.6); text-transform: uppercase; font-weight: 900; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 15px;">
+                        <span>ENTRAR AL MENÚ</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    
+                    <div class="home-social-links" style="margin-bottom: 0;">
+                        <div class="social-icons" style="gap: 15px; justify-content: center;">
+                            <a href="#" target="_blank" class="social-facebook" style="background: rgba(255,255,255,0.9); box-shadow: 0 4px 10px rgba(0,0,0,0.3);"><i class="fa-brands fa-facebook-f" style="color: #1877f2;"></i></a>
+                            <a href="#" target="_blank" class="social-instagram" style="background: rgba(255,255,255,0.9); box-shadow: 0 4px 10px rgba(0,0,0,0.3);"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i></a>
+                            <a href="#" target="_blank" class="social-whatsapp" style="background: rgba(255,255,255,0.9); box-shadow: 0 4px 10px rgba(0,0,0,0.3);"><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i></a>
+                            <a href="#" target="_blank" class="social-tiktok" style="background: rgba(255,255,255,0.9); box-shadow: 0 4px 10px rgba(0,0,0,0.3);"><i class="fa-brands fa-tiktok" style="color: #000000;"></i></a>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="visitor-counter-container" style="display: flex; align-items: center; justify-content: center; gap: 10px; transform: scale(0.85); transform-origin: center; margin: -5px 0;">
+            </div>
+            
+            <div class="home-selection" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; margin-top: 15px; position: relative; z-index: 10;">
+                <div class="visitor-counter-container" style="display: flex; align-items: center; justify-content: center; gap: 10px; transform: scale(0.85); transform-origin: center; margin: 0;">
                     <div>
-                        <p class="counter-title" style="margin: 0; font-size: 0.8rem;">VISITAS</p>
-                        <div class="flip-counter" id="visitor-flip-counter">
+                        <p class="counter-title" style="margin: 0; font-size: 0.9rem; color: #333; font-weight: bold;">VISITAS</p>
+                        <div class="flip-counter" id="visitor-flip-counter" style="filter: invert(1) hue-rotate(180deg);">
                             <!-- Digits injected by JS -->
                         </div>
                     </div>
                 </div>
 
-                <div class="branch-buttons-container" style="gap: 15px; margin-top: 0;">
-                    <button class="branch-btn kfc-style" onclick="selectBranch('Sede 1')" style="padding: 10px 20px; min-width: 160px; font-size: 0.9rem;">
-                        <i class="fa-solid fa-store fa-lg" style="margin-bottom: 5px;"></i>
-                        <span>SUCURSAL<br>SEDE 1</span>
-                    </button>
-                    <button class="branch-btn kfc-style" onclick="selectBranch('Sede 2')" style="padding: 10px 20px; min-width: 160px; font-size: 0.9rem;">
-                        <i class="fa-solid fa-store fa-lg" style="margin-bottom: 5px;"></i>
-                        <span>SUCURSAL<br>SEDE 2</span>
-                    </button>
-                </div>
-
-                <div style="text-align: center; color: white; margin-top: 5px; margin-bottom: 5px; font-family: 'Roboto', sans-serif;">
-                    <h4 style="color: #0071ce; margin-bottom: 5px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 900;">Nuestras Sedes</h4>
-                    <p style="margin: 2px 0; font-size: 0.9rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);"><i class="fa-solid fa-location-dot" style="color: #ff3333;"></i> Direccion Sede 1</p>
-                    <p style="margin: 2px 0; font-size: 0.9rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);"><i class="fa-solid fa-location-dot" style="color: #ff3333;"></i> Direccion Sede 2</p>
+                <div style="text-align: center; color: #333; margin-top: 10px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">
+                    <p style="margin: 2px 0; font-size: 1rem; font-weight: bold;"><i class="fa-solid fa-truck-fast" style="color: #0071ce;"></i> Despachos a domicilio rápidos y seguros</p>
                 </div>
             </div>
         </div>
@@ -61,7 +57,7 @@
     <header class="top-header">
         <div class="container header-container">
             <div class="logo">
-                <img src="https://placehold.co/200x80?text=Logo+A&E" alt="A&E Máxima Limpieza" style="max-height: 80px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="nuevo%20catalogo/logo.jpg.jpeg" alt="A&E Máxima Limpieza" style="max-height: 80px; transition: transform 0.3s; border-radius: 8px;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
             </div>
             
             <div class="calendar-btn" id="open-cart-btn" style="cursor: pointer;">
@@ -104,7 +100,7 @@
             <a href="#productos" data-category="HIGIENE EMPRESAS">HIGIENE EMPRESAS</a>
             <a href="#productos" data-category="PAÑALES">PAÑALES</a>
             <a href="#" id="open-contact-btn" style="color: #e74c3c; font-weight: bold;"><i class="fa-solid fa-address-book"></i> CONTACTO</a>
-            <a href="catalogo%20productos/Inventario2026_FINAL.pdf" download="Catalogo_AE_Maxima_Limpieza.pdf" style="color: #0071ce; font-weight: 900;"><i class="fa-solid fa-file-pdf"></i> CATÁLOGO PDF</a>
+            <a href="libros%20de%20venta/lista_productos_tabla_limpia.pdf" download="Catalogo_AE_Maxima_Limpieza.pdf" style="color: #0071ce; font-weight: 900;"><i class="fa-solid fa-file-pdf"></i> CATÁLOGO PDF</a>
         </div>
     </nav>
 
@@ -124,10 +120,10 @@
     <main class="main-content container">
         
         <aside class="ad-box left-ad" style="position: relative;">
-            <img src="https://placehold.co/300x600?text=Publicidad+Aseo" alt="Publicidad Aseo" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="nuevo%20catalogo/imagen%20izquierda.jpg" alt="Publicidad Izquierda" style="width: 100%; height: 100%; object-fit: cover;">
             <!-- QR WhatsApp en la esquina superior izquierda -->
             <a href="#" target="_blank" title="Unirte al grupo de WhatsApp" style="position: absolute; top: 10px; left: 10px; width: 65px; height: 65px; border-radius: 8px; border: 3px solid #25D366; box-shadow: 0 0 8px rgba(37,211,102,0.6); overflow: hidden; background: white; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-                <img src="https://placehold.co/65x65?text=QR" alt="QR WhatsApp" style="width: 100%; height: 100%; object-fit: cover; object-position: center 25%; transform: scale(1.5);">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="QR WhatsApp" style="width: 100%; height: 100%; object-fit: contain; padding: 5px;">
             </a>
         </aside>
 
@@ -136,15 +132,21 @@
                 <div class="slider-track" id="sliderTrack">
                     <!-- Slide 1 -->
                     <div class="slide">
-                        <img src="https://placehold.co/800x400?text=Banner+Oferta+Limpieza" alt="Banner Limpieza 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="nuevo%20catalogo/omopubli.mp4.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <!-- Slide 2 -->
                     <div class="slide">
-                        <img src="https://placehold.co/800x400?text=Nuevos+Productos" alt="Banner Limpieza 2" style="width: 100%; height: 100%; object-fit: cover;">
+                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="nuevo%20catalogo/lisoformpubli.mp4.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <!-- Slide 3 -->
                     <div class="slide">
-                        <img src="https://placehold.co/800x400?text=Despacho+Gratis" alt="Banner Limpieza 3" style="width: 100%; height: 100%; object-fit: cover;">
+                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="nuevo%20catalogo/publiquix.mp4.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
                 
@@ -160,7 +162,7 @@
         </section>
 
         <aside class="ad-box right-ad">
-            <img src="https://placehold.co/300x600?text=Publicidad+Aseo" alt="Publicidad Aseo" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="nuevo%20catalogo/detergente%20publi.webp" alt="Publicidad Derecha" style="width: 100%; height: 100%; object-fit: cover;">
         </aside>
 
     </main>
@@ -170,19 +172,29 @@
         <h2 style="color: #ff9800; margin-bottom: 20px; font-size: 1.8rem; text-transform: uppercase; font-weight: 900; letter-spacing: 2px;">Todas las marcas</h2>
         <div class="brands-marquee">
             <div class="marquee-content">
-                <!-- Logos de Marcas -->
-                <img src="https://placehold.co/100x60?text=Marca+1" alt="Marca 1">
-                <img src="https://placehold.co/100x60?text=Marca+2" alt="Marca 2">
-                <img src="https://placehold.co/100x60?text=Marca+3" alt="Marca 3">
-                <img src="https://placehold.co/100x60?text=Marca+4" alt="Marca 4">
-                <img src="https://placehold.co/100x60?text=Marca+5" alt="Marca 5">
+                <!-- Logos de Marcas Oficiales -->
+                <img src="nuevo%20catalogo/logo1.webp" alt="Marca 1" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo2.webp" alt="Marca 2" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo3.webp" alt="Marca 3" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo4.webp" alt="Marca 4" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo5.webp" alt="Marca 5" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo6.webp" alt="Marca 6" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo7.webp" alt="Marca 7" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo8.webp" alt="Marca 8" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo9.png" alt="Marca 9" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo10.jpg" alt="Marca 10" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
                 
-                <!-- Duplicate logos for infinite scroll effect -->
-                <img src="https://placehold.co/100x60?text=Marca+1" alt="Marca 1">
-                <img src="https://placehold.co/100x60?text=Marca+2" alt="Marca 2">
-                <img src="https://placehold.co/100x60?text=Marca+3" alt="Marca 3">
-                <img src="https://placehold.co/100x60?text=Marca+4" alt="Marca 4">
-                <img src="https://placehold.co/100x60?text=Marca+5" alt="Marca 5">
+                <!-- Duplicados para efecto infinito -->
+                <img src="nuevo%20catalogo/logo1.webp" alt="Marca 1" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo2.webp" alt="Marca 2" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo3.webp" alt="Marca 3" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo4.webp" alt="Marca 4" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo5.webp" alt="Marca 5" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo6.webp" alt="Marca 6" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo7.webp" alt="Marca 7" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo8.webp" alt="Marca 8" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo9.png" alt="Marca 9" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
+                <img src="nuevo%20catalogo/logo10.jpg" alt="Marca 10" style="height: 60px; object-fit: contain; margin: 0 30px; background: white; padding: 10px; border-radius: 8px;">
             </div>
         </div>
     </section>
@@ -253,14 +265,14 @@
     <section class="excel-section container" id="catalogo-excel" style="margin-top: 60px; margin-bottom: 60px; text-align: center; padding: 40px; background-color: var(--bg-color); border: 1px solid var(--border-color); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
         <h2 class="section-title">INVENTARIO COMPLETO</h2>
         <p style="color: var(--text-color); margin-bottom: 30px; font-size: 1.2rem;">Descarga nuestro inventario real actualizado con todos los productos disponibles en formato Excel.</p>
-        <a href="#" download="Inventario_Limpieza_2026.xlsx" style="display: inline-flex; align-items: center; background-color: #217346; color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: transform 0.2s, background-color 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 40px;">
+        <a href="libros%20de%20venta/inventario%20a&e.xlsx" download="Inventario_A&E_Limpieza.xlsx" style="display: inline-flex; align-items: center; background-color: #217346; color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: transform 0.2s, background-color 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 40px;">
             <i class="fa-solid fa-file-excel" style="margin-right: 12px; font-size: 1.5rem;"></i> Descargar Archivo Excel
         </a>
 
         <!-- Visor del PDF debajo del botón -->
         <h3 style="color: var(--text-color); margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase;">Vista Previa del Catálogo (PDF)</h3>
         <div style="width: 100%; height: 800px; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-            <iframe src="catalogo productos/Inventario2026_FINAL.pdf" width="100%" height="100%" style="border: none;"></iframe>
+            <iframe src="libros%20de%20venta/lista_productos_tabla_limpia.pdf" width="100%" height="100%" style="border: none;"></iframe>
         </div>
     </section>
 
@@ -268,12 +280,12 @@
         <h2 class="section-title">MÁS SOBRE NOSOTROS</h2>
         <div class="media-grid">
             <div class="media-video">
-                <video src="video2.mp4.mp4" controls playsinline></video>
+                <video src="videoaseo1.mp4.mp4" controls playsinline></video>
             </div>
             <div class="media-images">
-                <img src="slice1.jpg.jpg" alt="Local">
-                <img src="slice2.jpg.jpg" alt="Bebidas">
-                <img src="slice3.jpg.jpeg" alt="Fiesta">
+                <img src="imagen1.jpg" alt="Local Distribuidora A&E">
+                <img src="imagen2.jpg" alt="Productos de Aseo">
+                <img src="imagen3.jpg" alt="Limpieza Profesional">
             </div>
         </div>
     </section>
@@ -282,29 +294,29 @@
         <h2 class="section-title">NOTICIAS Y NOVEDADES</h2>
         <div class="news-grid">
             <div class="news-card">
-                <img src="imagen6.jpg" alt="Noticia 1">
+                <img src="nuevo%20catalogo/detergente%20publi.webp" alt="Noticia Detergentes" style="height: 200px; object-fit: cover; width: 100%;">
                 <div class="news-content">
                     <span class="news-date">15 de Junio, 2026</span>
-                    <h3>¡Nueva Sucursal en Pudahuel Sur!</h3>
-                    <p>Ven a conocer nuestras nuevas instalaciones con más variedad y los mejores precios para tus celebraciones.</p>
+                    <h3>¡Llegaron los Nuevos Detergentes!</h3>
+                    <p>Ven a conocer nuestras nuevas opciones de detergentes industriales con mayor poder quitamanchas a los mejores precios.</p>
                     <a href="#" class="read-more">Leer más</a>
                 </div>
             </div>
             <div class="news-card">
-                <img src="imagen7.jpg" alt="Noticia 2">
+                <img src="nuevo%20catalogo/imagen%20izquierda.jpg" alt="Noticia Promociones" style="height: 200px; object-fit: cover; width: 100%;">
                 <div class="news-content">
                     <span class="news-date">10 de Junio, 2026</span>
                     <h3>Promociones Especiales de Invierno</h3>
-                    <p>Aprovecha nuestros packs de licores y destilados perfectos para compartir este invierno con amigos y familia.</p>
+                    <p>Aprovecha nuestros packs de limpieza profunda, perfectos para mantener tu hogar y empresa libres de virus y bacterias este invierno.</p>
                     <a href="#" class="read-more">Leer más</a>
                 </div>
             </div>
             <div class="news-card">
-                <img src="slice1.jpg.jpg" alt="Noticia 3">
+                <video src="nuevo%20catalogo/babysecvideo.mp4.mp4" controls playsinline style="height: 200px; object-fit: cover; width: 100%;"></video>
                 <div class="news-content">
                     <span class="news-date">5 de Junio, 2026</span>
-                    <h3>¡Llegaron las nuevas Energéticas!</h3>
-                    <p>Mantente activo toda la noche con nuestra nueva línea de bebidas energéticas ya disponibles en tienda.</p>
+                    <h3>¡Nuevas Marcas de Pañales!</h3>
+                    <p>Mantén a los más pequeños cómodos con nuestra nueva línea de pañales Babysec y alternativas al por mayor.</p>
                     <a href="#" class="read-more">Leer más</a>
                 </div>
             </div>
@@ -430,7 +442,7 @@
             
             <!-- Hero Image Comunidad -->
             <div style="width: 100%; height: 200px; overflow: hidden; position: relative;">
-                <img src="https://placehold.co/800x400?text=Comunidad+Aseo" alt="Clientes Felices" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=800&auto=format&fit=crop" alt="Comunidad Limpieza" style="width: 100%; height: 100%; object-fit: cover;">
                 <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: white;">
                     <h3 style="margin: 0; font-size: 1.8rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">¡Bienvenidos a la Familia!</h3>
                     <p style="margin: 5px 0 0 0; color: #ffcc00; font-weight: bold;">La limpieza en su máxima expresión</p>

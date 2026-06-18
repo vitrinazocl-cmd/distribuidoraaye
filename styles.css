@@ -3,18 +3,18 @@
    ========================================= */
 :root {
     /* Brand Colors (Derived from A&E logo & reference image) */
-    --color-primary: #000000; /* Deep Black */
-    --color-primary-light: #111111;
-    --color-secondary: #e60000; /* Intense Red for offers/buttons */
-    --color-secondary-hover: #cc0000;
-    --color-accent: #f5b041; /* Gold/Yellow from logo */
+    --color-primary: #0071ce; /* Clean Blue */
+    --color-primary-light: #00bfff;
+    --color-secondary: #00bfff; /* Bright Cyan for offers/buttons */
+    --color-secondary-hover: #005bb5;
+    --color-accent: #f0f8ff; /* Alice Blue */
     --color-white: #ffffff;
-    --color-background: #f8fafc;
+    --color-background: #ffffff;
     
     /* Text Colors */
     --text-main: #333333;
     --text-muted: #666666;
-    --text-light: #94a3b8;
+    --text-light: #0071ce;
     
     /* UI Colors */
     --border-color: #e2e8f0;
@@ -42,7 +42,7 @@
     flex-direction: column;
     min-height: 100vh;
     font-family: var(--font-heading);
-    background-color: #111; /* Black background for bottom */
+    background-color: var(--color-background); /* White background */
 }
 
 /* TOP VIDEO BANNER */
