@@ -38,29 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (btnTodos) btnTodos.classList.add('active');
         }
     };
-    // --- Modal de Edad ---
-    const ageModal = document.getElementById('age-modal');
-    const btnAgeYes = document.getElementById('btn-age-yes');
-    const btnAgeNo = document.getElementById('btn-age-no');
-    const ageErrorMsg = document.getElementById('age-error-msg');
-
-    if (ageModal) {
-        // Mostrar SIEMPRE el modal de edad al entrar
-        ageModal.style.display = 'flex'; 
-        ageModal.classList.remove('hidden');
-
-        if (btnAgeYes) {
-            btnAgeYes.addEventListener('click', () => {
-                // Solo lo ocultamos temporalmente para esta sesión, sin guardarlo para siempre
-                ageModal.style.display = 'none';
-            });
-        }
-        if (btnAgeNo) {
-            btnAgeNo.addEventListener('click', () => {
-                ageErrorMsg.style.display = 'block';
-            });
-        }
-    }
 
     // --- Modal de Sucursal (Home Principal) ---
     const branchSelector = document.getElementById('branch-selector');
