@@ -3,37 +3,19 @@ let baseCatalogo = catalogoProductos;
 
 document.addEventListener('DOMContentLoaded', () => {
     updateBranchMenu = function(branchName) {
-        if (branchName === 'Cerro Navia') {
-            const alcoholCategories = ['CERVEZA', 'LICORES', 'PISCO', 'WHISKY', 'RON', 'VODKA', 'GIN', 'TEQUILA', 'VINOS'];
-            baseCatalogo = catalogoProductos.filter(p => {
-                if (!p) return false;
-                const category = p.category ? p.category.toUpperCase() : '';
-                const name = p.name ? p.name.toUpperCase() : '';
-                
-                if (alcoholCategories.includes(category)) return false;
-                if (name.includes('VINO') || name.includes('ESPUMANTE') || name.includes('CERVEZA') || name.includes('PISCO') || name.includes('RON') || name.includes('WHISKY') || name.includes('VODKA') || name.includes('GIN')) return false;
-                return true;
-            });
-        } else {
-            baseCatalogo = catalogoProductos;
-        }
+        baseCatalogo = catalogoProductos;
         
-        // Ocultar categorías de alcohol en el navbar si es Cerro Navia
-        const navLinks = document.querySelectorAll('.nav-container a');
-        navLinks.forEach(link => {
-            const cat = link.getAttribute('data-category');
-            if (cat && ['CERVEZA', 'PISCO', 'WHISKY', 'RON', 'VODKA', 'GIN', 'TEQUILA', 'LICORES'].includes(cat)) {
-                link.style.display = branchName === 'Cerro Navia' ? 'none' : 'inline-block';
-            }
-        });
-
         // Re-renderizar productos
         if (typeof setProducts === 'function') {
             setProducts(baseCatalogo);
             const productsTitle = document.getElementById('productos-title');
             if (productsTitle) productsTitle.textContent = 'TODOS LOS PRODUCTOS';
             
-            navLinks.forEach(l => l.classList.remove('active'));
+            const navLinks = document.querySelectorAll('.nav-container a');
+            navLinks.forEach(l => {
+                l.classList.remove('active');
+                l.style.display = 'inline-block';
+            });
             const btnTodos = document.querySelector('.nav-container a[data-category="TODOS"]');
             if (btnTodos) btnTodos.classList.add('active');
         }
