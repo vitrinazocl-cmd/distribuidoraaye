@@ -102,6 +102,7 @@
             <a href="#productos" data-category="PAPELERIA">PAPELERÍA</a>
             <a href="#productos" data-category="OFERTAS" style="color: #ffcc00; font-weight: bold;"><i class="fa-solid fa-star"></i> OFERTAS</a>
             <a href="#productos" data-category="COMUNIDAD">COMUNIDAD</a>
+            <a href="#" id="open-mayorista-btn" style="color: #28a745; font-weight: bold;"><i class="fa-solid fa-boxes-stacked"></i> VENTA POR MAYOR</a>
             <a href="#" id="open-contact-btn" style="color: #e74c3c; font-weight: bold;"><i class="fa-solid fa-address-book"></i> CONTACTO</a>
             <a href="libros%20de%20venta/lista_productos_tabla_limpia.pdf" download="Catalogo_AE_Maxima_Limpieza.pdf" style="color: #0071ce; font-weight: 900;"><i class="fa-solid fa-file-pdf"></i> CATÁLOGO PDF</a>
         </div>
@@ -539,6 +540,30 @@
 
     <!-- (Audio removed for cleaning layout) -->
 
+    <!-- Mayorista Modal -->
+    <div id="mayorista-modal" class="cart-modal hidden" style="justify-content: center; align-items: center; z-index: 999999;">
+        <div class="cart-content" style="max-height: 85vh; overflow-y: auto; border-radius: 8px; max-width: 500px; background: var(--dark-bg); border: 2px solid #28a745;">
+            <div class="cart-header" style="background: #28a745; padding: 15px;">
+                <h2 style="color: white; margin: 0;"><i class="fa-solid fa-boxes-stacked"></i> Ventas por Mayor</h2>
+                <button id="close-mayorista-btn" class="close-cart-btn" style="color: white;"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="cart-items" style="padding: 25px; font-size: 1.1rem; line-height: 1.6; color: white; text-align: center;">
+                <p style="margin-bottom: 20px; font-weight: bold; font-size: 1.2rem; color: #ffcc00;">Para Ventas por Mayor, comunícate directamente con nosotros a través de:</p>
+                <p style="margin-bottom: 15px;"><i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.5rem;"></i> <br>
+                <a href="https://wa.me/56920403682" target="_blank" style="color: white; text-decoration: none; font-weight: bold; font-size: 1.3rem;">+56 9 2040 3682</a></p>
+                <p style="margin-bottom: 25px;"><i class="fa-solid fa-envelope" style="color: #0071ce; font-size: 1.5rem;"></i> <br>
+                <a href="mailto:detergentesae@gmail.com" style="color: white; text-decoration: none; font-weight: bold; font-size: 1.2rem;">detergentesae@gmail.com</a></p>
+                
+                <div style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 25px;">
+                    <p style="margin-bottom: 15px;">También puedes descargar o visualizar nuestro Catálogo en PDF:</p>
+                    <a href="libros%20de%20venta/lista_productos_tabla_limpia.pdf" target="_blank" class="checkout-btn" style="background: #0071ce; color: white; display: inline-block; width: auto; padding: 10px 20px; text-decoration: none; border-radius: 5px;"><i class="fa-solid fa-file-pdf"></i> Ver Catálogo PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase App -->
+    <script type="module" src="firebase-config.js"></script>
     <!-- Scripts -->
     <script src="catalogo.js?v=999"></script>
     <script src="script.js?v=1000"></script>

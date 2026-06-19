@@ -926,6 +926,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+// --- Funcionalidad del Modal de Ventas por Mayor ---
+document.addEventListener('DOMContentLoaded', () => {
+    const mayoristaBtn = document.getElementById('open-mayorista-btn');
+    const mayoristaModal = document.getElementById('mayorista-modal');
+    const closeMayoristaBtn = document.getElementById('close-mayorista-btn');
+
+    if (mayoristaBtn && mayoristaModal) {
+        mayoristaBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            mayoristaModal.classList.remove('hidden');
+            mayoristaModal.style.display = 'flex';
+        });
+
+        if (closeMayoristaBtn) {
+            closeMayoristaBtn.addEventListener('click', () => {
+                mayoristaModal.classList.add('hidden');
+            });
+        }
+        
+        // Cerrar haciendo click en el fondo oscuro
+        mayoristaModal.addEventListener('click', (e) => {
+            if (e.target === mayoristaModal) {
+                mayoristaModal.classList.add('hidden');
+            }
+        });
+    }
+});
 
 // --- Funcionalidad del Modal de Comunidad ---
 document.addEventListener('DOMContentLoaded', () => {
