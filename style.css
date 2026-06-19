@@ -373,6 +373,19 @@ a {
     object-position: center;
 }
 
+.home-banner-controls {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 20;
+    width: 100%;
+}
+
 .home-selection {
     text-align: center;
     padding: 40px 20px;
@@ -1207,6 +1220,20 @@ a {
         gap: 15px;
         align-items: center;
         text-align: center;
+    }
+
+    /* Banner del Home: Mover botones abajo del video */
+    .home-banner {
+        flex-direction: column !important;
+        min-height: auto !important;
+    }
+    .home-banner-controls {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     .logo {
