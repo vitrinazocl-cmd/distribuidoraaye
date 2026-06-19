@@ -1248,8 +1248,46 @@ a {
 
     /* Modales a 100% en móvil */
     .cart-content {
-        max-width: 95%;
-        margin: auto;
+        max-width: 100%;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    /* Ads y Slider más pequeños */
+    .ad-box {
+        height: 140px;
+    }
+    .slider-section {
+        height: 220px;
+    }
+
+    /* Grilla de 2 columnas */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .falabella-style .product-image-container {
+        height: 120px;
+        margin-bottom: 10px;
+    }
+    .falabella-style .product-title {
+        font-size: 13px;
+        line-height: 1.2;
+        margin-bottom: 5px;
+    }
+    .falabella-style .main-price {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+    .falabella-style .old-price-row {
+        font-size: 11px;
+    }
+    .falabella-style .fb-blue-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
         border-radius: 8px;
     }
 
