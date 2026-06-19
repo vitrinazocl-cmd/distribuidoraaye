@@ -818,7 +818,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const user = loginUser.value.trim();
             const pass = loginPass.value.trim();
 
-            if (user === 'admin' && pass === 'admin123') {
+            if (user === 'combate' && pass === '12345') {
                 // Credenciales correctas, redirigir a la página correspondiente
                 window.location.href = loginTarget;
             } else {
