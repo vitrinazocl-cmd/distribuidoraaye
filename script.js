@@ -113,6 +113,13 @@ function selectBranch(branchName) {
         overlay.classList.add('hidden');
     }
     
+    // Reproducir música de fondo
+    const bgMusic = document.getElementById('bg-music');
+    if (bgMusic) {
+        bgMusic.volume = 0.5;
+        bgMusic.play().catch(e => console.log('Audio autoplay prevented:', e));
+    }
+    
     // Ensure the page starts at the top
     window.scrollTo({ top: 0, behavior: 'instant' });
     
