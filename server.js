@@ -15,14 +15,16 @@ const ordenesPendientes = new Map();
 const app = express();
 const PORT = process.env.PORT || 3000;
 const DATABASE_URL = process.env.DATABASE_URL;
-const hasDatabase = Boolean(DATABASE_URL);
-
-const pool = hasDatabase
+let pool = DATABASE_URL
     ? new Pool({
         connectionString: DATABASE_URL,
         ssl: { rejectUnauthorized: false }
     })
     : null;
+
+function isDbEnabled() {
+    return Boolean(pool);
+}
 
 // Configuración de middlewares
 app.use(cors());
@@ -45,7 +47,7 @@ app.get('/', (req, res) => {
 app.get('/api/estado', (req, res) => {
     res.json({
         mensaje: '¡El backend está funcionando correctamente!',
-        almacenamiento: hasDatabase ? 'postgres' : 'json'
+        almacenamiento: isDbEnabled() ? 'postgres' : 'json'
     });
 });
 
@@ -164,18 +166,23 @@ if (!fs.existsSync(VENTAS_FILE)) {
 
 async function initDatabase() {
     if (!pool) return;
-    await pool.query(`
-        CREATE TABLE IF NOT EXISTS ventas (
-            id TEXT PRIMARY KEY,
-            fecha TEXT,
-            isodate TIMESTAMPTZ,
-            customername TEXT,
-            customeraddress TEXT,
-            items JSONB,
-            total NUMERIC,
-            createdat TIMESTAMPTZ DEFAULT NOW()
-        )
-    `);
+    try {
+        await pool.query(`
+            CREATE TABLE IF NOT EXISTS ventas (
+                id TEXT PRIMARY KEY,
+                fecha TEXT,
+                isodate TIMESTAMPTZ,
+                customername TEXT,
+                customeraddress TEXT,
+                items JSONB,
+                total NUMERIC,
+                createdat TIMESTAMPTZ DEFAULT NOW()
+            )
+        `);
+    } catch (error) {
+        console.error('No se pudo conectar a PostgreSQL. Se usará ventas.json como respaldo:', error.message);
+        pool = null;
+    }
 }
 
 function readVentasFromJson() {
@@ -189,7 +196,7 @@ function writeVentaToJson(venta) {
 }
 
 async function saveVenta(venta) {
-    if (!pool) {
+    if (!isDbEnabled()) {
         writeVentaToJson(venta);
         return;
     }
@@ -211,7 +218,7 @@ async function saveVenta(venta) {
 }
 
 async function getVentas() {
-    if (!pool) {
+    if (!isDbEnabled()) {
         return readVentasFromJson();
     }
 
@@ -292,11 +299,7 @@ initDatabase()
             console.log(`=================================================`);
             console.log(`🚀 Servidor Backend iniciado con éxito`);
             console.log(`🌐 Escuchando en el puerto: http://localhost:${PORT}`);
-            console.log(`💾 Almacenamiento: ${hasDatabase ? 'PostgreSQL (Render)' : 'ventas.json (local)'}`);
+            console.log(`💾 Almacenamiento: ${isDbEnabled() ? 'PostgreSQL (Render)' : 'ventas.json (local)'}`);
             console.log(`=================================================`);
         });
-    })
-    .catch((error) => {
-        console.error('Error inicializando la base de datos:', error.message);
-        process.exit(1);
     });
