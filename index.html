@@ -15,7 +15,7 @@
     <div id="branch-selector" class="branch-selector-overlay">
         <div class="branch-home-content">
             <div class="home-banner" style="margin-bottom: 5px; display: flex; align-items: center; justify-content: center; background-color: #000; border-radius: 8px; overflow: hidden; width: 100%; position: relative; min-height: 350px;">
-                <video autoplay muted loop playsinline style="width: 100%; height: auto; display: block;">
+                <video autoplay muted loop playsinline preload="metadata" style="width: 100%; height: auto; display: block;">
                     <source src="nuevo%20catalogo/babysecvideo.mp4.mp4" type="video/mp4">
                 </video>
                 
@@ -124,7 +124,7 @@
     <main class="main-content container">
         
         <aside class="ad-box left-ad" style="position: relative;">
-            <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+            <video autoplay muted loop playsinline preload="metadata" style="width: 100%; height: 100%; object-fit: cover;">
                 <source src="nuevo%20catalogo/videohardcorito.mp4" type="video/mp4">
             </video>
             <!-- QR WhatsApp en la esquina superior izquierda -->
@@ -138,7 +138,7 @@
                 <div class="slider-track" id="sliderTrack">
                     <!-- Slide 1 -->
                     <div class="slide">
-                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                        <video autoplay muted loop playsinline preload="metadata" style="width: 100%; height: 100%; object-fit: cover;">
                             <source src="nuevo%20catalogo/omopubli.mp4.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -148,13 +148,13 @@
                     </div>
                     <!-- Slide 2 -->
                     <div class="slide">
-                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                        <video autoplay muted loop playsinline preload="metadata" style="width: 100%; height: 100%; object-fit: cover;">
                             <source src="nuevo%20catalogo/lisoformpubli.mp4.mp4" type="video/mp4">
                         </video>
                     </div>
                     <!-- Slide 3 -->
                     <div class="slide">
-                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                        <video autoplay muted loop playsinline preload="metadata" style="width: 100%; height: 100%; object-fit: cover;">
                             <source src="nuevo%20catalogo/publiquix.mp4.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -301,12 +301,12 @@
         <h2 class="section-title">MÁS SOBRE NOSOTROS</h2>
         <div class="media-grid">
             <div class="media-video">
-                <video src="videoaseo1.mp4.mp4" controls playsinline></video>
+                <video src="videoaseo1.mp4.mp4" controls playsinline preload="none"></video>
             </div>
             <div class="media-images">
-                <img src="nuevo%20catalogo/logo10.jpg" alt="Local Distribuidora A&E">
-                <img src="nuevo%20catalogo/detergente%20publi.webp" alt="Productos de Aseo">
-                <img src="nuevo%20catalogo/logo9.png" alt="Limpieza Profesional">
+                <img src="nuevo%20catalogo/logo10.jpg" alt="Local Distribuidora A&E" loading="lazy">
+                <img src="nuevo%20catalogo/detergente%20publi.webp" alt="Productos de Aseo" loading="lazy">
+                <img src="nuevo%20catalogo/logo9.png" alt="Limpieza Profesional" loading="lazy">
             </div>
         </div>
     </section>
@@ -316,7 +316,7 @@
         <div class="news-grid">
             <div class="news-card" style="border: 3px solid #ffcc00; box-shadow: 0 0 15px rgba(255,204,0,0.5); position: relative; overflow: hidden;">
                 <div style="position: absolute; top: 10px; right: -35px; background: #e74c3c; color: white; padding: 5px 40px; transform: rotate(45deg); font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.3); z-index: 10;">¡OFERTA!</div>
-                <img src="nuevo%20catalogo/Producto80730HBP-MonsalMedic.cl-Principal.webp" alt="Promoción 5 Litros" style="height: 220px; object-fit: contain; width: 100%; background: #fff; padding: 15px;">
+                <img src="nuevo%20catalogo/Producto80730HBP-MonsalMedic.cl-Principal.webp" alt="Promoción 5 Litros" loading="lazy" style="height: 220px; object-fit: contain; width: 100%; background: #fff; padding: 15px;">
                 <div class="news-content" style="background: linear-gradient(135deg, #0071ce, #005bb5); color: white; text-align: center; padding: 20px;">
                     <h3 style="color: #ffcc00; font-size: 1.6rem; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">¡SUPER PROMOCIÓN!</h3>
                     <p style="font-size: 1.3rem; font-weight: 900; margin: 10px 0; line-height: 1.2;">5 LITROS POR <span style="font-size: 2.2rem; color: #ffcc00; display: block; margin-top: 5px; text-shadow: 2px 2px 4px rgba(0,0,0,0.4);">$3.190</span></p>
@@ -324,7 +324,7 @@
                 </div>
             </div>
             <div class="news-card">
-                <img src="nuevo%20catalogo/logo10.jpg" alt="Noticia Promociones" style="height: 200px; object-fit: cover; width: 100%;">
+                <img src="nuevo%20catalogo/logo10.jpg" alt="Noticia Promociones" loading="lazy" style="height: 200px; object-fit: cover; width: 100%;">
                 <div class="news-content">
                     <span class="news-date">10 de Junio, 2026</span>
                     <h3>Promociones Especiales de Invierno</h3>
@@ -333,7 +333,7 @@
                 </div>
             </div>
             <div class="news-card">
-                <video src="nuevo%20catalogo/babysecvideo.mp4.mp4" controls playsinline style="height: 200px; object-fit: cover; width: 100%;"></video>
+                <video src="nuevo%20catalogo/babysecvideo.mp4.mp4" controls playsinline preload="none" style="height: 200px; object-fit: cover; width: 100%;"></video>
                 <div class="news-content">
                     <span class="news-date">5 de Junio, 2026</span>
                     <h3>¡Nuevas Marcas de Pañales!</h3>
