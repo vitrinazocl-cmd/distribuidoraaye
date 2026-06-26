@@ -67,7 +67,8 @@ app.post('/api/pagar', async (req, res) => {
     try {
         // Validación Legal Horarios en Backend
         const currentHour = new Date().getHours();
-        if (currentHour >= 1 && currentHour < 9) {
+        const isProduction = process.env.WEBPAY_ENVIRONMENT === 'PRODUCTION';
+        if (isProduction && currentHour >= 1 && currentHour < 9) {
             return res.status(403).json({ error: 'Las compras están restringidas entre la 01:00 AM y 09:00 AM por cumplimiento legal.' });
         }
 

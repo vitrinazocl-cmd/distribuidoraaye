@@ -666,6 +666,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         cliente: clienteInfo
                     })
                 });
+
+                    if (!response.ok) {
+                        const errorData = await response.json().catch(() => ({}));
+                        throw new Error(errorData.error || `El servidor respondió con ${response.status}`);
+                    }
                 
                 const data = await response.json();
                 
@@ -695,7 +700,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } catch (error) {
                 console.error(error);
-                alert('No se pudo conectar con el servidor Backend. Verifica que el servicio esté activo o que Render haya terminado el despliegue.');
+                alert('No se pudo completar el pago: ' + error.message);
                 checkoutBtn.innerHTML = textOriginal;
                 checkoutBtn.disabled = false;
             }
