@@ -29,14 +29,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Redirigir cualquier otra ruta a index.html (SPA)
-app.get('/*', (req, res) => {
-    // Si no es una ruta API, servir index.html
-    if (!req.path.startsWith('/api/')) {
-        res.sendFile(path.join(__dirname, 'index.html'));
-    }
-});
-
 // ==========================================
 // RUTAS DE PRUEBA Y DEBUG
 // ==========================================
