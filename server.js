@@ -2,11 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
+const { Pool } = require('pg');
 const { WebpayPlus } = require('transbank-sdk');
 require('dotenv').config(); // Cargar variables de entorno
 
 const excelService = require('./excelService'); // Importar el servicio de Excel
-const bicomService = require('./bicomService'); // Importar servicio Bicom
 
 // Objeto en memoria para guardar carritos temporales
 const ordenesPendientes = new Map();
@@ -14,6 +14,15 @@ const ordenesPendientes = new Map();
 // Webpay ya viene configurado para el entorno de pruebas (Integration) por defecto.
 const app = express();
 const PORT = process.env.PORT || 3000;
+const DATABASE_URL = process.env.DATABASE_URL;
+const hasDatabase = Boolean(DATABASE_URL);
+
+const pool = hasDatabase
+    ? new Pool({
+        connectionString: DATABASE_URL,
+        ssl: { rejectUnauthorized: false }
+    })
+    : null;
 
 // Configuración de middlewares
 app.use(cors());
@@ -34,7 +43,10 @@ app.get('/', (req, res) => {
 // RUTAS DE PRUEBA Y DEBUG
 // ==========================================
 app.get('/api/estado', (req, res) => {
-    res.json({ mensaje: '¡El backend está funcionando correctamente!' });
+    res.json({
+        mensaje: '¡El backend está funcionando correctamente!',
+        almacenamiento: hasDatabase ? 'postgres' : 'json'
+    });
 });
 
 app.get('/api/debug-excel', (req, res) => {
@@ -140,41 +152,6 @@ app.get('/api/confirmar-pago', async (req, res) => {
 });
 
 // ==========================================
-// ESQUELETO RUTAS BICOM
-// ==========================================
-
-// Obtener productos desde Bicom
-app.get('/api/bicom/productos', async (req, res) => {
-    try {
-        const productos = await bicomService.obtenerProductos();
-        res.json(productos);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-// Enviar un pedido a Bicom
-app.post('/api/bicom/pedidos', async (req, res) => {
-    try {
-        const pedido = req.body;
-        const resultado = await bicomService.crearPedido(pedido);
-        res.json(resultado);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-// Sincronizar stock
-app.get('/api/sincronizar-stock', async (req, res) => {
-    try {
-        const resultado = await bicomService.sincronizarStock();
-        res.json(resultado);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-// ==========================================
 // RUTAS DE VENTAS
 // ==========================================
 
@@ -185,12 +162,80 @@ if (!fs.existsSync(VENTAS_FILE)) {
     fs.writeFileSync(VENTAS_FILE, JSON.stringify([]));
 }
 
-app.post('/api/guardar-venta', (req, res) => {
+async function initDatabase() {
+    if (!pool) return;
+    await pool.query(`
+        CREATE TABLE IF NOT EXISTS ventas (
+            id TEXT PRIMARY KEY,
+            fecha TEXT,
+            isodate TIMESTAMPTZ,
+            customername TEXT,
+            customeraddress TEXT,
+            items JSONB,
+            total NUMERIC,
+            createdat TIMESTAMPTZ DEFAULT NOW()
+        )
+    `);
+}
+
+function readVentasFromJson() {
+    return JSON.parse(fs.readFileSync(VENTAS_FILE, 'utf-8'));
+}
+
+function writeVentaToJson(venta) {
+    const ventasData = readVentasFromJson();
+    ventasData.push(venta);
+    fs.writeFileSync(VENTAS_FILE, JSON.stringify(ventasData, null, 2));
+}
+
+async function saveVenta(venta) {
+    if (!pool) {
+        writeVentaToJson(venta);
+        return;
+    }
+
+    await pool.query(
+        `INSERT INTO ventas (id, fecha, isodate, customername, customeraddress, items, total)
+         VALUES ($1, $2, $3, $4, $5, $6, $7)
+         ON CONFLICT (id) DO NOTHING`,
+        [
+            venta.id,
+            venta.date || null,
+            venta.isoDate || new Date().toISOString(),
+            venta.customerName || null,
+            venta.customerAddress || null,
+            JSON.stringify(venta.items || []),
+            venta.total || 0
+        ]
+    );
+}
+
+async function getVentas() {
+    if (!pool) {
+        return readVentasFromJson();
+    }
+
+    const result = await pool.query(
+        `SELECT id, fecha, isodate, customername, customeraddress, items, total
+         FROM ventas
+         ORDER BY isodate DESC NULLS LAST, createdat DESC`
+    );
+
+    return result.rows.map((row) => ({
+        id: row.id,
+        date: row.fecha,
+        isoDate: row.isodate ? new Date(row.isodate).toISOString() : null,
+        customerName: row.customername,
+        customerAddress: row.customeraddress,
+        items: row.items || [],
+        total: Number(row.total || 0)
+    }));
+}
+
+app.post('/api/guardar-venta', async (req, res) => {
     try {
         const venta = req.body;
-        const ventasData = JSON.parse(fs.readFileSync(VENTAS_FILE, 'utf-8'));
-        ventasData.push(venta);
-        fs.writeFileSync(VENTAS_FILE, JSON.stringify(ventasData, null, 2));
+        await saveVenta(venta);
         res.json({ success: true });
     } catch (error) {
         console.error("Error guardando venta:", error);
@@ -198,18 +243,18 @@ app.post('/api/guardar-venta', (req, res) => {
     }
 });
 
-app.get('/api/ventas', (req, res) => {
+app.get('/api/ventas', async (req, res) => {
     try {
-        const ventasData = JSON.parse(fs.readFileSync(VENTAS_FILE, 'utf-8'));
+        const ventasData = await getVentas();
         res.json(ventasData);
     } catch (error) {
         res.status(500).json({ error: "Error leyendo ventas" });
     }
 });
 
-app.get('/api/descargar-excel-ventas', (req, res) => {
+app.get('/api/descargar-excel-ventas', async (req, res) => {
     try {
-        const ventasData = JSON.parse(fs.readFileSync(VENTAS_FILE, 'utf-8'));
+        const ventasData = await getVentas();
         const xlsx = require('xlsx');
         
         // Aplanar los datos para el Excel
@@ -241,9 +286,17 @@ app.get('/api/descargar-excel-ventas', (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(PORT, () => {
-    console.log(`=================================================`);
-    console.log(`🚀 Servidor Backend iniciado con éxito`);
-    console.log(`🌐 Escuchando en el puerto: http://localhost:${PORT}`);
-    console.log(`=================================================`);
-});
+initDatabase()
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`=================================================`);
+            console.log(`🚀 Servidor Backend iniciado con éxito`);
+            console.log(`🌐 Escuchando en el puerto: http://localhost:${PORT}`);
+            console.log(`💾 Almacenamiento: ${hasDatabase ? 'PostgreSQL (Render)' : 'ventas.json (local)'}`);
+            console.log(`=================================================`);
+        });
+    })
+    .catch((error) => {
+        console.error('Error inicializando la base de datos:', error.message);
+        process.exit(1);
+    });
