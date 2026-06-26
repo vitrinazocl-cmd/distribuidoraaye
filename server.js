@@ -6,6 +6,7 @@ const { WebpayPlus } = require('transbank-sdk');
 require('dotenv').config(); // Cargar variables de entorno
 
 const excelService = require('./excelService'); // Importar el servicio de Excel
+const bicomService = require('./bicomService'); // Importar servicio Bicom
 
 // Objeto en memoria para guardar carritos temporales
 const ordenesPendientes = new Map();
