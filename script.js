@@ -468,26 +468,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function openCart() { 
         cartModal.classList.remove('hidden'); 
         renderCart(); 
-        checkSalesHours();
     }
     
     function checkSalesHours() {
-        const currentHour = new Date().getHours();
-        if (currentHour >= 1 && currentHour < 9) {
-            if(checkoutBtn) {
-                checkoutBtn.disabled = true;
-                checkoutBtn.style.opacity = '0.5';
-                checkoutBtn.style.cursor = 'not-allowed';
-            }
-            if(timeRestrictionMsg) timeRestrictionMsg.style.display = 'block';
-        } else {
-            if(checkoutBtn) {
-                checkoutBtn.disabled = false;
-                checkoutBtn.style.opacity = '1';
-                checkoutBtn.style.cursor = 'pointer';
-            }
-            if(timeRestrictionMsg) timeRestrictionMsg.style.display = 'none';
+        if(checkoutBtn) {
+            checkoutBtn.disabled = false;
+            checkoutBtn.style.opacity = '1';
+            checkoutBtn.style.cursor = 'pointer';
         }
+        if(timeRestrictionMsg) timeRestrictionMsg.style.display = 'none';
     }
 
     function closeCart() { cartModal.classList.add('hidden'); }
@@ -616,13 +605,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if(checkoutBtn) {
         checkoutBtn.addEventListener('click', async () => {
             if(carrito.length === 0) { alert('El carrito está vacío.'); return; }
-            
-            // Validar Horario
-            const currentHour = new Date().getHours();
-            if (currentHour >= 1 && currentHour < 9) {
-                alert('Las compras están restringidas entre la 01:00 AM y 09:00 AM por cumplimiento legal.');
-                return;
-            }
             
             const nameInput = document.getElementById('customer-name');
             const addressInput = document.getElementById('customer-address');
