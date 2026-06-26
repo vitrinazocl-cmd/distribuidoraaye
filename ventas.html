@@ -54,6 +54,11 @@
     </style>
 </head>
 <body>
+    <script>
+        const API_BASE = window.location.hostname === 'localhost'
+            ? 'http://localhost:3000'
+            : `${window.location.protocol}//${window.location.host}`;
+    </script>
 
     <header class="top-header">
         <div class="container header-container">
@@ -75,7 +80,7 @@
         
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
             <h2 class="section-title" style="margin: 0;">Estadísticas Generales</h2>
-            <a href="http://localhost:3000/api/descargar-excel-ventas" class="btn-excel">
+            <a id="download-excel-link" href="#" class="btn-excel">
                 <i class="fa-solid fa-file-excel"></i> Descargar Reporte Excel
             </a>
         </div>
@@ -121,19 +126,20 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('download-excel-link').href = `${API_BASE}/api/descargar-excel-ventas`;
             fetchVentas();
         });
 
         async function fetchVentas() {
             try {
-                const response = await fetch('http://localhost:3000/api/ventas');
+                const response = await fetch(`${API_BASE}/api/ventas`);
                 const ventas = await response.json();
                 
                 renderVentas(ventas);
                 calculateStats(ventas);
             } catch (error) {
                 console.error("Error obteniendo ventas:", error);
-                document.getElementById('no-ventas-msg').innerText = "Error cargando las ventas. Verifica que el servidor backend esté corriendo.";
+                document.getElementById('no-ventas-msg').innerText = "Error cargando las ventas. Verifica que el backend esté activo o que Render haya terminado el despliegue.";
                 document.getElementById('no-ventas-msg').style.display = 'block';
             }
         }
