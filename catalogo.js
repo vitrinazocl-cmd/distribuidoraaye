@@ -262,7 +262,7 @@ const catalogoProductos = [
     },
     {
         "id": "7791290796027",
-        "name": "DETERGENTE POLVO OMO CON VICARBONATO OMO (Caja x18)",
+        "name": "DETERGENTE POLVO OMO CON BICARBONATO OMO (Caja x18)",
         "marca": "OMO",
         "price": 30420,
         "category": "TODOS",
