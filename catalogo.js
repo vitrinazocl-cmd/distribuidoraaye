@@ -50,7 +50,7 @@ const catalogoProductos = [
         "marca": "EXCELL",
         "price": 3180,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20%20HABRILLANTADOR%20MAS%20LIMPIADOR%20%2010%20UNIDADES%20%20EXCELL.jpg",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.07.57%20(1).jpeg",
         "flavors": []
     },
     {
