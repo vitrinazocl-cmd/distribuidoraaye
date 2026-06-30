@@ -752,16 +752,16 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 10680,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/CERA%20PINTURA%20ROJA%20AYEAYE1%20LITRO.jpg",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.05.52%20(3).jpeg",
         "flavors": []
     },
     {
         "id": "255844",
-        "name": "CERA PINTURA ROJA AYE AYE",
+        "name": "CERA PINTURA ROJA AYE AYE 1 LITRO",
         "marca": "AYE",
         "price": 2890,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/CERA%20PINTURA%20ROJA%20AYEAYE1%20LITRO.jpg",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.05.52%20(3).jpeg",
         "flavors": []
     },
     {
