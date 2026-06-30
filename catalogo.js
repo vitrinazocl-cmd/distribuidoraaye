@@ -707,7 +707,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 5940,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/LIMPIAPISO%20AYE%20AYE2%20LITROS.png",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.34%20(1).jpeg",
         "flavors": []
     },
     {
@@ -725,7 +725,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 6240,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/LIMPIAPISO%20AYE%20AYE2%20LITROS.png",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.34%20(1).jpeg",
         "flavors": []
     },
     {
