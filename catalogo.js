@@ -338,7 +338,7 @@ const catalogoProductos = [
         "marca": "FUZOL",
         "price": 21960,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DETERGENTE%20LIQUIDO%20FUZOL%203LITROS.webp",
+        "image": "nuevo%20catalogo/stock%20productos/d6bd19d8-b09d-4692-9199-ba076a5c3dcc.c35506bc00ff590a099560dabbe5f1a6.avif",
         "flavors": []
     },
     {
