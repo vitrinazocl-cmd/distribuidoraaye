@@ -797,7 +797,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 1490,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DETERGENTE%20ECONOMICO%20AYEAYE5%20LITROS.jpg",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.58%20(1).jpeg",
         "flavors": []
     },
     {
