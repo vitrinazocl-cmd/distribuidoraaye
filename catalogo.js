@@ -779,7 +779,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 1590,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DETERGENTE%20PERLADO%20AYEAYE5%20LITROS.webp",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.57%20(4).jpeg",
         "flavors": []
     },
     {
