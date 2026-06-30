@@ -1517,7 +1517,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 890,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/CEPILLO%20AQUAFRESH%20PACK%20X2%20AQUAFRESH.jpg",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.08.39.jpeg",
         "flavors": []
     },
     {
