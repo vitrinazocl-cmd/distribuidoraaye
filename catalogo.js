@@ -1778,7 +1778,7 @@ const catalogoProductos = [
         "marca": "nova",
         "price": 6490,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/nova%20clasica%20giganrte%20x70nova%2070%20metros.webp",
+        "image": "nuevo%20catalogo/stock%20productos/D_NQ_NP_2X_928607-MLC76270852514_052024-F.webp",
         "flavors": []
     },
     {
