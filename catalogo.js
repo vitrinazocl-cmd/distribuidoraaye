@@ -716,7 +716,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 10680,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DESENGRASANTE%20AYE%20GATILLOAYE1%20LITRO.webp",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.13.08.jpeg",
         "flavors": []
     },
     {
@@ -734,7 +734,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 17880,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DESENGRASANTE%20AYE%20GATILLOAYE1%20LITRO.webp",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.13.08.jpeg",
         "flavors": []
     },
     {
@@ -770,7 +770,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 2890,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DESENGRASANTE%20AYE%20GATILLOAYE1%20LITRO.webp",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.13.08.jpeg",
         "flavors": []
     },
     {
