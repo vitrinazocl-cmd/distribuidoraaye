@@ -1679,7 +1679,7 @@ const catalogoProductos = [
         "marca": "noble",
         "price": 8890,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/confort%20noble%2022metrosnoblepacks%20x6.webp",
+        "image": "nuevo%20catalogo/stock%20productos/02030712-7b62-4a3c-b350-fc34396cc9ff.f0ff5992f84c70d616bc6addef32fd2d.avif",
         "flavors": []
     },
     {
