@@ -27,7 +27,7 @@
     </header>
 
     <main class="main-content container pedidos-container" style="display: block;">
-        <h2 class="section-title">Pedidos por Despachar</h2>
+        <h2 class="section-title">Pedidos Pendientes (Despachos y Retiros)</h2>
         
         <div style="overflow-x: auto;">
             <table class="pedidos-table" id="pedidos-table">
@@ -36,7 +36,7 @@
                         <th>ID Pedido</th>
                         <th>Fecha</th>
                         <th>Cliente</th>
-                        <th>Dirección</th>
+                        <th>Dirección / Tipo</th>
                         <th>Productos</th>
                         <th>Total</th>
                         <th>Acción</th>
@@ -47,7 +47,7 @@
                 </tbody>
             </table>
         </div>
-        <p id="no-pedidos-msg" style="text-align: center; color: #888; margin-top: 30px; display: none;">No hay pedidos pendientes por despachar.</p>
+        <p id="no-pedidos-msg" style="text-align: center; color: #888; margin-top: 30px; display: none;">No hay pedidos pendientes.</p>
     </main>
 
     <footer class="main-footer" style="margin-top: auto;">
@@ -82,17 +82,34 @@
                     });
                     productosHtml += '</ul>';
                     
+                    const isRetiro = pedido.customerAddress === 'Retiro en Tienda';
+                    const badgeHtml = isRetiro 
+                        ? `<span style="background-color: #28a745; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 5px;"><i class="fa-solid fa-store"></i> RETIRO EN TIENDA</span>`
+                        : `<span style="background-color: #007bff; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 5px;"><i class="fa-solid fa-truck"></i> DESPACHO</span>`;
+                    
+                    const direccionHtml = isRetiro
+                        ? `<strong>Retirar en Local (Pudahuel)</strong>`
+                        : `${pedido.customerAddress}`;
+
+                    const btnClass = isRetiro ? 'btn-entregar' : 'btn-despachar';
+                    const btnStyle = isRetiro ? 'background-color: #28a745;' : 'background-color: #0044cc;';
+                    const btnIcon = isRetiro ? 'fa-check' : 'fa-truck-fast';
+                    const btnText = isRetiro ? 'Entregar' : 'Despachar';
+
                     html += `
                         <tr style="color: #333;">
                             <td><strong>${pedido.id}</strong></td>
                             <td>${pedido.date}</td>
                             <td>${pedido.customerName}</td>
-                            <td>${pedido.customerAddress}</td>
+                            <td>
+                                ${badgeHtml}<br>
+                                ${direccionHtml}
+                            </td>
                             <td>${productosHtml}</td>
                             <td style="color:#d32f2f; font-weight:bold;">$${pedido.total.toLocaleString('es-CL')}</td>
                             <td>
-                                <button class="btn-despachar" onclick="despacharPedido('${pedido.id}')">
-                                    <i class="fa-solid fa-truck-fast"></i> Despachar
+                                <button class="${btnClass}" style="${btnStyle} color: white; border: none; padding: 8px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; transition: opacity 0.3s; display: inline-flex; align-items: center; gap: 5px;" onclick="despacharPedido('${pedido.id}')">
+                                    <i class="fa-solid ${btnIcon}"></i> ${btnText}
                                 </button>
                             </td>
                         </tr>
@@ -103,8 +120,14 @@
             }
             
             window.despacharPedido = function(id) {
-                if(confirm('¿Estás seguro que deseas marcar este pedido como despachado?')) {
-                    let pedidos = JSON.parse(localStorage.getItem('pedidosPendientes')) || [];
+                let pedidos = JSON.parse(localStorage.getItem('pedidosPendientes')) || [];
+                const pedido = pedidos.find(p => p.id === id);
+                const isRetiro = pedido && pedido.customerAddress === 'Retiro en Tienda';
+                const msg = isRetiro 
+                    ? '¿Estás seguro que deseas marcar este pedido como ENTREGADO en tienda?'
+                    : '¿Estás seguro que deseas marcar este pedido como DESPACHADO?';
+                
+                if(confirm(msg)) {
                     pedidos = pedidos.filter(p => p.id !== id);
                     localStorage.setItem('pedidosPendientes', JSON.stringify(pedidos));
                     renderPedidos();
