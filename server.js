@@ -67,6 +67,23 @@ app.get('/api/debug-excel', (req, res) => {
     }
 });
 
+// Helper para obtener la instancia de WebpayPlus con configuración dinámica
+function getWebpayTransaction() {
+    if (process.env.WEBPAY_COMMERCE_CODE && process.env.WEBPAY_API_KEY) {
+        const { Options, Environment } = require('transbank-sdk');
+        const env = process.env.WEBPAY_ENV === 'production' 
+            ? Environment.Production 
+            : Environment.Integration;
+        const options = new Options(
+            process.env.WEBPAY_COMMERCE_CODE,
+            process.env.WEBPAY_API_KEY,
+            env
+        );
+        return new WebpayPlus.Transaction(options);
+    }
+    return new WebpayPlus.Transaction();
+}
+
 // ==========================================
 // RUTAS WEBPAY
 // ==========================================
@@ -82,14 +99,17 @@ app.post('/api/pagar', async (req, res) => {
         // Generamos un ID de orden y sesión aleatorios
         const buyOrder = "ORDEN-" + Math.floor(Math.random() * 100000);
         const sessionId = "SESION-" + Math.floor(Math.random() * 100000);
-        const returnUrl = req.protocol + '://' + req.get('host') + "/api/confirmar-pago";
+        const apiBase = process.env.API_BASE || (req.protocol + '://' + req.get('host'));
+        const returnUrl = `${apiBase}/api/confirmar-pago`;
 
         // Guardar carrito en memoria asociado a la orden
         ordenesPendientes.set(buyOrder, { carrito, cliente, total });
 
         // Crear la transacción en Webpay
-        const tx = new WebpayPlus.Transaction();
+        const tx = getWebpayTransaction();
         const response = await tx.create(buyOrder, sessionId, total, returnUrl);
+
+        console.log(`[Webpay] Transacción Creada - Orden: ${buyOrder}, Total: ${total}, Token: ${response.token}`);
 
         // Devolvemos la URL y el Token al Frontend para que redirija al usuario
         res.json({
@@ -103,46 +123,60 @@ app.post('/api/pagar', async (req, res) => {
     }
 });
 
-app.get('/api/confirmar-pago', async (req, res) => {
+app.all('/api/confirmar-pago', async (req, res) => {
     try {
-        const token = req.query.token_ws;
-        const tbkToken = req.query.TBK_TOKEN;
-        const buyOrderCanceled = req.query.TBK_ORDEN_COMPRA;
+        const token = req.query.token_ws || req.body.token_ws;
+        const tbkToken = req.query.TBK_TOKEN || req.body.TBK_TOKEN;
+        const buyOrderCanceled = req.query.TBK_ORDEN_COMPRA || req.body.TBK_ORDEN_COMPRA;
         
         // Si viene TBK_TOKEN pero no token_ws, significa que el usuario anuló la compra
         if (tbkToken && !token) {
+            console.log(`[Webpay] Pago ANULADO por el usuario - Orden: ${buyOrderCanceled}, Token: ${tbkToken}`);
             if (buyOrderCanceled) ordenesPendientes.delete(buyOrderCanceled);
             return res.redirect('/index.html?pago=abortado');
         }
         
         if (!token) {
+            console.log(`[Webpay] Error - No se recibió token_ws`);
             return res.redirect('/index.html?pago=error');
         }
 
+        console.log(`[Webpay] Confirmando transacción. Token recibido: ${token}`);
+
         // Confirmar la transacción con Webpay usando el Token
-        const tx = new WebpayPlus.Transaction();
+        const tx = getWebpayTransaction();
         const response = await tx.commit(token);
 
+        // 1. Recuperar datos de la orden que guardamos en memoria al iniciar el pago
+        const ordenData = ordenesPendientes.get(response.buy_order);
+
+        // 2. Validación de seguridad requerida por Transbank:
+        // Verificar que la orden exista en nuestros registros y que el monto pagado coincida con el esperado
+        if (!ordenData) {
+            console.error(`[Webpay] ERROR SEGURIDAD: Se intentó confirmar la orden ${response.buy_order} pero no existe en los registros pendientes.`);
+            return res.redirect('/index.html?pago=error&detalle=orden_no_encontrada');
+        }
+
+        if (Number(response.amount) !== Number(ordenData.total)) {
+            console.error(`[Webpay] ERROR SEGURIDAD: El monto pagado en Webpay ($${response.amount}) no coincide con el total esperado ($${ordenData.total}) para la orden ${response.buy_order}.`);
+            ordenesPendientes.delete(response.buy_order); // Limpiar por seguridad
+            return res.redirect('/index.html?pago=error&detalle=monto_descalzado');
+        }
+
         if (response.status === 'AUTHORIZED') {
-            // Pago exitoso
-            console.log(`Pago autorizado. Orden: ${response.buy_order}`);
+            // Pago exitoso y verificado
+            console.log(`[Webpay] Pago AUTORIZADO y VERIFICADO - Orden: ${response.buy_order}, Token: ${token}`);
             
-            // Recuperar datos de la orden
-            const ordenData = ordenesPendientes.get(response.buy_order);
+            // Descontar inventario en Excel
+            await excelService.actualizarInventario(ordenData.carrito);
             
-            if (ordenData) {
-                // Descontar inventario en Excel
-                await excelService.actualizarInventario(ordenData.carrito);
-                
-                // Limpiar de memoria
-                ordenesPendientes.delete(response.buy_order);
-            } else {
-                console.error("Orden pagada pero no se encontraron los datos del carrito en memoria.");
-            }
+            // Limpiar de memoria
+            ordenesPendientes.delete(response.buy_order);
 
             return res.redirect('/index.html?pago=exito&orden=' + response.buy_order);
         } else {
             // Pago rechazado (sin saldo, etc.)
+            console.log(`[Webpay] Pago RECHAZADO - Orden: ${response.buy_order}, Estado: ${response.status}, Token: ${token}`);
             ordenesPendientes.delete(response.buy_order);
             return res.redirect('/index.html?pago=rechazado');
         }
