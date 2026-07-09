@@ -152,8 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (carritoActual.length > 0) {
                 let pedidosGuardados = JSON.parse(localStorage.getItem('pedidosPendientes')) || [];
                 
+                const isRetiro = clienteActual.metodoEnvio === 'retiro';
                 const hasTestProduct = carritoActual.some(item => item.id === "PROD_PRUEBA_50");
-                const shippingCost = hasTestProduct ? 0 : 3000;
+                const shippingCost = (hasTestProduct || isRetiro) ? 0 : 3000;
                 const totalPedido = carritoActual.reduce((acc, item) => acc + (item.price * item.quantity), 0) + shippingCost;
                 
                 const nuevaVenta = {
@@ -466,6 +467,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartCountSpan = document.getElementById('cart-count');
     const checkoutBtn = document.getElementById('checkout-btn');
     const timeRestrictionMsg = document.getElementById('time-restriction-msg');
+    
+    // Configuración del método de envío (retiro / despacho)
+    const shippingMethodSelect = document.getElementById('shipping-method');
+    const customerAddressInput = document.getElementById('customer-address');
+    const customerCommuneSelect = document.getElementById('customer-commune');
+    
+    if (shippingMethodSelect) {
+        shippingMethodSelect.addEventListener('change', () => {
+            const isRetiro = shippingMethodSelect.value === 'retiro';
+            if (isRetiro) {
+                customerAddressInput.style.display = 'none';
+                customerAddressInput.required = false;
+                customerAddressInput.value = 'Retiro en Tienda';
+                customerCommuneSelect.style.display = 'none';
+                customerCommuneSelect.required = false;
+                customerCommuneSelect.value = 'Pudahuel';
+            } else {
+                customerAddressInput.style.display = 'block';
+                customerAddressInput.required = true;
+                if (customerAddressInput.value === 'Retiro en Tienda') {
+                    customerAddressInput.value = '';
+                }
+                customerCommuneSelect.style.display = 'block';
+                customerCommuneSelect.required = true;
+                if (customerCommuneSelect.value === 'Pudahuel') {
+                    customerCommuneSelect.value = '';
+                }
+            }
+            renderCart();
+        });
+    }
 
     function openCart() { 
         cartModal.classList.remove('hidden'); 
@@ -593,9 +625,14 @@ document.addEventListener('DOMContentLoaded', () => {
         
         cartItemsContainer.innerHTML = html;
         const subtotalElement = document.getElementById('cart-subtotal-price');
+        const shippingPriceElement = document.getElementById('cart-shipping-price');
+        const isRetiro = shippingMethodSelect && shippingMethodSelect.value === 'retiro';
         const hasTestProduct = carrito.some(item => item.id === "PROD_PRUEBA_50");
-        const shippingCost = hasTestProduct ? 0 : 3000;
+        const shippingCost = (hasTestProduct || isRetiro) ? 0 : 3000;
         const finalTotal = total + shippingCost;
+        if(shippingPriceElement) {
+            shippingPriceElement.textContent = '$' + shippingCost.toLocaleString('es-CL');
+        }
         if(subtotalElement) {
             subtotalElement.textContent = '$' + total.toLocaleString('es-CL');
             cartTotalPrice.textContent = '$' + finalTotal.toLocaleString('es-CL');
@@ -631,15 +668,17 @@ document.addEventListener('DOMContentLoaded', () => {
             checkoutBtn.disabled = true;
 
             const total = carrito.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+            const isRetiro = shippingMethodSelect && shippingMethodSelect.value === 'retiro';
             const hasTestProduct = carrito.some(item => item.id === "PROD_PRUEBA_50");
-            const shippingCost = hasTestProduct ? 0 : 3000;
+            const shippingCost = (hasTestProduct || isRetiro) ? 0 : 3000;
             const finalTotal = total + shippingCost;
             
             const clienteInfo = {
                 nombre: nameInput.value,
                 direccion: addressInput.value,
                 rut: rutInput ? rutInput.value : '',
-                comuna: communeInput.value
+                comuna: communeInput.value,
+                metodoEnvio: shippingMethodSelect ? shippingMethodSelect.value : 'despacho'
             };
 
             try {

@@ -413,6 +413,13 @@
                 <div class="checkout-form" id="checkout-form-container">
                     <input type="text" id="customer-name" placeholder="Tu Nombre y Apellido (Receptor)" required style="width:100%; padding: 10px; margin-bottom:10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--dark-bg); color: var(--text-dark);">
                     <input type="text" id="customer-rut" placeholder="RUT (opcional)" style="width:100%; padding: 10px; margin-bottom:10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--dark-bg); color: var(--text-dark);">
+                    
+                    <label style="display: block; font-size: 14px; margin-bottom: 5px; color: #ccc; text-align: left;">Método de Entrega:</label>
+                    <select id="shipping-method" required style="width:100%; padding: 10px; margin-bottom:10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--dark-bg); color: var(--text-dark);">
+                        <option value="despacho">Despacho a Domicilio ($3.000)</option>
+                        <option value="retiro">Retiro en Tienda (Gratis - Pudahuel)</option>
+                    </select>
+
                     <input type="text" id="customer-address" placeholder="Dirección de Despacho Exacta" required style="width:100%; padding: 10px; margin-bottom:10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--dark-bg); color: var(--text-dark);">
                     <select id="customer-commune" required style="width:100%; padding: 10px; margin-bottom:10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--dark-bg); color: var(--text-dark);">
                         <option value="">Selecciona Comuna</option>
