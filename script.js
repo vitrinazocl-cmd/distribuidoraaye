@@ -152,7 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (carritoActual.length > 0) {
                 let pedidosGuardados = JSON.parse(localStorage.getItem('pedidosPendientes')) || [];
                 
-                const totalPedido = carritoActual.reduce((acc, item) => acc + (item.price * item.quantity), 0) + 3000;
+                const hasTestProduct = carritoActual.some(item => item.id === "PROD_PRUEBA_50");
+                const shippingCost = hasTestProduct ? 0 : 3000;
+                const totalPedido = carritoActual.reduce((acc, item) => acc + (item.price * item.quantity), 0) + shippingCost;
                 
                 const nuevaVenta = {
                     id: orden,
@@ -591,7 +593,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         cartItemsContainer.innerHTML = html;
         const subtotalElement = document.getElementById('cart-subtotal-price');
-        const shippingCost = 3000;
+        const hasTestProduct = carrito.some(item => item.id === "PROD_PRUEBA_50");
+        const shippingCost = hasTestProduct ? 0 : 3000;
         const finalTotal = total + shippingCost;
         if(subtotalElement) {
             subtotalElement.textContent = '$' + total.toLocaleString('es-CL');
@@ -628,7 +631,9 @@ document.addEventListener('DOMContentLoaded', () => {
             checkoutBtn.disabled = true;
 
             const total = carrito.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-            const finalTotal = total + 3000; // Agregar costo de envío
+            const hasTestProduct = carrito.some(item => item.id === "PROD_PRUEBA_50");
+            const shippingCost = hasTestProduct ? 0 : 3000;
+            const finalTotal = total + shippingCost;
             
             const clienteInfo = {
                 nombre: nameInput.value,
