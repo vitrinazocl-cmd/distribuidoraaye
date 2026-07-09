@@ -1,5 +1,14 @@
 const catalogoProductos = [
     {
+        "id": "PROD_PRUEBA_50",
+        "name": "PRODUCTO DE PRUEBA TRANSBANK ($50)",
+        "marca": "TRANSBANK",
+        "price": 50,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/serviletaswan.png",
+        "flavors": []
+    },
+    {
         "id": "775876001595",
         "name": "TRAPERO HUMEDO 10 UNIDADES TOLL (Caja x24)",
         "marca": "TOLL",
