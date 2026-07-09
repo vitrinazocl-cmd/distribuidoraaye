@@ -67,16 +67,31 @@ app.get('/api/debug-excel', (req, res) => {
     }
 });
 
+// Cargar configuración de Transbank desde archivo JSON si existe
+let transbankConfig = {};
+try {
+    const configPath = path.join(__dirname, 'transbank_config.json');
+    if (fs.existsSync(configPath)) {
+        transbankConfig = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+    }
+} catch (err) {
+    console.error("Error cargando transbank_config.json:", err);
+}
+
 // Helper para obtener la instancia de WebpayPlus con configuración dinámica
 function getWebpayTransaction() {
-    if (process.env.WEBPAY_COMMERCE_CODE && process.env.WEBPAY_API_KEY) {
+    const commerceCode = process.env.WEBPAY_COMMERCE_CODE || transbankConfig.WEBPAY_COMMERCE_CODE;
+    const apiKey = process.env.WEBPAY_API_KEY || transbankConfig.WEBPAY_API_KEY;
+    const webpayEnv = process.env.WEBPAY_ENV || transbankConfig.WEBPAY_ENV;
+
+    if (commerceCode && apiKey) {
         const { Options, Environment } = require('transbank-sdk');
-        const env = process.env.WEBPAY_ENV === 'production' 
+        const env = webpayEnv === 'production' 
             ? Environment.Production 
             : Environment.Integration;
         const options = new Options(
-            process.env.WEBPAY_COMMERCE_CODE,
-            process.env.WEBPAY_API_KEY,
+            commerceCode,
+            apiKey,
             env
         );
         return new WebpayPlus.Transaction(options);
@@ -99,7 +114,7 @@ app.post('/api/pagar', async (req, res) => {
         // Generamos un ID de orden y sesión aleatorios
         const buyOrder = "ORDEN-" + Math.floor(Math.random() * 100000);
         const sessionId = "SESION-" + Math.floor(Math.random() * 100000);
-        const apiBase = process.env.API_BASE || (req.protocol + '://' + req.get('host'));
+        const apiBase = process.env.API_BASE || transbankConfig.API_BASE || (req.protocol + '://' + req.get('host'));
         const returnUrl = `${apiBase}/api/confirmar-pago`;
 
         // Guardar carrito en memoria asociado a la orden
