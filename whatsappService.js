@@ -40,7 +40,10 @@ async function enviarNotificacionPedido(pedido) {
     try {
         // CallMeBot requiere el teléfono en formato internacional sin el signo "+"
         const cleanPhone = telefono.replace('+', '').trim();
-        const url = `https://api.callmebot.com/whatsapp.php?phone=${cleanPhone}&text=${encodeURIComponent(msg)}&apikey=${apiKey}`;
+        // Bugfix: CallMeBot interpreta "$" seguido de números como variables PHP vacías y las elimina.
+        // Añadir un espacio después del "$" protege los caracteres y números.
+        const safeMsg = msg.replace(/\$/g, '$ ');
+        const url = `https://api.callmebot.com/whatsapp.php?phone=${cleanPhone}&text=${encodeURIComponent(safeMsg)}&apikey=${apiKey}`;
         
         console.log(`[WhatsApp] Intentando enviar notificación a ${cleanPhone}...`);
         const response = await axios.get(url);
