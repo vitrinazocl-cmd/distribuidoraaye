@@ -1,1 +1,98 @@
-[]
+[
+  {
+    "id": "ORDEN-84788",
+    "date": "09-07-2026, 3:45:35 p. m.",
+    "isoDate": "2026-07-09T19:45:35.770Z",
+    "customerName": "Juan",
+    "customerAddress": "decanso89",
+    "items": [
+      {
+        "id": "775876001595",
+        "name": "TRAPERO HUMEDO 10 UNIDADES TOLL (Caja x24)",
+        "marca": "TOLL",
+        "price": 23760,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%2010%20UNIDADES%20TOLL.webp",
+        "flavors": [],
+        "quantity": 1,
+        "flavor": null
+      },
+      {
+        "id": "PROD_3",
+        "name": "TRAPERO HUMEDO CLASICO 10 UNIDADES EXCELL (Caja x10)",
+        "marca": "EXCELL",
+        "price": 1430,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20CLASICO%2010%20UNIDADES%20EXCELL.webp",
+        "flavors": [],
+        "quantity": 1,
+        "flavor": null
+      }
+    ],
+    "total": 28190
+  },
+  {
+    "id": "ORDEN-13107",
+    "date": "09-07-2026, 4:15:32 p. m.",
+    "isoDate": "2026-07-09T20:15:32.702Z",
+    "customerName": "pedro",
+    "customerAddress": "mentor 76",
+    "items": [
+      {
+        "id": "PROD_6",
+        "name": "TRAPERO HUMEDO ABRILLANTADOR  10 UNIDADES EXCELL (Caja x10)",
+        "marca": "EXCELL",
+        "price": 3180,
+        "category": "TODOS",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.07.57%20(1).jpeg",
+        "flavors": [],
+        "quantity": 4,
+        "flavor": null
+      },
+      {
+        "id": "775876001595",
+        "name": "TRAPERO HUMEDO 10 UNIDADES TOLL (Caja x24)",
+        "marca": "TOLL",
+        "price": 23760,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%2010%20UNIDADES%20TOLL.webp",
+        "flavors": [],
+        "quantity": 1,
+        "flavor": null
+      },
+      {
+        "id": "255844",
+        "name": "CERA PINTURA ROJA AYE AYE 1 LITRO",
+        "marca": "AYE",
+        "price": 2890,
+        "category": "TODOS",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.05.52%20(3).jpeg",
+        "flavors": [],
+        "quantity": 1,
+        "flavor": null
+      }
+    ],
+    "total": 42370
+  },
+  {
+    "id": "ORDEN-67807",
+    "date": "09-07-2026, 4:17:47 p. m.",
+    "isoDate": "2026-07-09T20:17:47.912Z",
+    "customerName": "martin",
+    "customerAddress": "kote 54",
+    "items": [
+      {
+        "id": "PROD_6",
+        "name": "TRAPERO HUMEDO ABRILLANTADOR  10 UNIDADES EXCELL (Caja x10)",
+        "marca": "EXCELL",
+        "price": 3180,
+        "category": "TODOS",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.07.57%20(1).jpeg",
+        "flavors": [],
+        "quantity": 6,
+        "flavor": null
+      }
+    ],
+    "total": 22080
+  }
+]
