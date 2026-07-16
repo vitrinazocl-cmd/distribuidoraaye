@@ -24,7 +24,7 @@ try {
     if (fs.existsSync(catalogoPath)) {
         const content = fs.readFileSync(catalogoPath, 'utf8');
         const jsonStart = content.indexOf('[');
-        const jsonEnd = content.lastIndexOf(']');
+        const jsonEnd = content.indexOf('];');
         if (jsonStart !== -1 && jsonEnd !== -1) {
             const jsonText = content.substring(jsonStart, jsonEnd + 1);
             const list = JSON.parse(jsonText);
@@ -73,7 +73,7 @@ try {
             const stockRaw = cols[6] ? cols[6].trim() : "";
             const stock = stockRaw === "" ? 1 : (parseInt(stockRaw) || 0);
             
-            if (desc && precioPorCaja > 0 && stock > 0) {
+            if (desc && precioPorCaja > 0 && stock >= 0) {
                 const numUnidades = parseInt(unidades.replace(/[^0-9]/g, '')) || 1;
                 
                 let nombreProducto = desc;
@@ -136,14 +136,15 @@ try {
                     price: price,
                     category: "TODOS",
                     image: finalImagePath,
-                    flavors: []
+                    flavors: [],
+                    stock: stock
                 });
             }
         }
     }
 
     // 3. Escribir el nuevo catálogo
-    const catalogoContent = `const catalogoProductos = ${JSON.stringify(productos, null, 4)};\n\nconst sliderImages = ${JSON.stringify(imageFiles, null, 4)};\n\n// Hacer el catálogo accesible globalmente\nif (typeof window !== 'undefined') {\n    window.catalogoProductos = catalogoProductos;\n    window.sliderImages = sliderImages;\n}\n`;
+    const catalogoContent = `const catalogoProductos = ${JSON.stringify(productos, null, 4)};\n\n// Hacer el catálogo accesible globalmente\nif (typeof window !== 'undefined') {\n    window.catalogoProductos = catalogoProductos;\n}\n`;
     
     fs.writeFileSync(catalogoPath, catalogoContent, 'utf8');
     console.log("¡Éxito! catalogo.js actualizado con " + productos.length + " productos.");

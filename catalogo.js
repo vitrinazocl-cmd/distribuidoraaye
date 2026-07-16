@@ -6,7 +6,8 @@ const catalogoProductos = [
         "price": 990,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%2010%20UNIDADES%20TOLL.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 204
     },
     {
         "id": "659525894252",
@@ -15,7 +16,8 @@ const catalogoProductos = [
         "price": 1490,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%2012%20UNIDADES%20WINNEX.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 312
     },
     {
         "id": "PROD_3",
@@ -24,7 +26,8 @@ const catalogoProductos = [
         "price": 1430,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20CLASICO%2010%20UNIDADES%20EXCELL.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_4",
@@ -33,7 +36,8 @@ const catalogoProductos = [
         "price": 1430,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20ABRILLANTADOR%20PISO%20FLOTANTE%20EXCELLEXCELL10%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_5",
@@ -41,8 +45,9 @@ const catalogoProductos = [
         "marca": "",
         "price": 1950,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.07.57%20(1).jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20%20HABRILLANTADOR%20MAS%20LIMPIADOR%20%2010%20UNIDADES%20%20EXCELL.jpg",
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_6",
@@ -50,8 +55,9 @@ const catalogoProductos = [
         "marca": "",
         "price": 3180,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.07.57%20(1).jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20%20HABRILLANTADOR%20MAS%20LIMPIADOR%20%2010%20UNIDADES%20%20EXCELL.jpg",
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "7804673120033",
@@ -60,7 +66,8 @@ const catalogoProductos = [
         "price": 1500,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%2012MAS1%20UNIDADES%20%20ULTRA%20CLEAN.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 45
     },
     {
         "id": "PROD_8",
@@ -69,7 +76,8 @@ const catalogoProductos = [
         "price": 990,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PASTAL%20DENTAL%20TRIPLE%20ACCION%20COLGATE.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_9",
@@ -78,7 +86,8 @@ const catalogoProductos = [
         "price": 790,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PASTA%20DENTAL%20TRIPLE%20ACCION%20PEPSODENT.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_10",
@@ -87,7 +96,8 @@ const catalogoProductos = [
         "price": 950,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PASTAS%20DENTAL%20%20INTEGRAL%2018%20PEPSODENT.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_11",
@@ -96,7 +106,8 @@ const catalogoProductos = [
         "price": 2290,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PASTA%20DENTAL%20PACK%203%20PEPSIODENT.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_12",
@@ -105,7 +116,8 @@ const catalogoProductos = [
         "price": 1970,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PASTA%20DENTAL%20%20REGULAR%20PACK%203%20FRESH%20%20UP.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_13",
@@ -114,7 +126,8 @@ const catalogoProductos = [
         "price": 1770,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PASTA%20DETAL%20WHITENING%20PACK%203%20FRESH%20UP.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_14",
@@ -123,7 +136,8 @@ const catalogoProductos = [
         "price": 1290,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CEPILLO%20DE%20DIENTES%20MEDIUM%20AQUAFRESH.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_15",
@@ -132,7 +146,8 @@ const catalogoProductos = [
         "price": 640,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CEPILLO%20DE%20DIENTES%20ADULTO%20SUAVE%20FRESH%20UP.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_16",
@@ -141,7 +156,8 @@ const catalogoProductos = [
         "price": 640,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CEPILLO%20DE%20DIENTES%20ADULTO%20MEDIO%20FRESH%20UP.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_17",
@@ -150,7 +166,8 @@ const catalogoProductos = [
         "price": 640,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CEPILLO%20DE%20DIENTE%20NI%C3%91O%20FRESH%20UP.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_18",
@@ -159,7 +176,8 @@ const catalogoProductos = [
         "price": 860,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CEPILLO%20DE%20DIENTE%20NI%C3%91O%20%20PACK%20X2%20FAMILY%20SET.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "7758676002011",
@@ -168,7 +186,8 @@ const catalogoProductos = [
         "price": 2290,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20HUMEDA%2080%20UNIDADES%20OVELLA.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 17
     },
     {
         "id": "7758676002011",
@@ -177,7 +196,8 @@ const catalogoProductos = [
         "price": 1190,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20HUMEDA%2080%20UNIDADES%20OVELLA.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 3
     },
     {
         "id": "PROD_21",
@@ -186,7 +206,8 @@ const catalogoProductos = [
         "price": 690,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20HUMEDAD%2045%20UNIDADES%20BABYSEC.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "659525893941",
@@ -195,7 +216,8 @@ const catalogoProductos = [
         "price": 890,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20HUMEDA%2080%20UNIDADES%20SOFT%20WIPES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 238
     },
     {
         "id": "PROD_23",
@@ -204,7 +226,8 @@ const catalogoProductos = [
         "price": 700,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20HUMEDA%20%2072%20UNIDADES%20SOFT%20CLOUD.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_24",
@@ -212,8 +235,9 @@ const catalogoProductos = [
         "marca": "",
         "price": 1300,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/TOALLA%20HUMEDA%20ADULTO%20ACTIVITY.webp",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/toalla%20humeda%20adulto%20activity12%20unidades.webp",
+        "flavors": [],
+        "stock": 1000
     },
     {
         "id": "PROD_25",
@@ -222,7 +246,8 @@ const catalogoProductos = [
         "price": 1750,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20PAPEL%20LIKE%20ULTRA%20TERSUS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 16
     },
     {
         "id": "12523258974",
@@ -231,7 +256,8 @@ const catalogoProductos = [
         "price": 3150,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/REMOVEDOR%20DE%20MANCHAS%20POLVO%20WINNEX%20500g.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 28
     },
     {
         "id": "7808304316031",
@@ -240,7 +266,8 @@ const catalogoProductos = [
         "price": 1550,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/RENOVADOR%20DE%20NEUMATICO%20%20TEDDY%20500ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1
     },
     {
         "id": "7808304390741",
@@ -249,7 +276,8 @@ const catalogoProductos = [
         "price": 2760,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PACK%20PROMOCIONAL%20%5BRENOVADOR%2BCERA%5D%20TEDDY%20500ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "7805020003047",
@@ -258,7 +286,8 @@ const catalogoProductos = [
         "price": 1200,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/JAVON%20LIQUIDO%20VIDABELL%20750ML.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 7
     },
     {
         "id": "7791290796027",
@@ -267,7 +296,8 @@ const catalogoProductos = [
         "price": 1690,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/DETERGENTE%20POLVO%20OMO%20CON%20VICARBONATO%20OMO%20800ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 9
     },
     {
         "id": "7791290791466",
@@ -276,7 +306,8 @@ const catalogoProductos = [
         "price": 3690,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/OMO%20PARA%20DILUIR%20PIEL%20SENSIBLE%20%20OMO%20500ML.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 27
     },
     {
         "id": "7791274000645",
@@ -285,7 +316,8 @@ const catalogoProductos = [
         "price": 3240,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/AROMATIZANTE%20DE%20TELAS%20VAIS%20ALGABO%20500ML.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 7
     },
     {
         "id": "6976617700234",
@@ -294,7 +326,8 @@ const catalogoProductos = [
         "price": 1589,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/REPUESTO%20AROMATIZANTE%20ULTRA%20CLEAN%20ULTRA%20CLEAN%2040ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 7
     },
     {
         "id": "6976617700142",
@@ -303,7 +336,8 @@ const catalogoProductos = [
         "price": 1180,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/GEL%20AROMATIZANTE%20ULTRA%20CLEAN%20ULTRA%20CLEAN%20212GRAMOS.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 19
     },
     {
         "id": "7805020003320",
@@ -312,7 +346,8 @@ const catalogoProductos = [
         "price": 1730,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/QUITAMANCHAS%202EN%201%20EXCELL%20960ML.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 41
     },
     {
         "id": "12345678288",
@@ -321,7 +356,8 @@ const catalogoProductos = [
         "price": 510,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/DESODORANTE%20DE%20INODORO%20ULTRA%20CLEAN%2040GR.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "27896015500133",
@@ -330,7 +366,8 @@ const catalogoProductos = [
         "price": 1290,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CEPILLO%20AQUAFRESH%20PACK%20X2%20AQUAFRESH.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "7804920001580",
@@ -338,8 +375,9 @@ const catalogoProductos = [
         "marca": "FUZOL",
         "price": 5490,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/stock%20productos/d6bd19d8-b09d-4692-9199-ba076a5c3dcc.c35506bc00ff590a099560dabbe5f1a6.avif",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/DETERGENTE%20LIQUIDO%20FUZOL%203LITROS.webp",
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "7730219040513",
@@ -348,7 +386,8 @@ const catalogoProductos = [
         "price": 3700,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/APOSITO%20COTIDIAN%20COTIDIAN.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 1
     },
     {
         "id": "7805020001760",
@@ -357,7 +396,8 @@ const catalogoProductos = [
         "price": 1530,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LIMPIADOE%20PORCELANATO%20Y%20VINILICOS%20EXCELL%20900ML.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 4
     },
     {
         "id": "7805020002019",
@@ -366,7 +406,8 @@ const catalogoProductos = [
         "price": 2260,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CERA%20AUTOBRILLO%20%5Bceramicos%20y%20baldosas%20%5D%20EXCELL%20900ML.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "7805020010007",
@@ -375,7 +416,8 @@ const catalogoProductos = [
         "price": 2280,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LIMPIADOR%20DE%20PISO%20FLOTANTE%20EXCELL%20900ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 4
     },
     {
         "id": "7805020001784",
@@ -384,7 +426,8 @@ const catalogoProductos = [
         "price": 1920,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CERA%20PINTURA%20ROJA%20EXCELL%20900CC.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "7805020003016",
@@ -393,7 +436,8 @@ const catalogoProductos = [
         "price": 1550,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LUSTRA%20MUEBLES%20LIQUIDO%20GATILLO%20EXCELL%20500ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 4
     },
     {
         "id": "7805020000930",
@@ -402,7 +446,8 @@ const catalogoProductos = [
         "price": 1460,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ANTIGRASA%20GATILLO%20EXCELL%20500ML.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 10
     },
     {
         "id": "7805020002860",
@@ -411,7 +456,8 @@ const catalogoProductos = [
         "price": 1720,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LIMPIADOR%20DE%20BA%C3%91O%20GATILLO%20EXCELL%20500ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "8794652126592",
@@ -420,7 +466,8 @@ const catalogoProductos = [
         "price": 1190,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/FILMS%20PLASTICO%20TRANSPARENTE%20HOME%20KING%2070%20METROS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1
     },
     {
         "id": "7805020010045",
@@ -429,7 +476,8 @@ const catalogoProductos = [
         "price": 1990,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/SHAMPOO%20ALFOMBRA%20Y%20TAPICES%20EXCELL.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "7805020002033",
@@ -438,7 +486,8 @@ const catalogoProductos = [
         "price": 1990,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LUSTRA%20MUEBLES%20%20EXCELL%20500%20CC.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "7804673120064",
@@ -447,7 +496,8 @@ const catalogoProductos = [
         "price": 1290,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TELA%20%20ANTIBACTERIAL%20%20ULTRA%20CLEAN%20%2030%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 7
     },
     {
         "id": "7805020000718",
@@ -456,7 +506,8 @@ const catalogoProductos = [
         "price": 2900,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ABRILLANTADOR%20PISO%20FLOTANTE%20EXCELL%20900%20CC.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "7791274192883",
@@ -465,7 +516,8 @@ const catalogoProductos = [
         "price": 2090,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/espuma%20afeitar%20algabo.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 7
     },
     {
         "id": "8698898464541",
@@ -474,7 +526,8 @@ const catalogoProductos = [
         "price": 1230,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/antigrasa%20gatillo%20winnex.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 3
     },
     {
         "id": "7791274004377",
@@ -483,7 +536,8 @@ const catalogoProductos = [
         "price": 890,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/talco%20para%20pies%20algabo.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "7791274005305",
@@ -492,7 +546,8 @@ const catalogoProductos = [
         "price": 870,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/QUITAESMALTE%20FORTALECEDOR%20ALGABO%20100%20ML.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 3
     },
     {
         "id": "7061200108",
@@ -501,7 +556,8 @@ const catalogoProductos = [
         "price": 1990,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/renovador%20kit.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 3
     },
     {
         "id": "730170695354",
@@ -510,7 +566,8 @@ const catalogoProductos = [
         "price": 830,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/DESODORANTE%20PARA%20INODORO%20WINNEX%2040%20GRAMOS.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 26
     },
     {
         "id": "7790520024527",
@@ -519,7 +576,8 @@ const catalogoProductos = [
         "price": 2590,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/pastillas%20para%20estanque%20x3EXCELL3%20unidaes.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 10
     },
     {
         "id": "7791274196416",
@@ -528,7 +586,18 @@ const catalogoProductos = [
         "price": 337,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TALCO%20PARA%20PIES%20BOLSA%20%20ALGABO%20200%20GRAMOS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 3
+    },
+    {
+        "id": "7805000180898",
+        "name": "PASTA DENTAL PEPSODENT PACK 3X2 PEPSODENT / unidad $2.290 / caja 18 unidades $41.220",
+        "marca": "PEPSODENT",
+        "price": 2290,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/PASTA%20DENTAL%20PEPSODENT%20PACK%203X2PEPSODENT%2090%20GRAMOS.webp",
+        "flavors": [],
+        "stock": 0
     },
     {
         "id": "8698898468334",
@@ -537,7 +606,8 @@ const catalogoProductos = [
         "price": 1100,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LIMPIADOR%20EN%20CREMA%20WINNEX%20WINNEX%20750%20GRAMOS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "7808304316277",
@@ -546,7 +616,8 @@ const catalogoProductos = [
         "price": 1160,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LIMPIADOR%20EN%20CREMA%20TEDDYTEDDY%20500%20ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 1
     },
     {
         "id": "7805020000787",
@@ -555,7 +626,8 @@ const catalogoProductos = [
         "price": 1140,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LIMPIADOR%20CREMA%20EXCELL%20EXCELL500%20ML.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 7
     },
     {
         "id": "12345678127",
@@ -564,7 +636,8 @@ const catalogoProductos = [
         "price": 2330,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/bolsa%20100x120.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "7758676000796",
@@ -573,7 +646,8 @@ const catalogoProductos = [
         "price": 1740,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/BOLSA%20DE%20BASURA%2080X110WINNEX.avif",
-        "flavors": []
+        "flavors": [],
+        "stock": 4
     },
     {
         "id": "785020003122",
@@ -582,7 +656,8 @@ const catalogoProductos = [
         "price": 1890,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/bolsa%20de%20basura90x120excellEXCELL10unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 4
     },
     {
         "id": "7805020003115",
@@ -591,7 +666,8 @@ const catalogoProductos = [
         "price": 1190,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/BOLSA%20DE%20BASURA%2070X%2090EXCELL10%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 54
     },
     {
         "id": "7805020003108",
@@ -600,7 +676,8 @@ const catalogoProductos = [
         "price": 680,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/BOLSA%20DE%20BASURA%2070X%2090EXCELL10%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 60
     },
     {
         "id": "25060955510155",
@@ -609,7 +686,8 @@ const catalogoProductos = [
         "price": 1000,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/BOLSA%20DE%20BASURA%2055X50%20BLANCAULTRA%20CLEAN%2020%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 4
     },
     {
         "id": "7891150090231",
@@ -618,7 +696,8 @@ const catalogoProductos = [
         "price": 720,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PASTA%20DENTAL%20PEPSODENT%20TRIPLE%2BPEPSODENT90%20GRAMOS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 90
     },
     {
         "id": "789115009826",
@@ -627,7 +706,8 @@ const catalogoProductos = [
         "price": 950,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PASTA%20DENTAL%20PEPSODENT%20INTEGRAL%2018PEPSODENT90%20GRAMOS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 4
     },
     {
         "id": "7791274199431",
@@ -636,7 +716,8 @@ const catalogoProductos = [
         "price": 1263,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/SHAMPOO%20BABY%20ALGABOALGABO444%20ML.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "7804932000601",
@@ -645,7 +726,8 @@ const catalogoProductos = [
         "price": 1290,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/BRIKS%20LAVALOZAS%20CONSENTRADOBRIKS2%20LITROS.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 3
     },
     {
         "id": "7805020002040",
@@ -654,7 +736,8 @@ const catalogoProductos = [
         "price": 653,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LAVALOZAS%20DESENGRASANTE%20BOLSAEXCELL1%20LITRO.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 61
     },
     {
         "id": "7805020003337",
@@ -663,7 +746,8 @@ const catalogoProductos = [
         "price": 1310,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LAVALOZA%20DESENGRASANTE%20EXCELLEXCELL750%20CC.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 3
     },
     {
         "id": "78050120001968",
@@ -672,7 +756,8 @@ const catalogoProductos = [
         "price": 1750,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/QUITA%20GRASA%20PROFESIONAL%20GATILLOEXCELL500%20ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 3
     },
     {
         "id": "7808304316581",
@@ -681,7 +766,8 @@ const catalogoProductos = [
         "price": 4250,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CLORO%20EN%20TABLETAS%20TEDDYTEDDY1%20KG.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 20
     },
     {
         "id": "556622467000",
@@ -690,7 +776,8 @@ const catalogoProductos = [
         "price": 3680,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PASTILLA%20DE%20CLORO%20GRANDE%20TEDDY1%20KG.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 18
     },
     {
         "id": "802371895796",
@@ -698,8 +785,9 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 990,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.34%20(1).jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/LIMPIAPISO%20AYE%20AYE2%20LITROS.png",
+        "flavors": [],
+        "stock": 25
     },
     {
         "id": "aye",
@@ -707,8 +795,9 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 890,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.13.08.jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/DESENGRASANTE%20AYE%20GATILLOAYE1%20LITRO.webp",
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "7509546653518",
@@ -716,8 +805,9 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 520,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.34%20(1).jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/LIMPIAPISO%20AYE%20AYE2%20LITROS.png",
+        "flavors": [],
+        "stock": 19
     },
     {
         "id": "7500435113601",
@@ -725,8 +815,9 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 1490,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.13.08.jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/DESENGRASANTE%20AYE%20GATILLOAYE1%20LITRO.webp",
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "2584172211000",
@@ -735,7 +826,8 @@ const catalogoProductos = [
         "price": 890,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/removedor%20de%20litro.jpeg",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "255444444",
@@ -743,8 +835,9 @@ const catalogoProductos = [
         "marca": "",
         "price": 1290,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.05.52%20(3).jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/CERA%20PINTURA%20ROJA%20AYEAYE5%20LITROS.png",
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "255844",
@@ -752,8 +845,9 @@ const catalogoProductos = [
         "marca": "",
         "price": 890,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.05.52%20(3).jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/CERA%20PINTURA%20ROJA%20AYEAYE1%20LITRO.jpg",
+        "flavors": [],
+        "stock": 7
     },
     {
         "id": "7751851005982",
@@ -761,8 +855,9 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 2890,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.13.08.jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/DESENGRASANTE%20AYE%20GATILLOAYE1%20LITRO.webp",
+        "flavors": [],
+        "stock": 53
     },
     {
         "id": "4231646",
@@ -770,8 +865,9 @@ const catalogoProductos = [
         "marca": "",
         "price": 1590,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.57%20(4).jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/DETERGENTE%20PERLADO%20AYEAYE5%20LITROS.webp",
+        "flavors": [],
+        "stock": 107
     },
     {
         "id": "7800988598758",
@@ -780,7 +876,8 @@ const catalogoProductos = [
         "price": 3290,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/DETERGENTE%20BRIKSBRIKS5%20LITROS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 630
     },
     {
         "id": "45567777",
@@ -788,8 +885,9 @@ const catalogoProductos = [
         "marca": "",
         "price": 1490,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.58%20(1).jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/DETERGENTE%20ECONOMICO%20AYEAYE5%20LITROS.jpg",
+        "flavors": [],
+        "stock": 118
     },
     {
         "id": "7808304316093",
@@ -798,7 +896,8 @@ const catalogoProductos = [
         "price": 435,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PA%C3%91O%20%20MICROFIBRA%20TEDDYTEDDY25.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 1
     },
     {
         "id": "7804673120118",
@@ -807,7 +906,8 @@ const catalogoProductos = [
         "price": 3600,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/VALDE%20TRAPEADOR%20ULTRA%20CLEAN.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 15
     },
     {
         "id": "7751851024006",
@@ -816,7 +916,8 @@ const catalogoProductos = [
         "price": 1640,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/BOLSA%20DE%20BASURA%2080X110WINNEX.avif",
-        "flavors": []
+        "flavors": [],
+        "stock": 4
     },
     {
         "id": "7805020002392",
@@ -825,7 +926,8 @@ const catalogoProductos = [
         "price": 20280,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/DISCOS%20ACTIVOS%20EXCELLEXCELL38%20ML.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 10
     },
     {
         "id": "7805020002989",
@@ -834,7 +936,8 @@ const catalogoProductos = [
         "price": 3108,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20ABRILLANTADOR%20PISO%20FLOTANTE%20EXCELLEXCELL10%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "70805020002638",
@@ -843,7 +946,8 @@ const catalogoProductos = [
         "price": 1430,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20PISO%20FLOTANTE%20DESINFECTANTE%20EXCELLEXCELL10%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 77
     },
     {
         "id": "7805020002637",
@@ -852,7 +956,8 @@ const catalogoProductos = [
         "price": 1430,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20CLASICO%2010%20UNIDADES%20EXCELL.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 102
     },
     {
         "id": "8696630143983",
@@ -861,7 +966,8 @@ const catalogoProductos = [
         "price": 970,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/DESODORANTE%20AMBIENTAL%20WINNEXSWINNEX400%20ML.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 20
     },
     {
         "id": "8696630142801",
@@ -870,7 +976,8 @@ const catalogoProductos = [
         "price": 1440,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/DESODORANTE%20AMBEINTAL%20WINNEXSWINNEXS250%20ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 38
     },
     {
         "id": "7805040000552",
@@ -879,7 +986,8 @@ const catalogoProductos = [
         "price": 1190,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/DESODORANTE%20AMBIENTAL%20AROMAROM225%20GRAMOS.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 48
     },
     {
         "id": "7805020003382",
@@ -888,7 +996,8 @@ const catalogoProductos = [
         "price": 1950,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20%20HABRILLANTADOR%20MAS%20LIMPIADOR%20%2010%20UNIDADES%20%20EXCELL.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 7
     },
     {
         "id": "7805020001913",
@@ -897,7 +1006,8 @@ const catalogoProductos = [
         "price": 850,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CLORO%20GEL%20EXCELLEXCELL900%20ML.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 148
     },
     {
         "id": "7805020003580",
@@ -906,7 +1016,8 @@ const catalogoProductos = [
         "price": 1580,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/QUITAMANCHAS%20GATILLOEXCELL500%20ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 12
     },
     {
         "id": "7805020002859",
@@ -915,7 +1026,8 @@ const catalogoProductos = [
         "price": 1640,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LIMPIADOR%20DE%20BA%C3%91O%20ULTRA%20PAWERPRFESIONAL%20GATILLOEXCELL500%20ML.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 20
     },
     {
         "id": "7791290794924",
@@ -924,7 +1036,8 @@ const catalogoProductos = [
         "price": 1237,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LAVALOZA%20RINSORINSO750%20ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 27
     },
     {
         "id": "7805020000794",
@@ -933,7 +1046,8 @@ const catalogoProductos = [
         "price": 1280,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LIMPIADOR%20CREMA%20EXCELL%20EXCELL500%20ML.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 8
     },
     {
         "id": "7805020003085",
@@ -942,7 +1056,8 @@ const catalogoProductos = [
         "price": 1830,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/SUAVIZANTE%20PARA%20DILUIR%20EXCELL%20BOLSAEXCELL500%20ML.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "7702626204642",
@@ -951,7 +1066,8 @@ const catalogoProductos = [
         "price": 700,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/VANISH%20POLVO%20VANISH30%20GRAMOS.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 72
     },
     {
         "id": "7805000322038",
@@ -960,7 +1076,8 @@ const catalogoProductos = [
         "price": 2690,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LAVALOZA%20QUIXQUIX1.500%20ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "7730219099122",
@@ -969,7 +1086,8 @@ const catalogoProductos = [
         "price": 1290,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLAS%20HUMEDASBABYSECBABYSEC40UNIDADE.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 3
     },
     {
         "id": "8681554621020",
@@ -978,7 +1096,8 @@ const catalogoProductos = [
         "price": 1600,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLAS%20LIMPIAMUEBLES%20WINNEXSWINNEX80UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "7791274004711",
@@ -987,7 +1106,8 @@ const catalogoProductos = [
         "price": 2220,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CREMA%20CORPORAL%20HIDRATANTE%20ALGABOALGABO400%20ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 9
     },
     {
         "id": "25060955510150",
@@ -996,7 +1116,8 @@ const catalogoProductos = [
         "price": 2850,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/BOLSA%20DE%20BASURA%20ULTRA%20CLEAN%20105X150ULTRA%20CLEAN10%20UNIDADES.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 76
     },
     {
         "id": "7791274196508",
@@ -1005,7 +1126,8 @@ const catalogoProductos = [
         "price": 1370,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/SHAMPOO%20BABY%20ALGABOALGABO444%20ML.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 13
     },
     {
         "id": "7791274004391",
@@ -1014,7 +1136,8 @@ const catalogoProductos = [
         "price": 1500,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ACONDICIONADOR%20KIDS%20ALGABO%20ALGABO350%20ML.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "7804673120149",
@@ -1023,7 +1146,8 @@ const catalogoProductos = [
         "price": 680,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/BOLSA%20DE%20BASURA%20ULTRA%20CLEAN%2070X90ULTRA%20CLEAN10%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 60
     },
     {
         "id": "7791290794221",
@@ -1032,7 +1156,8 @@ const catalogoProductos = [
         "price": 1230,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/CIF%20CREMA%20MULTIUSOCIF750%20MGRAMOS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 46
     },
     {
         "id": "764451183605",
@@ -1040,8 +1165,9 @@ const catalogoProductos = [
         "marca": "",
         "price": 900,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/LIMPIAPISOS%20WINNEX%20WINNEX900%20ML.jpg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/ESPONJA%20ABRASIVA%20WINNEX%20X5WINNEX5%20UNIDADES.webp",
+        "flavors": [],
+        "stock": 79
     },
     {
         "id": "6932757126655",
@@ -1050,7 +1176,8 @@ const catalogoProductos = [
         "price": 1560,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLAS%20FEMENINAS%20CARE%20UP%20NOCHES%20TRANQUILASCARE%20UP16%20TOALLAS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "6932757154740",
@@ -1059,7 +1186,8 @@ const catalogoProductos = [
         "price": 1430,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLAS%20FEMENINAS%20ULTRAFINA%20CON%20ALASCARE%20UP16%20TOALLAS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "7804670490351",
@@ -1068,7 +1196,8 @@ const catalogoProductos = [
         "price": 900,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLAS%20HUMEDASCAREUPCAREUP45%20UNIDADES.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "7808304316574",
@@ -1077,7 +1206,8 @@ const catalogoProductos = [
         "price": 1240,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLAS%20HUMEDAS%20DESINFEGTANTES%20TEDDYTEDDY50%20UNIDADES.jpeg",
-        "flavors": []
+        "flavors": [],
+        "stock": 1
     },
     {
         "id": "659525893996",
@@ -1086,7 +1216,8 @@ const catalogoProductos = [
         "price": 950,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/COTONITO%20200%20UNID%20SOTF%20CLOUDSOTF%20CLOUD200%20UNIDADES.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 144
     },
     {
         "id": "659525893989",
@@ -1095,7 +1226,8 @@ const catalogoProductos = [
         "price": 690,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/COTONITO%20100%20UNID%20SOFT%20CLOUDSOFTCLOUD100%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 288
     },
     {
         "id": "659525894009",
@@ -1104,7 +1236,8 @@ const catalogoProductos = [
         "price": 24,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/COTONITOS%20300%20UNID%20SOFT%20CLOUDSOFTCLOUD300%20UNIDADES.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 240
     },
     {
         "id": "7805045000120",
@@ -1113,7 +1246,8 @@ const catalogoProductos = [
         "price": 9690,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/DETERGENTE%20LIQUIDO%20POPEYE%203%20LITROSPOPEYE3%20LITROS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 33
     },
     {
         "id": "8888021206135",
@@ -1122,7 +1256,8 @@ const catalogoProductos = [
         "price": 490,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PILAS%20AA%20ENERGIZERENERGIZER12.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "7805020311029",
@@ -1131,7 +1266,8 @@ const catalogoProductos = [
         "price": 760,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LIMPIAPISOS%20EXCELLEXCELL900%20ML.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 125
     },
     {
         "id": "257958000000",
@@ -1140,7 +1276,8 @@ const catalogoProductos = [
         "price": 1190,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PALA%20PLASTICAULTRA%20CLEANULTRACLEAN1.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "7804673122999",
@@ -1149,7 +1286,8 @@ const catalogoProductos = [
         "price": 1190,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/escobillon%20economico%20uiltra%20clean%20x48%20unidULTRA%20CLEAN1.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 1
     },
     {
         "id": "7804673120095",
@@ -1158,7 +1296,8 @@ const catalogoProductos = [
         "price": 1190,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/escoba%20economicaultracleanx24unidultra%20clena%201.jpeg",
-        "flavors": []
+        "flavors": [],
+        "stock": 11
     },
     {
         "id": "7805020004122",
@@ -1167,7 +1306,8 @@ const catalogoProductos = [
         "price": 1890,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/bolsa%20de%20basura90x120excellEXCELL10unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "7806810016353",
@@ -1176,7 +1316,8 @@ const catalogoProductos = [
         "price": 990,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/limpiapisosvirutex%20900%20ml.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 30
     },
     {
         "id": "7509546000985",
@@ -1185,7 +1326,8 @@ const catalogoProductos = [
         "price": 990,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/pasta%20dental%20cogatecolgate75%20ml.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 21
     },
     {
         "id": "7804670490405",
@@ -1194,7 +1336,8 @@ const catalogoProductos = [
         "price": 4820,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ENJUAGUE%20BUCAL%20FREHSFRESH%20UP1000%20ML.avif",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "7804670490023",
@@ -1203,7 +1346,8 @@ const catalogoProductos = [
         "price": 2790,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ENJUAGUE%20BUCAL%20FREHSFRESH%20UP1000%20ML.avif",
-        "flavors": []
+        "flavors": [],
+        "stock": 1
     },
     {
         "id": "7702031563327",
@@ -1212,7 +1356,8 @@ const catalogoProductos = [
         "price": 1290,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ENJUAGUE%20BUCAL%20LISTERINE%20LISTERINE180%20ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 7
     },
     {
         "id": "658325192483",
@@ -1221,7 +1366,8 @@ const catalogoProductos = [
         "price": 970,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/DESODORANTE%20AMBIENTAL%20BRILLEXBRILLEX400%20ML.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 8
     },
     {
         "id": "7790520992055",
@@ -1230,7 +1376,8 @@ const catalogoProductos = [
         "price": 2990,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/INSECTICIDA%20CASA%20JARDIN%20RAIDSC%20JHONSON271%20GRAMOS.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 3
     },
     {
         "id": "659525541491",
@@ -1239,7 +1386,8 @@ const catalogoProductos = [
         "price": 1230,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/LIMPIA%20VIDRIOS%20Y%20SUPERFICIES%20WINNEXWINNEX650%20ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 7
     },
     {
         "id": "7805020002200",
@@ -1248,7 +1396,18 @@ const catalogoProductos = [
         "price": 1831,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/REMOVEDOR%20REST%20A%20CLIN%20EXCELL500%20ML.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
+    },
+    {
+        "id": "7759185010542",
+        "name": "TOALLAS FEMENINAS NOCTURNA MAXI PRO LADYSOFT / unidad $1.490 / caja 8 unidades $11.920",
+        "marca": "LADYSOFT",
+        "price": 1490,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/TOALLAS%20FEMENINAS%20NOCTURNA%20MAXI%20PRO%20LADYSOFT10%20UNIDADES.webp",
+        "flavors": [],
+        "stock": 0
     },
     {
         "id": "7702026173654",
@@ -1257,7 +1416,18 @@ const catalogoProductos = [
         "price": 700,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLAS%20FEMENINAS%20ULTRA%20DELGADA%20X8NOSOTRAS8%20TOALLAS.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
+    },
+    {
+        "id": "7790250096122",
+        "name": "TOALLAS FEMENINAS ULTRADELGADA X16 LADYSOFT / unidad $1.550 / caja 12 unidades $18.600",
+        "marca": "LADYSOFT",
+        "price": 1550,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/TOALLAS%20FEMENINAS%20ULTRADELGADA%20X16LADYSOFT16%20TOALLAS.jpg",
+        "flavors": [],
+        "stock": 0
     },
     {
         "id": "7702026173494",
@@ -1266,7 +1436,8 @@ const catalogoProductos = [
         "price": 750,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLAS%20FEMENINAS%20NATURAL-V%20NORMAL%20CON%20ALASNOSOTRAS8%20TOALLAS.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 14
     },
     {
         "id": "7790250096061",
@@ -1275,7 +1446,8 @@ const catalogoProductos = [
         "price": 980,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20FEMENINA%20ULTRA%20DELGADA%20%20X8LADYSOFT8%20TOALLAS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 14
     },
     {
         "id": "7702026178642",
@@ -1284,7 +1456,8 @@ const catalogoProductos = [
         "price": 700,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLAS%20FEMENINAS%20PROTECCION-V%20DELGADA%20X6NOSOTRAS6%20TOALLAS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 12
     },
     {
         "id": "7806500962823",
@@ -1293,7 +1466,8 @@ const catalogoProductos = [
         "price": 810,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLAS%20FEMENINAS%20NOCTURNA%20ULTRA%20DELGADA%20X7LADYSOFT7%20TOALLAS.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 9
     },
     {
         "id": "7806500961024",
@@ -1302,7 +1476,8 @@ const catalogoProductos = [
         "price": 1280,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20FEMENINA%20PACK%20X16%20%20NORMALLADYSOFT16%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 13
     },
     {
         "id": "6976617700289",
@@ -1311,7 +1486,8 @@ const catalogoProductos = [
         "price": 950,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ESPONJA%20SUAVEOROPLATAULTRACLEAN3UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 350
     },
     {
         "id": "6976617700067",
@@ -1320,7 +1496,8 @@ const catalogoProductos = [
         "price": 300,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ESPONJA%20MAGICA%20X20ULTRA%20CLEAN2O%20UNIDADES.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 120
     },
     {
         "id": "6976617700128",
@@ -1329,7 +1506,8 @@ const catalogoProductos = [
         "price": 293,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ESPONJA%20CERO%20RAYAS%20PACKS%20X20ULTRA%20CLEAN20%20UNIDADES.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 200
     },
     {
         "id": "6976617700074",
@@ -1338,7 +1516,8 @@ const catalogoProductos = [
         "price": 375,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ESPONJA%20MAGICA%20X20ULTRA%20CLEAN2O%20UNIDADES.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 48
     },
     {
         "id": "6976617700265",
@@ -1347,7 +1526,8 @@ const catalogoProductos = [
         "price": 267,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ESPONJA%20ABRASIVA%20X3ULTRA%20CLEAN3%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 100
     },
     {
         "id": "6976617700135",
@@ -1356,7 +1536,8 @@ const catalogoProductos = [
         "price": 7080,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ESPONJA%20CERO%20RAYAS%20PACKS%20X20ULTRA%20CLEAN20%20UNIDADES.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 47
     },
     {
         "id": "7808304316475",
@@ -1365,7 +1546,8 @@ const catalogoProductos = [
         "price": 630,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/GUANTES%20AMARLLOS%20TEDDYTEDDY12%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 12
     },
     {
         "id": "976617700982",
@@ -1374,7 +1556,18 @@ const catalogoProductos = [
         "price": 990,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/GUANTES%20NITRILO%20ULTRA%20CLEANULTRA%20CLEAN1%20PAR.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 10
+    },
+    {
+        "id": "5808304316109",
+        "name": "PA�O DE COCINA MICROFIBRA TEDDY / unidad $450 / caja 25 unidades $11.250",
+        "marca": "TEDDY",
+        "price": 450,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/PA%C3%91O%20DE%20COCINA%20MICROFIBRATEDDY.jpg",
+        "flavors": [],
+        "stock": 0
     },
     {
         "id": "7790250096085",
@@ -1383,7 +1576,8 @@ const catalogoProductos = [
         "price": 700,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLAS%20FEMENINAS%20NORMAL%20X8LADYSOFT8%20TOALLAS.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 13
     },
     {
         "id": "6976617700272",
@@ -1392,7 +1586,8 @@ const catalogoProductos = [
         "price": 900,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ESPONJA%20GRILL%20XL%20X2%20ULTRA%20CLEAN2%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 400
     },
     {
         "id": "8698898464732",
@@ -1401,7 +1596,8 @@ const catalogoProductos = [
         "price": 580,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ESPONJA%20ABRASIVA%20WINNEX%20X5WINNEX5%20UNIDADES.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 9
     },
     {
         "id": "7808304315867",
@@ -1410,7 +1606,8 @@ const catalogoProductos = [
         "price": 216,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/virutills%20plateada%20tddy%20x25teddy25%20unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "7808304315850",
@@ -1419,7 +1616,8 @@ const catalogoProductos = [
         "price": 320,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/virutilladorada%20x25%20teddyteddy25%20unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "6976617700005",
@@ -1428,7 +1626,8 @@ const catalogoProductos = [
         "price": 450,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/esponja%20galvanizada%20x1%20ultra%20cleanultra%20clean1%20unidad.jpeg",
-        "flavors": []
+        "flavors": [],
+        "stock": 350
     },
     {
         "id": "98000000",
@@ -1437,7 +1636,8 @@ const catalogoProductos = [
         "price": 520,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/trapero%20de%20algodon%20teddyteddy25%20unidades.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "6933290400325",
@@ -1446,7 +1646,8 @@ const catalogoProductos = [
         "price": 564,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/jabonera%20economica10%20unidades.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 15
     },
     {
         "id": "6949744320880",
@@ -1455,7 +1656,8 @@ const catalogoProductos = [
         "price": 540,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/escobilla%20grande%20%20para%20ropa10%20unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 4
     },
     {
         "id": "9338312003497",
@@ -1464,7 +1666,8 @@ const catalogoProductos = [
         "price": 690,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/escobilla%20peque%C3%B1a%20x212%20paks%20x2.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "7805020002354",
@@ -1473,7 +1676,8 @@ const catalogoProductos = [
         "price": 250,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/esponja%20plateada%20safi%20texsafi%20tex1.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 20
     },
     {
         "id": "123",
@@ -1481,8 +1685,9 @@ const catalogoProductos = [
         "marca": "",
         "price": 890,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.08.39.jpeg",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/cepillo%20de%20ba%C3%B1o.jpeg",
+        "flavors": [],
+        "stock": 30
     },
     {
         "id": "6920155211110",
@@ -1491,7 +1696,8 @@ const catalogoProductos = [
         "price": 970,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/set%20deducha.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 15
     },
     {
         "id": "6926370691003",
@@ -1500,7 +1706,8 @@ const catalogoProductos = [
         "price": 74,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/esponja%20deluxe%20colores.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 20
     },
     {
         "id": "6957136500154",
@@ -1509,7 +1716,8 @@ const catalogoProductos = [
         "price": 850,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/pasta%20dental%20kids%20x12%2012%20unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "7758676001649",
@@ -1518,7 +1726,8 @@ const catalogoProductos = [
         "price": 1300,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20HUMEDA%20ADULTO%20ACTIVITY.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 7
     },
     {
         "id": "7806500731177",
@@ -1527,7 +1736,8 @@ const catalogoProductos = [
         "price": 690,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/toalla%20humeda%20babysec%20x45babysec45%20unidades.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 45
     },
     {
         "id": "7758676001670",
@@ -1536,7 +1746,18 @@ const catalogoProductos = [
         "price": 700,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/toalla%20humeda%20soft%20cloud%20animalitosouft%20cloud72%20unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 25
+    },
+    {
+        "id": "1253696457200",
+        "name": "velas peque�a winnex WINNEX / unidad $810 / caja 60 unidades $48.600",
+        "marca": "WINNEX",
+        "price": 810,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/velas%20peque%C3%B1a%20winnexWINNEX%204%20unidades.jpg",
+        "flavors": [],
+        "stock": 0
     },
     {
         "id": "12523338973",
@@ -1545,7 +1766,8 @@ const catalogoProductos = [
         "price": 85,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/vela%20grande%20winnexWINNEX4%20unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 4
     },
     {
         "id": "7805020003573",
@@ -1554,7 +1776,8 @@ const catalogoProductos = [
         "price": 3250,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/detergente%20para%20ropa%20negra1%20litro.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 10
     },
     {
         "id": "6957136500222",
@@ -1563,7 +1786,8 @@ const catalogoProductos = [
         "price": 890,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/pasta%20dental%20fresh%20up%20x6frehs%20up130%20gramos.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 24
     },
     {
         "id": "7758676001625",
@@ -1572,7 +1796,8 @@ const catalogoProductos = [
         "price": 1280,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/toalla%20humeda%20garffieldsoft%20wipes80%20unidaes.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 16
     },
     {
         "id": "7758676001151",
@@ -1581,7 +1806,8 @@ const catalogoProductos = [
         "price": 2100,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/toalla%20cilicona%20wiinex%20carsWINNEX80%20unidaes.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 6
     },
     {
         "id": "7805020002507",
@@ -1590,7 +1816,8 @@ const catalogoProductos = [
         "price": 840,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/antigrasa%20doypackEXCELL%20500%20ml.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 13
     },
     {
         "id": "7805020002491",
@@ -1599,7 +1826,8 @@ const catalogoProductos = [
         "price": 840,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/multiusos%20limpiavidrios%20excellEXCELL500%20ml.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 14
     },
     {
         "id": "7805020002385",
@@ -1608,7 +1836,8 @@ const catalogoProductos = [
         "price": 1830,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/pastillas%20para%20estanque%20x3EXCELL3%20unidaes.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "7808304315966",
@@ -1617,7 +1846,8 @@ const catalogoProductos = [
         "price": 780,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/pa%C3%B1o%20esponja%20premiun%20teddyteddy3%20unidades.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 20
     },
     {
         "id": "7806500406860",
@@ -1626,7 +1856,8 @@ const catalogoProductos = [
         "price": 2063,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/nova%20ultra%20gigante%2070nova70%20metros.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 8
     },
     {
         "id": "7806500508335",
@@ -1634,8 +1865,9 @@ const catalogoProductos = [
         "marca": "noble",
         "price": 1111,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/stock%20productos/02030712-7b62-4a3c-b350-fc34396cc9ff.f0ff5992f84c70d616bc6addef32fd2d.avif",
-        "flavors": []
+        "image": "nuevo catalogo/stock productos/confort%20noble%2022metrosnoblepacks%20x6.webp",
+        "flavors": [],
+        "stock": 434
     },
     {
         "id": "7806500509820",
@@ -1644,7 +1876,18 @@ const catalogoProductos = [
         "price": 2186,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/confort%20elite%2050%20metroselitepacks%20x2.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 18
+    },
+    {
+        "id": "7806500507116",
+        "name": "confort confort x50 metros confort / unidad $2.031 / caja 8 unidades $16.250",
+        "marca": "confort",
+        "price": 2031,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/confort%20confort%20x50%20metrosconfortpacks%20x2.webp",
+        "flavors": [],
+        "stock": 0
     },
     {
         "id": "7804653341809",
@@ -1653,7 +1896,8 @@ const catalogoProductos = [
         "price": 1061,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/confort%20suan%2020%20metros%20suanpacks%20x6.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 34
     },
     {
         "id": "7804670070478",
@@ -1662,7 +1906,8 @@ const catalogoProductos = [
         "price": 1061,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/conforte%20ovella%2022%20metros%20ovellapacks%20x6.jpg",
-        "flavors": []
+        "flavors": [],
+        "stock": 2
     },
     {
         "id": "7806500508533",
@@ -1671,7 +1916,18 @@ const catalogoProductos = [
         "price": 1236,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/confort%20noble%2022metrosnoblepacks%20x6.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 30
+    },
+    {
+        "id": "7804670070355",
+        "name": "conforte ovella de 50 metros ovella / unidad $1.686 / caja 8 unidades $13.490",
+        "marca": "ovella",
+        "price": 1686,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/conforte%20ovella%2022%20metros%20ovellapacks%20x6.jpg",
+        "flavors": [],
+        "stock": 0
     },
     {
         "id": "7804653341601",
@@ -1680,7 +1936,18 @@ const catalogoProductos = [
         "price": 1711,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/nova%20suan%20ultra%20x70suan70%20metros.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 13
+    },
+    {
+        "id": "7804670070461",
+        "name": "nova ovella roja xl ovella / unidad $1.250 / caja 6 unidades $7.500",
+        "marca": "ovella",
+        "price": 1250,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/nova%20ovella%20roja%20xlovella100%20metros.webp",
+        "flavors": [],
+        "stock": 0
     },
     {
         "id": "7806500241201",
@@ -1689,7 +1956,8 @@ const catalogoProductos = [
         "price": 1050,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/servilleta%20nova%20pack%20familiarnova%20300%20unidaes.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 5
     },
     {
         "id": "7806500401339",
@@ -1698,7 +1966,18 @@ const catalogoProductos = [
         "price": 1711,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/nova%20clasica%20giganrte%20x70nova%2070%20metros.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 189
+    },
+    {
+        "id": "7806500406884",
+        "name": "nova clasica x3 nova / unidad $811 / caja 8 unidades $6.490",
+        "marca": "nova",
+        "price": 811,
+        "category": "TODOS",
+        "image": "nuevo catalogo/stock productos/nova%20clasica%20giganrte%20x70nova%2070%20metros.webp",
+        "flavors": [],
+        "stock": 0
     },
     {
         "id": "7804670070522",
@@ -1707,7 +1986,8 @@ const catalogoProductos = [
         "price": 2282,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/nova%20ovella%20gigante%20de%20100%20metrosovella100%20metros.avif",
-        "flavors": []
+        "flavors": [],
+        "stock": 22
     },
     {
         "id": "7806500752202",
@@ -1716,7 +1996,8 @@ const catalogoProductos = [
         "price": 2563,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/pa%C3%B1al%20babysec%20babysec14%20unidades.png",
-        "flavors": []
+        "flavors": [],
+        "stock": 56
     },
     {
         "id": "7804670490467",
@@ -1725,7 +2006,8 @@ const catalogoProductos = [
         "price": 9500,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/pa%C3%B1al%20para%20adulto%20care%20upx16careup16%20unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 19
     },
     {
         "id": "7804670490436",
@@ -1734,7 +2016,8 @@ const catalogoProductos = [
         "price": 11990,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/pa%C3%B1al%20para%20adulto%20caree%20up%20x%2020care%20up20%20unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 10
     },
     {
         "id": "7804670490474",
@@ -1743,7 +2026,8 @@ const catalogoProductos = [
         "price": 536,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/sabanilla%20care%20up%20x8care%20up8%20unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 8
     },
     {
         "id": "7804670490481",
@@ -1752,7 +2036,8 @@ const catalogoProductos = [
         "price": 140,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/aposito%20multiuso%20care%20upcare%20up20unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 10
     },
     {
         "id": "12345",
@@ -1761,228 +2046,12 @@ const catalogoProductos = [
         "price": 54000,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/pa%C3%B1os%20amarillos360%20unidades.webp",
-        "flavors": []
+        "flavors": [],
+        "stock": 11
     }
-];
-
-const sliderImages = [
-    "02030712-7b62-4a3c-b350-fc34396cc9ff.f0ff5992f84c70d616bc6addef32fd2d.avif",
-    "ABRILLANTADOR PISO FLOTANTE EXCELL 900 CC.webp",
-    "ACONDICIONADOR KIDS ALGABO ALGABO350 ML.png",
-    "antigrasa doypackEXCELL 500 ml.jpg",
-    "ANTIGRASA GATILLO EXCELL 500ML.png",
-    "antigrasa gatillo winnex.jpg",
-    "APOSITO COTIDIAN COTIDIAN.png",
-    "aposito multiuso care upcare up20unidades.webp",
-    "AROMATIZANTE DE TELAS VAIS ALGABO 500ML.png",
-    "bolsa 100x120.webp",
-    "bolsa 90 x120 excel.webp",
-    "bolsa 90x120.webp",
-    "BOLSA DE BASURA 55X50 BLANCAULTRA CLEAN 20 UNIDADES.webp",
-    "BOLSA DE BASURA 70X 90EXCELL10 UNIDADES.webp",
-    "BOLSA DE BASURA 80 X 110 excel.jpg",
-    "BOLSA DE BASURA 80X110WINNEX.avif",
-    "BOLSA DE BASURA ULTRA CLEAN 105X150ULTRA CLEAN10 UNIDADES.jpg",
-    "BOLSA DE BASURA ULTRA CLEAN 70X90ULTRA CLEAN10 UNIDADES.webp",
-    "bolsa de basura90x120excellEXCELL10unidades.webp",
-    "BRIKS LAVALOZAS CONSENTRADOBRIKS2 LITROS.jpg",
-    "CEPILLO AQUAFRESH PACK X2 AQUAFRESH.jpg",
-    "cepillo de baño.jpeg",
-    "CEPILLO DE DIENTE NIÑO  PACK X2 FAMILY SET.webp",
-    "CEPILLO DE DIENTE NIÑO FRESH UP.webp",
-    "CEPILLO DE DIENTES ADULTO MEDIO FRESH UP.webp",
-    "CEPILLO DE DIENTES ADULTO SUAVE FRESH UP.webp",
-    "CEPILLO DE DIENTES MEDIUM AQUAFRESH.jpg",
-    "CERA AUTOBRILLO [ceramicos y baldosas ] EXCELL 900ML.png",
-    "CERA PINTURA ROJA AYEAYE1 LITRO.jpg",
-    "CERA PINTURA ROJA AYEAYE5 LITROS.png",
-    "CERA PINTURA ROJA EXCELL 900CC.jpg",
-    "CIF CREMA MULTIUSOCIF750 MGRAMOS.webp",
-    "CLORO EN TABLETAS TEDDYTEDDY1 KG.webp",
-    "CLORO GEL EXCELLEXCELL900 ML.jpg",
-    "confort confort x50 metrosconfortpacks x2.webp",
-    "confort elite 50 metroselitepacks x2.png",
-    "confort noble 22metrosnoblepacks x6.webp",
-    "confort noble de 23 metrosnoblepacks x3.webp",
-    "confort suan 20 metros suanpacks x6.webp",
-    "conforte ovella 22 metros ovellapacks x6.jpg",
-    "conforte ovella de 50 metrosovellapacks x4.webp",
-    "confortovella 22metrosx6.webp",
-    "COTONITO 100 UNID SOFT CLOUDSOFTCLOUD100 UNIDADES.webp",
-    "COTONITO 200 UNID SOTF CLOUDSOTF CLOUD200 UNIDADES.jpg",
-    "COTONITOS 300 UNID SOFT CLOUDSOFTCLOUD300 UNIDADES.jpg",
-    "CREMA CORPORAL HIDRATANTE ALGABOALGABO400 ML.webp",
-    "d6bd19d8-b09d-4692-9199-ba076a5c3dcc.c35506bc00ff590a099560dabbe5f1a6.avif",
-    "DESENGRASANTE AYE GATILLOAYE1 LITRO.webp",
-    "DESENGRASANTE AYEAYE1 LITRO.jpg",
-    "DESENGRASANTE AYEAYE5 LITROS.webp",
-    "DESODORANTE AMBEINTAL WINNEXSWINNEXS250 ML.webp",
-    "DESODORANTE AMBIENTAL AROMAROM225 GRAMOS.png",
-    "DESODORANTE AMBIENTAL BRILLEXBRILLEX400 ML.png",
-    "DESODORANTE AMBIENTAL WINNEXSWINNEX400 ML.png",
-    "DESODORANTE DE INODORO ULTRA CLEAN 40GR.jpg",
-    "DESODORANTE PARA INODORO WINNEX 40 GRAMOS.png",
-    "DETERGENTE BRIKSBRIKS5 LITROS.webp",
-    "DETERGENTE ECONOMICO AYEAYE5 LITROS.jpg",
-    "DETERGENTE EN POLVO WINNEX.png",
-    "DETERGENTE LIQUIDO FUZOL 3LITROS.webp",
-    "DETERGENTE LIQUIDO POPEYE 3 LITROSPOPEYE3 LITROS.webp",
-    "detergente para ropa negra1 litro.jpg",
-    "DETERGENTE PERLADO AYEAYE5 LITROS.webp",
-    "DETERGENTE POLVO OMO CON VICARBONATO OMO 800ML.webp",
-    "DISCOS ACTIVOS EXCELLEXCELL38 ML.jpg",
-    "D_NQ_NP_2X_928607-MLC76270852514_052024-F.webp",
-    "ENJUAGUE BUCAL FREHSFRESH UP1000 ML.avif",
-    "ENJUAGUE BUCAL FRESH UPFRESH UP500 ML.jpg",
-    "ENJUAGUE BUCAL LISTERINE LISTERINE180 ML.webp",
-    "escoba economicaultracleanx24unidultra clena 1.jpeg",
-    "escobilla grande  para ropa10 unidades.webp",
-    "escobilla pequeña x212 paks x2.jpg",
-    "escobillon economico uiltra clean x48 unidULTRA CLEAN1.png",
-    "ESPONJA ABRASIVA WINNEX X5WINNEX5 UNIDADES.webp",
-    "ESPONJA ABRASIVA X3ULTRA CLEAN3 UNIDADES.webp",
-    "ESPONJA CERO RAYAS PACKS X20ULTRA CLEAN20 UNIDADES.jpg",
-    "ESPONJA CERO RAYAS PACKS X3ULTRA CLEAN3 UNIDADES.jpeg",
-    "esponja deluxe colores.webp",
-    "esponja galvanizada x1 ultra cleanultra clean1 unidad.jpeg",
-    "ESPONJA GRILL XL X2 ULTRA CLEAN2 UNIDADES.webp",
-    "ESPONJA MAGICA X20ULTRA CLEAN2O UNIDADES.jpg",
-    "ESPONJA MAGICA X3ULTRA CLEAN3 UNIDADES.png",
-    "esponja plateada safi texsafi tex1.jpg",
-    "ESPONJA SUAVEOROPLATAULTRACLEAN3UNIDADES.webp",
-    "espuma afeitar algabo.webp",
-    "FILMS PLASTICO TRANSPARENTE HOME KING 70 METROS.webp",
-    "GEL AROMATIZANTE ULTRA CLEAN ULTRA CLEAN 212GRAMOS.png",
-    "GUANTES AMARLLOS TEDDYTEDDY12 UNIDADES.webp",
-    "GUANTES NITRILO ULTRA CLEANULTRA CLEAN1 PAR.webp",
-    "INSECTICIDA CASA JARDIN RAIDSC JHONSON271 GRAMOS.jpg",
-    "jabonera economica10 unidades.png",
-    "JAVON LIQUIDO VIDABELL 750ML.png",
-    "LAVALOZA DESENGRASANTE EXCELLEXCELL750 CC.jpg",
-    "LAVALOZA QUIXQUIX1.500 ML.webp",
-    "LAVALOZA RINSORINSO750 ML.webp",
-    "LAVALOZAS DESENGRASANTE BOLSAEXCELL1 LITRO.webp",
-    "LIMPIA VIDRIOS Y SUPERFICIES WINNEXWINNEX650 ML.webp",
-    "LIMPIADOE PORCELANATO Y VINILICOS EXCELL 900ML.jpg",
-    "LIMPIADOR CREMA EXCELL EXCELL500 ML.png",
-    "LIMPIADOR DE BAÑO GATILLO EXCELL 500ML.webp",
-    "LIMPIADOR DE BAÑO ULTRA PAWERPRFESIONAL GATILLOEXCELL500 ML.jpg",
-    "LIMPIADOR DE PISO FLOTANTE EXCELL 900ML.webp",
-    "LIMPIADOR EN CREMA EXCELLEXCELL250 ML.webp",
-    "LIMPIADOR EN CREMA TEDDYTEDDY 500 ML.webp",
-    "LIMPIADOR EN CREMA WINNEX WINNEX 750 GRAMOS.webp",
-    "LIMPIAPISO AYE AYE2 LITROS.png",
-    "LIMPIAPISO AYE AYE900 ML.webp",
-    "LIMPIAPISOS EXCELLEXCELL900 ML.jpg",
-    "LIMPIAPISOS WINNEX WINNEX900 ML.jpg",
-    "limpiapisosvirutex 900 ml.webp",
-    "LUSTRA MUEBLES  EXCELL 500 CC.jpg",
-    "LUSTRA MUEBLES LIQUIDO GATILLO EXCELL 500ML.webp",
-    "multiusos limpiavidrios excellEXCELL500 ml.jpg",
-    "nova clasica giganrte x70nova 70 metros.webp",
-    "nova clasica x3nova packs x3.jpg",
-    "nova ovella gigante de 100 metrosovella100 metros.avif",
-    "nova ovella roja xlovella100 metros.webp",
-    "nova suan ultra x70suan70 metros.webp",
-    "nova ultra gigante 70nova70 metros.webp",
-    "OMO PARA DILUIR PIEL SENSIBLE  OMO 500ML.jpg",
-    "PACK PROMOCIONAL [RENOVADOR+CERA] TEDDY 500ML.webp",
-    "PALA PLASTICAULTRA CLEANULTRACLEAN1.webp",
-    "PASTA DENTAL  REGULAR PACK 3 FRESH  UP.jpg",
-    "pasta dental cogatecolgate75 ml.webp",
-    "pasta dental fresh up x6frehs up130 gramos.webp",
-    "pasta dental kids x12 12 unidades.webp",
-    "PASTA DENTAL PACK 3 PEPSIODENT.webp",
-    "PASTA DENTAL PEPSODENT INTEGRAL 18PEPSODENT90 GRAMOS.webp",
-    "PASTA DENTAL PEPSODENT PACK 3X2PEPSODENT 90 GRAMOS.webp",
-    "PASTA DENTAL PEPSODENT TRIPLE+PEPSODENT90 GRAMOS.webp",
-    "PASTA DENTAL TRIPLE ACCION PEPSODENT.jpg",
-    "PASTA DETAL WHITENING PACK 3 FRESH UP.jpg",
-    "PASTAL DENTAL TRIPLE ACCION COLGATE.jpg",
-    "PASTAS DENTAL  INTEGRAL 18 PEPSODENT.jpg",
-    "PASTILLA DE CLORO GRANDE TEDDY1 KG.webp",
-    "pastillas lysoform.webp",
-    "pastillas para estanque x3EXCELL3 unidaes.webp",
-    "pañal babysec babysec14 unidades.png",
-    "pañal para adulto care upx16careup16 unidades.webp",
-    "pañal para adulto caree up x 20care up20 unidades.webp",
-    "PAÑO  MICROFIBRA TEDDYTEDDY25.jpg",
-    "PAÑO DE COCINA MICROFIBRATEDDY.jpg",
-    "paño esponja premiun teddyteddy3 unidades.png",
-    "paños amarillos360 unidades.webp",
-    "PILAS AA ENERGIZERENERGIZER12.webp",
-    "QUITA GRASA PROFESIONAL GATILLOEXCELL500 ML.webp",
-    "QUITAESMALTE FORTALECEDOR ALGABO 100 ML.png",
-    "QUITAMANCHAS 2EN 1 EXCELL 960ML.jpg",
-    "QUITAMANCHAS GATILLOEXCELL500 ML.webp",
-    "removedor de litro.jpeg",
-    "REMOVEDOR DE MANCHAS POLVO WINNEX 500g.webp",
-    "REMOVEDOR REST A CLIN EXCELL500 ML.webp",
-    "RENOVADOR DE NEUMATICO  TEDDY 500ML.webp",
-    "renovador kit.webp",
-    "REPUESTO AROMATIZANTE ULTRA CLEAN ULTRA CLEAN 40ML.webp",
-    "sabanilla care up x8care up8 unidades.webp",
-    "serviletaswan.png",
-    "servilleta nova pack familiarnova 300 unidaes.webp",
-    "set deducha.webp",
-    "SHAMPOO ALFOMBRA Y TAPICES EXCELL.jpg",
-    "SHAMPOO BABY ALGABOALGABO444 ML.jpg",
-    "SHAMPOO BABY ALGABOALGABO444 ML.webp",
-    "SHAMPOOALGABO  930 ML.webp",
-    "SUAVIZANTE PARA DILUIR EXCELL BOLSAEXCELL500 ML.jpg",
-    "talco para pies algabo.webp",
-    "TALCO PARA PIES BOLSA  ALGABO 200 GRAMOS.webp",
-    "tapero clasico humedo.webp",
-    "TELA  ANTIBACTERIAL  ULTRA CLEAN  30 UNIDADES.webp",
-    "toalla cilicona wiinex carsWINNEX80 unidaes.png",
-    "TOALLA FEMENINA PACK X16  NORMALLADYSOFT16 UNIDADES.webp",
-    "TOALLA FEMENINA ULTRA DELGADA  X8LADYSOFT8 TOALLAS.webp",
-    "TOALLA HUMEDA  72 UNIDADES SOFT CLOUD.webp",
-    "TOALLA HUMEDA 80 UNDS PACK 2 OVELLA.jpg",
-    "TOALLA HUMEDA 80 UNIDADES OVELLA.jpg",
-    "TOALLA HUMEDA 80 UNIDADES SOFT WIPES.webp",
-    "TOALLA HUMEDA ADULTO ACTIVITY.webp",
-    "toalla humeda adulto activity12 unidades.webp",
-    "toalla humeda babysec x45babysec45 unidades.png",
-    "toalla humeda garffieldsoft wipes80 unidaes.webp",
-    "toalla humeda soft cloud animalitosouft cloud72 unidades.webp",
-    "TOALLA HUMEDAD 45 UNIDADES BABYSEC.webp",
-    "TOALLA PAPEL LIKE ULTRA TERSUS.webp",
-    "TOALLAS FEMENINAS CARE UP NOCHES TRANQUILASCARE UP16 TOALLAS.webp",
-    "TOALLAS FEMENINAS NATURAL-V NORMAL CON ALASNOSOTRAS8 TOALLAS.png",
-    "TOALLAS FEMENINAS NOCTURNA MAXI PRO LADYSOFT10 UNIDADES.webp",
-    "TOALLAS FEMENINAS NOCTURNA ULTRA DELGADA X7LADYSOFT7 TOALLAS.webp",
-    "TOALLAS FEMENINAS NORMAL X8LADYSOFT8 TOALLAS.png",
-    "TOALLAS FEMENINAS PROTECCION-V DELGADA X6NOSOTRAS6 TOALLAS.webp",
-    "TOALLAS FEMENINAS ULTRA DELGADA X8NOSOTRAS8 TOALLAS.jpg",
-    "TOALLAS FEMENINAS ULTRADELGADA X16LADYSOFT16 TOALLAS.jpg",
-    "TOALLAS FEMENINAS ULTRAFINA CON ALASCARE UP16 TOALLAS.webp",
-    "TOALLAS HUMEDAS DESINFEGTANTES TEDDYTEDDY50 UNIDADES.jpeg",
-    "TOALLAS HUMEDASBABYSECBABYSEC40UNIDADE.webp",
-    "TOALLAS HUMEDASCAREUPCAREUP45 UNIDADES.jpg",
-    "TOALLAS LIMPIAMUEBLES WINNEXSWINNEX80UNIDADES.webp",
-    "trapero de algodon teddyteddy25 unidades.jpg",
-    "TRAPERO HUMEDO  HABRILLANTADOR MAS LIMPIADOR  10 UNIDADES  EXCELL.jpg",
-    "TRAPERO HUMEDO 10 UNIDADES TOLL.webp",
-    "TRAPERO HUMEDO 12 UNIDADES WINNEX.webp",
-    "TRAPERO HUMEDO 12MAS1 UNIDADES  ULTRA CLEAN.jpg",
-    "TRAPERO HUMEDO 2 EN 1 [LIMPIADOR +ABRILLANTADOR ]EXCELL10 UNIDADES.jpg",
-    "TRAPERO HUMEDO ABRILLANTADOR  10 UNIDADES  EXCELL.jpg",
-    "TRAPERO HUMEDO ABRILLANTADOR PISO FLOTANTE EXCELLEXCELL10 UNIDADES.webp",
-    "TRAPERO HUMEDO CLASICO 10 UNIDADES EXCELL.webp",
-    "TRAPERO HUMEDO PISO FLOTANTE 10 UNIDADES EXCELL.webp",
-    "TRAPERO HUMEDO PISO FLOTANTE DESINFECTANTE EXCELLEXCELL10 UNIDADES.webp",
-    "VALDE TRAPEADOR ULTRA CLEAN.jpg",
-    "VANISH POLVO VANISH30 GRAMOS.jpg",
-    "vela grande winnexWINNEX4 unidades.webp",
-    "vela grande winnexWINNEX4 unidades_files",
-    "velas pequeña winnexWINNEX 4 unidades.jpg",
-    "virutilladorada x25 teddyteddy25 unidades.webp",
-    "virutills plateada tddy x25teddy25 unidades.webp"
 ];
 
 // Hacer el catálogo accesible globalmente
 if (typeof window !== 'undefined') {
     window.catalogoProductos = catalogoProductos;
-    window.sliderImages = sliderImages;
 }

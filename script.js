@@ -35,26 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const track = document.getElementById('sliderTrack');
     
-    // Cargar dinámicamente las imágenes de productos de la carpeta stock productos si existen
-    if (window.sliderImages && Array.isArray(window.sliderImages)) {
-        window.sliderImages.forEach(imgName => {
-            // Ignorar logos o archivos no compatibles
-            if (!imgName.match(/\.(jpe?g|png|webp|gif)$/i)) return;
-            
-            const slideDiv = document.createElement('div');
-            slideDiv.className = 'slide';
-            
-            const img = document.createElement('img');
-            img.src = `nuevo catalogo/stock productos/${encodeURIComponent(imgName)}`;
-            img.alt = imgName;
-            img.style.width = '100%';
-            img.style.height = '100%';
-            img.style.objectFit = 'cover';
-            
-            slideDiv.appendChild(img);
-            track.appendChild(slideDiv);
-        });
-    }
+
 
     const slides = Array.from(track.children);
     const nextBtn = document.getElementById('nextBtn');
@@ -289,16 +270,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const oldPrice = prod.price ? Math.floor(prod.price * 1.3) : 0;
             const savings = oldPrice - (prod.price || 0);
 
+            const isOutOfStock = prod.stock !== undefined && prod.stock === 0;
+
             html += `
-            <div class="product-card falabella-style" data-id="${prod.id}">
-                <div class="product-image-container">
+            <div class="product-card falabella-style ${isOutOfStock ? 'out-of-stock-card' : ''}" data-id="${prod.id}" style="${isOutOfStock ? 'position: relative;' : ''}">
+                <div class="product-image-container" style="${isOutOfStock ? 'opacity: 0.55;' : ''}">
                     <img class="mini-logo-overlay" src="nuevo%20catalogo/logo.jpg.jpeg" alt="Logo">
                     <img src="${imageStr}" alt="${nameStr}">
+                    ${isOutOfStock ? `
+                    <div class="out-of-stock-badge-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(220, 53, 69, 0.9); color: white; padding: 6px 12px; font-weight: bold; border-radius: 4px; font-size: 13px; text-transform: uppercase; z-index: 2; letter-spacing: 1px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border: 1px solid white;">Agotado</div>
+                    ` : ''}
                 </div>
                 <div class="product-info-container">
-                    ${savings > 0 ? '<div class="rebaja-badge"><i class="fa-solid fa-arrow-down"></i> Rebaja</div>' : ''}
+                    ${savings > 0 && !isOutOfStock ? '<div class="rebaja-badge"><i class="fa-solid fa-arrow-down"></i> Rebaja</div>' : ''}
                     <h4 class="brand-title">${prod.category || 'VARIOS'}</h4>
-                    <h3 class="product-title">${nameStr}</h3>
+                    <h3 class="product-title" style="${isOutOfStock ? 'color: #888;' : ''}">${nameStr}</h3>
                     <div class="rating-container">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i>
@@ -307,9 +293,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="#" class="rating-reviews">${reviews} opiniones</a>
                     </div>
                     
-                    <div class="price-container">
+                    <div class="price-container" style="${isOutOfStock ? 'opacity: 0.7;' : ''}">
                         <div class="main-price">$${priceStr}</div>
-                        ${savings > 0 ? `
+                        ${savings > 0 && !isOutOfStock ? `
                         <div class="old-price-row">
                             <span class="old-price">$${oldPrice.toLocaleString('es-CL')}</span>
                             <span class="savings-badge">Ahorra $${savings.toLocaleString('es-CL')}</span>
@@ -321,15 +307,19 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
                             <div style="display: flex; gap: 10px; align-items: center;">
                                 <label style="font-size: 13px; color: #555; font-weight: 600;">CANT:</label>
-                                <input type="number" class="product-qty" min="1" max="50" value="1" style="width: 60px;">
+                                <input type="number" class="product-qty" min="1" max="50" value="1" style="width: 60px;" ${isOutOfStock ? 'disabled' : ''}>
                             </div>
                             ${prod.flavors && prod.flavors.length > 0 ? `
-                            <select class="product-flavor" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; font-size: 13px;">
+                            <select class="product-flavor" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; font-size: 13px;" ${isOutOfStock ? 'disabled' : ''}>
                                 ${prod.flavors.map(f => `<option value="${f}">${f}</option>`).join('')}
                             </select>
                             ` : ''}
                         </div>
+                        ${isOutOfStock ? `
+                        <button class="add-to-cart-btn fb-blue-btn out-of-stock-btn" disabled style="background-color: #777 !important; border-color: #777 !important; cursor: not-allowed; box-shadow: none;">Agotado</button>
+                        ` : `
                         <button class="add-to-cart-btn fb-blue-btn">Agregar al carro</button>
+                        `}
                     </div>
                 </div>
             </div>`;
