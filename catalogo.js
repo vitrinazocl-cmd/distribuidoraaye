@@ -45,7 +45,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 1950,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20%20HABRILLANTADOR%20MAS%20LIMPIADOR%20%2010%20UNIDADES%20%20EXCELL.jpg",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.07.57%20(1).jpeg",
         "flavors": [],
         "stock": 1000
     },
@@ -55,7 +55,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 3180,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20%20HABRILLANTADOR%20MAS%20LIMPIADOR%20%2010%20UNIDADES%20%20EXCELL.jpg",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.07.57%20(1).jpeg",
         "flavors": [],
         "stock": 1000
     },
@@ -235,7 +235,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 1300,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/toalla%20humeda%20adulto%20activity12%20unidades.webp",
+        "image": "nuevo catalogo/stock productos/TOALLA%20HUMEDA%20ADULTO%20ACTIVITY.webp",
         "flavors": [],
         "stock": 1000
     },
@@ -375,7 +375,7 @@ const catalogoProductos = [
         "marca": "FUZOL",
         "price": 5490,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DETERGENTE%20LIQUIDO%20FUZOL%203LITROS.webp",
+        "image": "nuevo%20catalogo/stock%20productos/d6bd19d8-b09d-4692-9199-ba076a5c3dcc.c35506bc00ff590a099560dabbe5f1a6.avif",
         "flavors": [],
         "stock": 2
     },
@@ -785,7 +785,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 990,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/LIMPIAPISO%20AYE%20AYE2%20LITROS.png",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.34%20(1).jpeg",
         "flavors": [],
         "stock": 25
     },
@@ -795,7 +795,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 890,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DESENGRASANTE%20AYE%20GATILLOAYE1%20LITRO.webp",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.13.08.jpeg",
         "flavors": [],
         "stock": 2
     },
@@ -805,7 +805,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 520,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/LIMPIAPISO%20AYE%20AYE2%20LITROS.png",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.34%20(1).jpeg",
         "flavors": [],
         "stock": 19
     },
@@ -815,7 +815,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 1490,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DESENGRASANTE%20AYE%20GATILLOAYE1%20LITRO.webp",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.13.08.jpeg",
         "flavors": [],
         "stock": 5
     },
@@ -835,7 +835,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 1290,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/CERA%20PINTURA%20ROJA%20AYEAYE5%20LITROS.png",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.05.52%20(3).jpeg",
         "flavors": [],
         "stock": 2
     },
@@ -845,7 +845,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 890,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/CERA%20PINTURA%20ROJA%20AYEAYE1%20LITRO.jpg",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.05.52%20(3).jpeg",
         "flavors": [],
         "stock": 7
     },
@@ -855,7 +855,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 2890,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DESENGRASANTE%20AYE%20GATILLOAYE1%20LITRO.webp",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.13.08.jpeg",
         "flavors": [],
         "stock": 53
     },
@@ -865,7 +865,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 1590,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DETERGENTE%20PERLADO%20AYEAYE5%20LITROS.webp",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.57%20(4).jpeg",
         "flavors": [],
         "stock": 107
     },
@@ -885,7 +885,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 1490,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DETERGENTE%20ECONOMICO%20AYEAYE5%20LITROS.jpg",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.58%20(1).jpeg",
         "flavors": [],
         "stock": 118
     },
@@ -1165,7 +1165,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 900,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/ESPONJA%20ABRASIVA%20WINNEX%20X5WINNEX5%20UNIDADES.webp",
+        "image": "nuevo catalogo/stock productos/LIMPIAPISOS%20WINNEX%20WINNEX900%20ML.jpg",
         "flavors": [],
         "stock": 79
     },
@@ -1685,7 +1685,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 890,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/cepillo%20de%20ba%C3%B1o.jpeg",
+        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.08.39.jpeg",
         "flavors": [],
         "stock": 30
     },
@@ -1865,7 +1865,7 @@ const catalogoProductos = [
         "marca": "noble",
         "price": 1111,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/confort%20noble%2022metrosnoblepacks%20x6.webp",
+        "image": "nuevo%20catalogo/stock%20productos/02030712-7b62-4a3c-b350-fc34396cc9ff.f0ff5992f84c70d616bc6addef32fd2d.avif",
         "flavors": [],
         "stock": 434
     },
@@ -1975,7 +1975,7 @@ const catalogoProductos = [
         "marca": "nova",
         "price": 811,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/nova%20clasica%20giganrte%20x70nova%2070%20metros.webp",
+        "image": "nuevo%20catalogo/stock%20productos/D_NQ_NP_2X_928607-MLC76270852514_052024-F.webp",
         "flavors": [],
         "stock": 0
     },
