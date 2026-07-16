@@ -371,36 +371,6 @@ app.post('/api/login', (req, res) => {
     }
 });
 
-// Endpoint para simular un pago exitoso (sin tarjeta/Transbank) y probar WhatsApp
-app.post('/api/test-whatsapp-trigger', async (req, res) => {
-    try {
-        const { cliente, carrito, total } = req.body;
-        const buyOrder = "TEST-MOCK-" + Math.floor(Math.random() * 100000);
-        
-        const nuevaVenta = {
-            id: buyOrder,
-            date: new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' }),
-            isoDate: new Date().toISOString(),
-            customerName: cliente?.nombre || 'Cliente de Prueba',
-            customerAddress: cliente?.direccion || 'Dirección de Prueba',
-            items: carrito || [],
-            total: total || 0,
-            estado: 'pendiente'
-        };
-
-        // Guardar en almacenamiento
-        await saveVenta(nuevaVenta);
-        
-        // Enviar notificación a WhatsApp
-        await whatsappService.enviarNotificacionPedido(nuevaVenta);
-
-        res.json({ success: true, orden: buyOrder });
-    } catch (error) {
-        console.error("Error en test-whatsapp-trigger:", error);
-        res.status(500).json({ error: error.message });
-    }
-});
-
 // Endpoint para obtener solo pedidos pendientes
 app.get('/api/pedidos-pendientes', async (req, res) => {
     try {
