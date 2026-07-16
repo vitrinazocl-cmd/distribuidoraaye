@@ -2,5 +2,7 @@
   "WEBPAY_ENV": "production",
   "WEBPAY_COMMERCE_CODE": "597053086562",
   "WEBPAY_API_KEY": "db79cf0c-bfda-4378-b189-dcbd75664f1c",
-  "API_BASE": "https://www.distribuidoraaye.cl"
+  "API_BASE": "https://www.distribuidoraaye.cl",
+  "WHATSAPP_PHONE": "+56989784973",
+  "WHATSAPP_API_KEY": ""
 }

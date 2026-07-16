@@ -147,40 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (estadoPago) {
         if (estadoPago === 'exito') {
             const orden = urlParams.get('orden');
-            
-            // Guardar el pedido en localStorage para pedidos.html
-            let carritoActual = JSON.parse(localStorage.getItem('carrito')) || [];
-            let clienteActual = JSON.parse(localStorage.getItem('clienteTemporal')) || {};
-            
-            if (carritoActual.length > 0) {
-                let pedidosGuardados = JSON.parse(localStorage.getItem('pedidosPendientes')) || [];
-                
-                const isRetiro = clienteActual.metodoEnvio === 'retiro';
-                const hasTestProduct = carritoActual.some(item => item.id === "PROD_PRUEBA_50");
-                const shippingCost = (hasTestProduct || isRetiro) ? 0 : 3000;
-                const totalPedido = carritoActual.reduce((acc, item) => acc + (item.price * item.quantity), 0) + shippingCost;
-                
-                const nuevaVenta = {
-                    id: orden,
-                    date: new Date().toLocaleString('es-CL'),
-                    isoDate: new Date().toISOString(),
-                    customerName: clienteActual.nombre || 'Sin Nombre',
-                    customerAddress: clienteActual.direccion || 'Sin Dirección',
-                    items: carritoActual,
-                    total: totalPedido
-                };
-
-                pedidosGuardados.push(nuevaVenta);
-                localStorage.setItem('pedidosPendientes', JSON.stringify(pedidosGuardados));
-
-                // Guardar la venta en el backend para el historial permanente (Dashboard de Ventas)
-                fetch(`${API_BASE}/api/guardar-venta`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(nuevaVenta)
-                }).catch(err => console.error('Error guardando venta en backend:', err));
-            }
-
             alert('¡Pago Exitoso!\nTu compra ha sido aprobada. Número de orden: ' + orden);
             // Limpiar el carrito ya que la compra fue exitosa
             localStorage.removeItem('carrito');
@@ -276,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="product-card falabella-style ${isOutOfStock ? 'out-of-stock-card' : ''}" data-id="${prod.id}" style="${isOutOfStock ? 'position: relative;' : ''}">
                 <div class="product-image-container" style="${isOutOfStock ? 'opacity: 0.55;' : ''}">
                     <img class="mini-logo-overlay" src="nuevo%20catalogo/logo.jpg.jpeg" alt="Logo">
-                    <img src="${imageStr}" alt="${nameStr}">
+                    <img src="${imageStr}" alt="${nameStr}" loading="lazy">
                     ${isOutOfStock ? `
                     <div class="out-of-stock-badge-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(220, 53, 69, 0.9); color: white; padding: 6px 12px; font-weight: bold; border-radius: 4px; font-size: 13px; text-transform: uppercase; z-index: 2; letter-spacing: 1px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border: 1px solid white;">Agotado</div>
                     ` : ''}
@@ -867,15 +833,27 @@ document.addEventListener('DOMContentLoaded', () => {
             loginModal.classList.add('hidden');
         });
 
-        submitLoginBtn.addEventListener('click', () => {
+        submitLoginBtn.addEventListener('click', async () => {
             const user = loginUser.value.trim();
             const pass = loginPass.value.trim();
 
-            if (user === 'combate' && pass === '12345') {
-                // Credenciales correctas, redirigir a la página correspondiente
-                window.location.href = loginTarget;
-            } else {
-                // Credenciales incorrectas
+            try {
+                const response = await fetch(`${API_BASE}/api/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ user, pass })
+                });
+
+                if (response.ok) {
+                    // Credenciales correctas, se redirecciona
+                    window.location.href = loginTarget;
+                } else {
+                    // Credenciales incorrectas
+                    loginError.style.display = 'block';
+                }
+            } catch (err) {
+                console.error("Error al iniciar sesión:", err);
+                loginError.textContent = "Error de conexión con el servidor.";
                 loginError.style.display = 'block';
             }
         });

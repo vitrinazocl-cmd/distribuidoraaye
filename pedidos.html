@@ -61,76 +61,107 @@
             const pedidosBody = document.getElementById('pedidos-body');
             const noPedidosMsg = document.getElementById('no-pedidos-msg');
             const table = document.getElementById('pedidos-table');
+
+            const API_BASE = window.location.hostname === 'localhost'
+                ? 'http://localhost:3000'
+                : `${window.location.protocol}//${window.location.host}`;
             
-            function renderPedidos() {
-                const pedidos = JSON.parse(localStorage.getItem('pedidosPendientes')) || [];
-                
-                if(pedidos.length === 0) {
-                    table.style.display = 'none';
-                    noPedidosMsg.style.display = 'block';
-                    return;
-                } else {
-                    table.style.display = 'table';
-                    noPedidosMsg.style.display = 'none';
-                }
-                
-                let html = '';
-                pedidos.forEach(pedido => {
-                    let productosHtml = '<ul style="margin:0; padding-left:20px; font-size:13px;">';
-                    pedido.items.forEach(item => {
-                        productosHtml += `<li>${item.quantity}x ${item.name} ${item.flavor ? `(Sabor: ${item.flavor})` : ''}</li>`;
+            async function renderPedidos() {
+                try {
+                    const response = await fetch(`${API_BASE}/api/pedidos-pendientes`);
+                    
+                    if (!response.ok) {
+                        if (response.status === 401) {
+                            window.location.href = 'index.html?error=no_auth';
+                            return;
+                        }
+                        throw new Error(`HTTP ${response.status}`);
+                    }
+                    
+                    const pedidos = await response.json();
+                    
+                    if(pedidos.length === 0) {
+                        table.style.display = 'none';
+                        noPedidosMsg.style.display = 'block';
+                        return;
+                    } else {
+                        table.style.display = 'table';
+                        noPedidosMsg.style.display = 'none';
+                    }
+                    
+                    let html = '';
+                    pedidos.forEach(pedido => {
+                        let productosHtml = '<ul style="margin:0; padding-left:20px; font-size:13px;">';
+                        pedido.items.forEach(item => {
+                            productosHtml += `<li>${item.quantity}x ${item.name} ${item.flavor ? `(Sabor: ${item.flavor})` : ''}</li>`;
+                        });
+                        productosHtml += '</ul>';
+                        
+                        const isRetiro = pedido.customerAddress === 'Retiro en Tienda';
+                        const badgeHtml = isRetiro 
+                            ? `<span style="background-color: #28a745; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 5px;"><i class="fa-solid fa-store"></i> RETIRO EN TIENDA</span>`
+                            : `<span style="background-color: #007bff; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 5px;"><i class="fa-solid fa-truck"></i> DESPACHO</span>`;
+                        
+                        const direccionHtml = isRetiro
+                            ? `<strong>Retirar en Local (Pudahuel)</strong>`
+                            : `${pedido.customerAddress}`;
+
+                        const btnClass = isRetiro ? 'btn-entregar' : 'btn-despachar';
+                        const btnStyle = isRetiro ? 'background-color: #28a745;' : 'background-color: #0044cc;';
+                        const btnIcon = isRetiro ? 'fa-check' : 'fa-truck-fast';
+                        const btnText = isRetiro ? 'Entregar' : 'Despachar';
+
+                        html += `
+                            <tr style="color: #333;">
+                                <td><strong>${pedido.id}</strong></td>
+                                <td>${pedido.date}</td>
+                                <td>${pedido.customerName}</td>
+                                <td>
+                                    ${badgeHtml}<br>
+                                    ${direccionHtml}
+                                </td>
+                                <td>${productosHtml}</td>
+                                <td style="color:#d32f2f; font-weight:bold;">$${pedido.total.toLocaleString('es-CL')}</td>
+                                <td>
+                                    <button class="${btnClass}" style="${btnStyle} color: white; border: none; padding: 8px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; transition: opacity 0.3s; display: inline-flex; align-items: center; gap: 5px;" onclick="despacharPedido('${pedido.id}', '${isRetiro ? 'entregado' : 'despachado'}')">
+                                        <i class="fa-solid ${btnIcon}"></i> ${btnText}
+                                    </button>
+                                </td>
+                            </tr>
+                        `;
                     });
-                    productosHtml += '</ul>';
                     
-                    const isRetiro = pedido.customerAddress === 'Retiro en Tienda';
-                    const badgeHtml = isRetiro 
-                        ? `<span style="background-color: #28a745; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 5px;"><i class="fa-solid fa-store"></i> RETIRO EN TIENDA</span>`
-                        : `<span style="background-color: #007bff; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 5px;"><i class="fa-solid fa-truck"></i> DESPACHO</span>`;
-                    
-                    const direccionHtml = isRetiro
-                        ? `<strong>Retirar en Local (Pudahuel)</strong>`
-                        : `${pedido.customerAddress}`;
-
-                    const btnClass = isRetiro ? 'btn-entregar' : 'btn-despachar';
-                    const btnStyle = isRetiro ? 'background-color: #28a745;' : 'background-color: #0044cc;';
-                    const btnIcon = isRetiro ? 'fa-check' : 'fa-truck-fast';
-                    const btnText = isRetiro ? 'Entregar' : 'Despachar';
-
-                    html += `
-                        <tr style="color: #333;">
-                            <td><strong>${pedido.id}</strong></td>
-                            <td>${pedido.date}</td>
-                            <td>${pedido.customerName}</td>
-                            <td>
-                                ${badgeHtml}<br>
-                                ${direccionHtml}
-                            </td>
-                            <td>${productosHtml}</td>
-                            <td style="color:#d32f2f; font-weight:bold;">$${pedido.total.toLocaleString('es-CL')}</td>
-                            <td>
-                                <button class="${btnClass}" style="${btnStyle} color: white; border: none; padding: 8px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; transition: opacity 0.3s; display: inline-flex; align-items: center; gap: 5px;" onclick="despacharPedido('${pedido.id}')">
-                                    <i class="fa-solid ${btnIcon}"></i> ${btnText}
-                                </button>
-                            </td>
-                        </tr>
-                    `;
-                });
-                
-                pedidosBody.innerHTML = html;
+                    pedidosBody.innerHTML = html;
+                } catch (error) {
+                    console.error("Error al cargar pedidos:", error);
+                    table.style.display = 'none';
+                    noPedidosMsg.textContent = "Error al conectar con el servidor.";
+                    noPedidosMsg.style.display = 'block';
+                }
             }
             
-            window.despacharPedido = function(id) {
-                let pedidos = JSON.parse(localStorage.getItem('pedidosPendientes')) || [];
-                const pedido = pedidos.find(p => p.id === id);
-                const isRetiro = pedido && pedido.customerAddress === 'Retiro en Tienda';
-                const msg = isRetiro 
+            window.despacharPedido = async function(id, nuevoEstado) {
+                const msg = nuevoEstado === 'entregado' 
                     ? '¿Estás seguro que deseas marcar este pedido como ENTREGADO en tienda?'
                     : '¿Estás seguro que deseas marcar este pedido como DESPACHADO?';
                 
                 if(confirm(msg)) {
-                    pedidos = pedidos.filter(p => p.id !== id);
-                    localStorage.setItem('pedidosPendientes', JSON.stringify(pedidos));
-                    renderPedidos();
+                    try {
+                        const response = await fetch(`${API_BASE}/api/actualizar-estado-pedido`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ id, estado: nuevoEstado })
+                        });
+
+                        if (response.ok) {
+                            renderPedidos();
+                        } else {
+                            alert("No se pudo actualizar el estado del pedido.");
+                        }
+                    } catch (err) {
+                        console.error(err);
+                        alert("Error al conectar con el servidor.");
+                    }
                 }
             };
             

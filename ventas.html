@@ -133,13 +133,20 @@
         async function fetchVentas() {
             try {
                 const response = await fetch(`${API_BASE}/api/ventas`);
+                if (!response.ok) {
+                    if (response.status === 401) {
+                        window.location.href = 'index.html?error=no_auth';
+                        return;
+                    }
+                    throw new Error(`HTTP ${response.status}`);
+                }
                 const ventas = await response.json();
                 
                 renderVentas(ventas);
                 calculateStats(ventas);
             } catch (error) {
                 console.error("Error obteniendo ventas:", error);
-                document.getElementById('no-ventas-msg').innerText = "Error cargando las ventas. Verifica que el backend esté activo o que Render haya terminado el despliegue.";
+                document.getElementById('no-ventas-msg').innerText = "Error cargando las ventas. Asegúrate de tener permisos administrativos.";
                 document.getElementById('no-ventas-msg').style.display = 'block';
             }
         }

@@ -7,6 +7,7 @@ const { WebpayPlus } = require('transbank-sdk');
 require('dotenv').config(); // Cargar variables de entorno
 
 const excelService = require('./excelService'); // Importar el servicio de Excel
+const whatsappService = require('./whatsappService'); // Importar el servicio de WhatsApp
 
 // Objeto en memoria para guardar carritos temporales
 const ordenesPendientes = new Map();
@@ -30,6 +31,33 @@ function isDbEnabled() {
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Helper para obtener cookies del request
+function getCookie(req, name) {
+    const list = {};
+    const rc = req.headers.cookie;
+    if (rc) {
+        rc.split(';').forEach(cookie => {
+            const parts = cookie.split('=');
+            if (parts.length >= 2) {
+                list[parts.shift().trim()] = decodeURI(parts.join('='));
+            }
+        });
+    }
+    return list[name];
+}
+
+// Middleware de autenticación antes de servir archivos estáticos administrativos
+app.use((req, res, next) => {
+    const filePath = req.path.toLowerCase();
+    if (filePath.endsWith('pedidos.html') || filePath.endsWith('ventas.html')) {
+        const token = getCookie(req, 'admin_session');
+        if (token !== 'combate_authenticated_token') {
+            return res.redirect('/index.html?error=no_auth');
+        }
+    }
+    next();
+});
 
 // Servir los archivos estáticos de tu frontend actual
 app.use(express.static(__dirname));
@@ -183,7 +211,37 @@ app.all('/api/confirmar-pago', async (req, res) => {
             console.log(`[Webpay] Pago AUTORIZADO y VERIFICADO - Orden: ${response.buy_order}, Token: ${token}`);
             
             // Descontar inventario en Excel
-            await excelService.actualizarInventario(ordenData.carrito);
+            try {
+                await excelService.actualizarInventario(ordenData.carrito);
+            } catch (err) {
+                console.error("[Webpay] Error descontando inventario:", err.message);
+            }
+            
+            // Registrar la venta en PostgreSQL o ventas.json directamente en el backend
+            const nuevaVenta = {
+                id: response.buy_order,
+                date: new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' }),
+                isoDate: new Date().toISOString(),
+                customerName: ordenData.cliente.nombre || 'Sin Nombre',
+                customerAddress: ordenData.cliente.direccion || 'Sin Dirección',
+                items: ordenData.carrito,
+                total: ordenData.total,
+                estado: 'pendiente'
+            };
+
+            try {
+                await saveVenta(nuevaVenta);
+                console.log(`[Webpay] Venta registrada con éxito en backend para Orden: ${response.buy_order}`);
+            } catch (err) {
+                console.error("[Webpay] Error registrando la venta en backend:", err.message);
+            }
+
+            // Enviar notificación automática por WhatsApp
+            try {
+                await whatsappService.enviarNotificacionPedido(nuevaVenta);
+            } catch (err) {
+                console.error("[WhatsApp] Error en el envío de la notificación:", err.message);
+            }
             
             // Limpiar de memoria
             ordenesPendientes.delete(response.buy_order);
@@ -228,6 +286,10 @@ async function initDatabase() {
                 createdat TIMESTAMPTZ DEFAULT NOW()
             )
         `);
+        // Asegurar que exista la columna estado para bases de datos existentes
+        await pool.query(`
+            ALTER TABLE ventas ADD COLUMN IF NOT EXISTS estado TEXT DEFAULT 'pendiente'
+        `);
     } catch (error) {
         console.error('No se pudo conectar a PostgreSQL. Se usará ventas.json como respaldo:', error.message);
         pool = null;
@@ -240,6 +302,9 @@ function readVentasFromJson() {
 
 function writeVentaToJson(venta) {
     const ventasData = readVentasFromJson();
+    if (!venta.estado) {
+        venta.estado = 'pendiente';
+    }
     ventasData.push(venta);
     fs.writeFileSync(VENTAS_FILE, JSON.stringify(ventasData, null, 2));
 }
@@ -251,8 +316,8 @@ async function saveVenta(venta) {
     }
 
     await pool.query(
-        `INSERT INTO ventas (id, fecha, isodate, customername, customeraddress, items, total)
-         VALUES ($1, $2, $3, $4, $5, $6, $7)
+        `INSERT INTO ventas (id, fecha, isodate, customername, customeraddress, items, total, estado)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
          ON CONFLICT (id) DO NOTHING`,
         [
             venta.id,
@@ -261,7 +326,8 @@ async function saveVenta(venta) {
             venta.customerName || null,
             venta.customerAddress || null,
             JSON.stringify(venta.items || []),
-            venta.total || 0
+            venta.total || 0,
+            venta.estado || 'pendiente'
         ]
     );
 }
@@ -272,7 +338,7 @@ async function getVentas() {
     }
 
     const result = await pool.query(
-        `SELECT id, fecha, isodate, customername, customeraddress, items, total
+        `SELECT id, fecha, isodate, customername, customeraddress, items, total, estado
          FROM ventas
          ORDER BY isodate DESC NULLS LAST, createdat DESC`
     );
@@ -284,10 +350,75 @@ async function getVentas() {
         customerName: row.customername,
         customerAddress: row.customeraddress,
         items: row.items || [],
-        total: Number(row.total || 0)
+        total: Number(row.total || 0),
+        estado: row.estado || 'pendiente'
     }));
 }
 
+// Endpoint de login seguro en el servidor
+app.post('/api/login', (req, res) => {
+    const { user, pass } = req.body;
+    const adminUser = process.env.ADMIN_USER || 'combate';
+    const adminPass = process.env.ADMIN_PASS || '12345';
+
+    if (user === adminUser && pass === adminPass) {
+        res.cookie('admin_session', 'combate_authenticated_token', {
+            maxAge: 24 * 60 * 60 * 1000 // 1 día
+        });
+        return res.json({ success: true });
+    } else {
+        return res.status(401).json({ error: "Credenciales incorrectas" });
+    }
+});
+
+// Endpoint para obtener solo pedidos pendientes
+app.get('/api/pedidos-pendientes', async (req, res) => {
+    try {
+        const token = getCookie(req, 'admin_session');
+        if (token !== 'combate_authenticated_token') {
+            return res.status(401).json({ error: "No autorizado" });
+        }
+        const ventasData = await getVentas();
+        const pendientes = ventasData.filter(v => v.estado === 'pendiente');
+        res.json(pendientes);
+    } catch (error) {
+        res.status(500).json({ error: "Error leyendo pedidos pendientes" });
+    }
+});
+
+// Endpoint para actualizar estado de un pedido (despachar/entregar)
+app.post('/api/actualizar-estado-pedido', async (req, res) => {
+    try {
+        const token = getCookie(req, 'admin_session');
+        if (token !== 'combate_authenticated_token') {
+            return res.status(401).json({ error: "No autorizado" });
+        }
+        const { id, estado } = req.body;
+        if (!id || !estado) {
+            return res.status(400).json({ error: "Falta ID o Estado" });
+        }
+
+        if (isDbEnabled()) {
+            await pool.query(
+                `UPDATE ventas SET estado = $1 WHERE id = $2`,
+                [estado, id]
+            );
+        } else {
+            const ventasData = readVentasFromJson();
+            const venta = ventasData.find(v => v.id === id);
+            if (venta) {
+                venta.estado = estado;
+                fs.writeFileSync(VENTAS_FILE, JSON.stringify(ventasData, null, 2));
+            }
+        }
+        res.json({ success: true });
+    } catch (error) {
+        console.error("Error actualizando estado del pedido:", error);
+        res.status(500).json({ error: "No se pudo actualizar el estado del pedido" });
+    }
+});
+
+// Para mantener compatibilidad si es necesario
 app.post('/api/guardar-venta', async (req, res) => {
     try {
         const venta = req.body;
@@ -301,6 +432,10 @@ app.post('/api/guardar-venta', async (req, res) => {
 
 app.get('/api/ventas', async (req, res) => {
     try {
+        const token = getCookie(req, 'admin_session');
+        if (token !== 'combate_authenticated_token') {
+            return res.status(401).json({ error: "No autorizado" });
+        }
         const ventasData = await getVentas();
         res.json(ventasData);
     } catch (error) {
@@ -310,6 +445,10 @@ app.get('/api/ventas', async (req, res) => {
 
 app.get('/api/descargar-excel-ventas', async (req, res) => {
     try {
+        const token = getCookie(req, 'admin_session');
+        if (token !== 'combate_authenticated_token') {
+            return res.status(401).send("No autorizado");
+        }
         const ventasData = await getVentas();
         const xlsx = require('xlsx');
         
@@ -322,7 +461,8 @@ app.get('/api/descargar-excel-ventas', async (req, res) => {
                 "Cliente": v.customerName,
                 "Dirección": v.customerAddress,
                 "Productos": productosString,
-                "Total Venta": v.total
+                "Total Venta": v.total,
+                "Estado": v.estado || 'pendiente'
             };
         });
 
