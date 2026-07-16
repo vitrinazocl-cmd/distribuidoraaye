@@ -1012,3 +1012,74 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// --- Botón de Pago de Prueba de $50 CLP ---
+document.addEventListener('DOMContentLoaded', () => {
+    const devTestBtn = document.getElementById('dev-test-pago-btn');
+    if (devTestBtn) {
+        devTestBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            if (!confirm('¿Deseas iniciar un pago de prueba de $50 CLP en producción para verificar el envío de WhatsApp?')) {
+                return;
+            }
+            
+            const originalHTML = devTestBtn.innerHTML;
+            devTestBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>...';
+            devTestBtn.disabled = true;
+
+            const totalPrueba = 50;
+            const carritoPrueba = [
+                { id: "PROD_PRUEBA_50", name: "Producto de Prueba WhatsApp ($50)", price: 50, quantity: 1 }
+            ];
+            const clientePrueba = {
+                nombre: "Cliente de Prueba WhatsApp",
+                direccion: "El Parrón 331, Pudahuel",
+                rut: "12.345.678-9",
+                comuna: "Pudahuel",
+                metodoEnvio: "despacho"
+            };
+
+            try {
+                const response = await fetch(`${API_BASE}/api/pagar`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        total: totalPrueba,
+                        carrito: carritoPrueba,
+                        cliente: clientePrueba
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error("Error en el servidor");
+                }
+                
+                const data = await response.json();
+                if (data.url && data.token) {
+                    const form = document.createElement('form');
+                    form.action = data.url;
+                    form.method = 'POST';
+                    
+                    const inputToken = document.createElement('input');
+                    inputToken.type = 'hidden';
+                    inputToken.name = 'token_ws';
+                    inputToken.value = data.token;
+                    
+                    form.appendChild(inputToken);
+                    document.body.appendChild(form);
+                    form.submit();
+                } else {
+                    alert("Error: no se recibió token.");
+                    devTestBtn.innerHTML = originalHTML;
+                    devTestBtn.disabled = false;
+                }
+            } catch (err) {
+                console.error(err);
+                alert("No se pudo iniciar el pago de prueba: " + err.message);
+                devTestBtn.innerHTML = originalHTML;
+                devTestBtn.disabled = false;
+            }
+        });
+    }
+});
