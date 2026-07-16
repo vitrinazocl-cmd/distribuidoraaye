@@ -92,8 +92,15 @@ async function actualizarInventario(carrito) {
                 // Producto encontrado, descontar el stock
                 let currentStock = parseFloat(data[rowIndex][stockCol]);
                 if (isNaN(currentStock)) currentStock = 0;
+
+                const unitsCol = Object.keys(data[rowIndex]).find(k => {
+                    const normalized = k.toLowerCase();
+                    return normalized.includes('unidades') && (normalized.includes('caja') || normalized.includes('pack'));
+                }) || Object.keys(data[rowIndex]).find(k => k.toLowerCase().includes('unidades'));
                 
-                let newStock = currentStock - item.quantity;
+                const unitsPerBox = unitsCol ? (parseFloat(data[rowIndex][unitsCol]) || 1) : 1;
+                
+                let newStock = currentStock - (item.quantity / unitsPerBox);
                 if (newStock < 0) newStock = 0; // Evitar stock negativo
 
                 data[rowIndex][stockCol] = newStock;

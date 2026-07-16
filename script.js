@@ -34,6 +34,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const track = document.getElementById('sliderTrack');
+    
+    // Cargar dinámicamente las imágenes de productos de la carpeta stock productos si existen
+    if (window.sliderImages && Array.isArray(window.sliderImages)) {
+        window.sliderImages.forEach(imgName => {
+            // Ignorar logos o archivos no compatibles
+            if (!imgName.match(/\.(jpe?g|png|webp|gif)$/i)) return;
+            
+            const slideDiv = document.createElement('div');
+            slideDiv.className = 'slide';
+            
+            const img = document.createElement('img');
+            img.src = `nuevo catalogo/stock productos/${encodeURIComponent(imgName)}`;
+            img.alt = imgName;
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+            
+            slideDiv.appendChild(img);
+            track.appendChild(slideDiv);
+        });
+    }
+
     const slides = Array.from(track.children);
     const nextBtn = document.getElementById('nextBtn');
     const prevBtn = document.getElementById('prevBtn');
