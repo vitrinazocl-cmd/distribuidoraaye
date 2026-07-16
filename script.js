@@ -1013,27 +1013,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --- Botón de Pago de Prueba de $50 CLP ---
+// --- Botón de Pago de Prueba (Simulado sin tarjeta) ---
 document.addEventListener('DOMContentLoaded', () => {
     const devTestBtn = document.getElementById('dev-test-pago-btn');
     if (devTestBtn) {
         devTestBtn.addEventListener('click', async (e) => {
             e.preventDefault();
             
-            if (!confirm('¿Deseas iniciar un pago de prueba de $50 CLP en producción para verificar el envío de WhatsApp?')) {
+            if (!confirm('¿Deseas simular una compra exitosa (sin cobrar nada ni pedir tarjeta) para verificar si llega la notificación de WhatsApp?')) {
                 return;
             }
             
             const originalHTML = devTestBtn.innerHTML;
-            devTestBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>...';
+            devTestBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Simulando...';
             devTestBtn.disabled = true;
 
-            const totalPrueba = 50;
+            const totalPrueba = 12500;
             const carritoPrueba = [
-                { id: "PROD_PRUEBA_50", name: "Producto de Prueba WhatsApp ($50)", price: 50, quantity: 1 }
+                { id: "PROD_MOCK_1", name: "Detergente Líquido A&E 5 Litros (Prueba)", price: 3190, quantity: 2 },
+                { id: "PROD_MOCK_2", name: "Cloro Gel Concentrado 1 Litro (Prueba)", price: 1560, quantity: 4 }
             ];
             const clientePrueba = {
-                nombre: "Cliente de Prueba WhatsApp",
+                nombre: "Juan Pérez (Test Manual)",
                 direccion: "El Parrón 331, Pudahuel",
                 rut: "12.345.678-9",
                 comuna: "Pudahuel",
@@ -1041,7 +1042,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                const response = await fetch(`${API_BASE}/api/pagar`, {
+                const response = await fetch(`${API_BASE}/api/test-whatsapp-trigger`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ 
@@ -1052,31 +1053,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (!response.ok) {
-                    throw new Error("Error en el servidor");
+                    const errText = await response.text();
+                    throw new Error(errText || "Error en el servidor");
                 }
                 
                 const data = await response.json();
-                if (data.url && data.token) {
-                    const form = document.createElement('form');
-                    form.action = data.url;
-                    form.method = 'POST';
-                    
-                    const inputToken = document.createElement('input');
-                    inputToken.type = 'hidden';
-                    inputToken.name = 'token_ws';
-                    inputToken.value = data.token;
-                    
-                    form.appendChild(inputToken);
-                    document.body.appendChild(form);
-                    form.submit();
+                if (data.success && data.orden) {
+                    alert(`¡Simulación Exitosa!\nPedido registrado: ${data.orden}\nRevisa tu WhatsApp en unos segundos.`);
                 } else {
-                    alert("Error: no se recibió token.");
-                    devTestBtn.innerHTML = originalHTML;
-                    devTestBtn.disabled = false;
+                    alert("Error en la simulación.");
                 }
             } catch (err) {
                 console.error(err);
-                alert("No se pudo iniciar el pago de prueba: " + err.message);
+                alert("No se pudo completar la simulación: " + err.message);
+            } finally {
                 devTestBtn.innerHTML = originalHTML;
                 devTestBtn.disabled = false;
             }
