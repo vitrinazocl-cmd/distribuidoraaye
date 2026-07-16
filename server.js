@@ -236,12 +236,9 @@ app.all('/api/confirmar-pago', async (req, res) => {
                 console.error("[Webpay] Error registrando la venta en backend:", err.message);
             }
 
-            // Enviar notificación automática por WhatsApp
-            try {
-                await whatsappService.enviarNotificacionPedido(nuevaVenta);
-            } catch (err) {
-                console.error("[WhatsApp] Error en el envío de la notificación:", err.message);
-            }
+            // Enviar notificación automática por WhatsApp en segundo plano (evita demoras al redirigir al cliente)
+            whatsappService.enviarNotificacionPedido(nuevaVenta)
+                .catch(err => console.error("[WhatsApp] Error en el envío de la notificación:", err.message));
             
             // Limpiar de memoria
             ordenesPendientes.delete(response.buy_order);
