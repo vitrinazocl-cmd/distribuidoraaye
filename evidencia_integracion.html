@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evidencia de Integración Webpay Plus - Distribuidora A&E</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #0056b3;
+            margin: 0;
+            font-size: 24px;
+        }
+        .meta-table, .tokens-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        .meta-table th, .meta-table td, .tokens-table th, .tokens-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .meta-table th, .tokens-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .section-title {
+            color: #0056b3;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        .alert {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .screenshot-placeholder {
+            border: 2px dashed #bbb;
+            background-color: #fafafa;
+            padding: 40px;
+            text-align: center;
+            color: #777;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-style: italic;
+        }
+        @media print {
+            body {
+                margin: 20px;
+            }
+            .no-print {
+                display: none;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>EVIDENCIA DE INTEGRACIÓN WEBPAY PLUS REST</h1>
+        <p><strong>Comercio:</strong> ELEGANTE (Distribuidora A&E) | <strong>Código de Comercio:</strong> 597053086562</p>
+    </div>
+
+    <div class="alert no-print">
+        <strong>💡 Instrucción para el Comercio:</strong> Esta página contiene la información técnica para tu validación con Transbank. Puedes imprimir esta página directamente a formato PDF (Control + P -> Guardar como PDF) para enviarla como parte de la evidencia. Si lo deseas, puedes pegar tus capturas de pantalla en las áreas designadas antes de imprimir.
+    </div>
+
+    <h2 class="section-title">1. Resumen de Credenciales y Pruebas Realizadas</h2>
+    <table class="tokens-table">
+        <thead>
+            <tr>
+                <th>Prueba / Escenario</th>
+                <th>Estado Esperado</th>
+                <th>Monto</th>
+                <th>Orden de Compra</th>
+                <th>Token de Transacción (token_ws)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Crédito Aprobado (Sin cuotas)</strong></td>
+                <td>Aprobado (AUTHORIZED)</td>
+                <td>$28.190</td>
+                <td>ORDEN-84788</td>
+                <td><code>01ab3b75529dbcbb7cfa024994ec91f01e8f4c3fc74e1f40e1f19c3960716131</code></td>
+            </tr>
+            <tr>
+                <td><strong>Crédito Rechazado (Sin cuotas)</strong></td>
+                <td>Rechazado (FAILED)</td>
+                <td>$12.540</td>
+                <td>ORDEN-87704</td>
+                <td><code>01ab1990916eae7d2de9895fd459ff357a5cf51c0ee37225991acbd330fdb164</code></td>
+            </tr>
+            <tr>
+                <td><strong>Crédito Aprobado (Con cuotas)</strong></td>
+                <td>Aprobado (AUTHORIZED)</td>
+                <td>$42.370</td>
+                <td>ORDEN-13107</td>
+                <td><code>01ab64460a54782f3c8cb1ea4d7e4f57e02b320d650dda9c4bf14222f9433dae</code></td>
+            </tr>
+            <tr>
+                <td><strong>Débito Aprobado</strong></td>
+                <td>Aprobado (AUTHORIZED)</td>
+                <td>$22.080</td>
+                <td>ORDEN-67807</td>
+                <td><code>01ab3b202b0e779793067546d875c66d656dca0652aa3419e8b3c3dece8f0b52</code></td>
+            </tr>
+            <tr>
+                <td><strong>Débito Rechazado</strong></td>
+                <td>Rechazado (FAILED)</td>
+                <td>$42.180</td>
+                <td>ORDEN-52994</td>
+                <td><code>01ab48d0b3a5c8f5b6aefa9c9c2353e8f0cea36a1b97665417b82c51d082bc2f</code></td>
+            </tr>
+            <tr>
+                <td><strong>Transacción Abortada (Anulada)</strong></td>
+                <td>Abortado por usuario (INITIALIZED)</td>
+                <td>$15.720</td>
+                <td>ORDEN-8272</td>
+                <td><code>01ab3f2ff39e95841bf1f5723dccaa1325a6e280d2d6c657ec600676b8fc5748</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="page-break"></div>
+
+    <h2 class="section-title">2. Flujo Visual de Pago Aprobado (Prueba 1)</h2>
+    <p>A continuación se documenta el flujo de pago exitoso desde el inicio de la orden en el comercio hasta la redirección de éxito final.</p>
+
+    <h3>Paso 2.1: Carrito de Compras / Checkout</h3>
+    <p>Se inicia la compra en la tienda Distribuidora A&E, mostrando el detalle de productos y el monto final de $28.190.</p>
+    <div class="screenshot-placeholder">
+        [Pegar aquí Captura 1: Carrito de compras / formulario de checkout en tu sitio]
+    </div>
+
+    <h3>Paso 2.2: Redirección al Formulario de Pago de Webpay Plus</h3>
+    <p>El cliente es redirigido de forma segura al formulario oficial de Webpay de Transbank, donde se ingresan los datos de la tarjeta VISA de pruebas.</p>
+    <div class="screenshot-placeholder">
+        [Pegar aquí Captura 2: Formulario de ingreso de tarjeta en Webpay de Transbank]
+    </div>
+
+    <div class="page-break"></div>
+
+    <h3>Paso 2.3: Autenticación Bancaria Simulación</h3>
+    <p>Se realiza el proceso de simulación bancaria con el RUT de pruebas 11.111.111-1 para autorizar la transacción.</p>
+    <div class="screenshot-placeholder">
+        [Pegar aquí Captura 3: Pantalla roja de simulación bancaria donde se ingresa RUT y clave]
+    </div>
+
+    <h3>Paso 2.4: Retorno y Confirmación de Transacción Exitosa</h3>
+    <p>Webpay confirma la transacción de forma segura en el backend y el sitio web muestra la confirmación del pago aprobado al cliente final.</p>
+    <div class="screenshot-placeholder">
+        [Pegar aquí Captura 4: Alerta/pantalla de éxito en tu sitio con el mensaje de pago exitoso]
+    </div>
+
+</body>
+</html>

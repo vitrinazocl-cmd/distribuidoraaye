@@ -45,7 +45,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 1950,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.07.57%20(1).jpeg",
+        "image": "trapero%20mas%20habrillantador.jpeg",
         "flavors": [],
         "stock": 1000
     },
@@ -107,7 +107,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PASTA%20DENTAL%20PACK%203%20PEPSIODENT.webp",
         "flavors": [],
-        "stock": 1000
+        "stock": 0
     },
     {
         "id": "PROD_12",
@@ -237,7 +237,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20HUMEDA%20ADULTO%20ACTIVITY.webp",
         "flavors": [],
-        "stock": 1000
+        "stock": 0
     },
     {
         "id": "PROD_25",
@@ -247,7 +247,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20PAPEL%20LIKE%20ULTRA%20TERSUS.webp",
         "flavors": [],
-        "stock": 16
+        "stock": 0
     },
     {
         "id": "12523258974",
@@ -267,7 +267,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/RENOVADOR%20DE%20NEUMATICO%20%20TEDDY%20500ML.webp",
         "flavors": [],
-        "stock": 1
+        "stock": 0
     },
     {
         "id": "7808304390741",
@@ -295,7 +295,7 @@ const catalogoProductos = [
         "marca": "OMO",
         "price": 1690,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DETERGENTE%20POLVO%20OMO%20CON%20VICARBONATO%20OMO%20800ML.webp",
+        "image": "omo%203.jpeg",
         "flavors": [],
         "stock": 9
     },
@@ -355,7 +355,7 @@ const catalogoProductos = [
         "marca": "ULTRA CLEAN",
         "price": 510,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/DESODORANTE%20DE%20INODORO%20ULTRA%20CLEAN%2040GR.jpg",
+        "image": "pastilla%20inodoro.jpeg",
         "flavors": [],
         "stock": 5
     },
@@ -581,11 +581,11 @@ const catalogoProductos = [
     },
     {
         "id": "7791274196416",
-        "name": "TALCO PARA PIES BOLSA ALGABO / unidad $337 / caja 24 unidades $8.090",
+        "name": "TALCO PARA PIES BOLSA ALGABO / unidad $890 / caja 24 unidades $8.090",
         "marca": "ALGABO",
-        "price": 337,
+        "price": 890,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/TALCO%20PARA%20PIES%20BOLSA%20%20ALGABO%20200%20GRAMOS.webp",
+        "image": "algabo2.jpeg",
         "flavors": [],
         "stock": 3
     },
@@ -689,16 +689,7 @@ const catalogoProductos = [
         "flavors": [],
         "stock": 4
     },
-    {
-        "id": "7891150090231",
-        "name": "PASTA DENTAL PEPSODENT TRIPLE+ PEPSODENT / unidad $720 / caja 12 unidades $8.640",
-        "marca": "PEPSODENT",
-        "price": 720,
-        "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/PASTA%20DENTAL%20PEPSODENT%20TRIPLE%2BPEPSODENT90%20GRAMOS.webp",
-        "flavors": [],
-        "stock": 90
-    },
+
     {
         "id": "789115009826",
         "name": "PASTA DENTAL PEPSODENT INTEGRAL 18 PEPSODENT / unidad $950 / caja 12 unidades $11.400",
@@ -715,7 +706,7 @@ const catalogoProductos = [
         "marca": "ALGABO",
         "price": 1263,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/SHAMPOO%20BABY%20ALGABOALGABO444%20ML.jpg",
+        "image": "shampo%20algabo.jpeg",
         "flavors": [],
         "stock": 2
     },
@@ -727,7 +718,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/BRIKS%20LAVALOZAS%20CONSENTRADOBRIKS2%20LITROS.jpg",
         "flavors": [],
-        "stock": 3
+        "stock": 0
     },
     {
         "id": "7805020002040",
@@ -749,16 +740,7 @@ const catalogoProductos = [
         "flavors": [],
         "stock": 3
     },
-    {
-        "id": "78050120001968",
-        "name": "QUITA GRASA PROFECIONAL GATILLO EXCELL / unidad $1.750 / caja 12 unidades $21.000",
-        "marca": "EXCELL",
-        "price": 1750,
-        "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/QUITA%20GRASA%20PROFESIONAL%20GATILLOEXCELL500%20ML.webp",
-        "flavors": [],
-        "stock": 3
-    },
+
     {
         "id": "7808304316581",
         "name": "CLORO EN TABLETAS TEDDY TEDDY unidad",
@@ -785,20 +767,11 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 990,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.34%20(1).jpeg",
+        "image": "limpiapisos%201%20litro.jpeg",
         "flavors": [],
         "stock": 25
     },
-    {
-        "id": "aye",
-        "name": "DESENGRASANTE AYE AYE / unidad $890 / caja 12 unidades $10.680",
-        "marca": "AYE",
-        "price": 890,
-        "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.13.08.jpeg",
-        "flavors": [],
-        "stock": 2
-    },
+
     {
         "id": "7509546653518",
         "name": "LIMPIAPISO AYE AYE / unidad $520 / caja 12 unidades $6.240",
@@ -825,7 +798,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 890,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/removedor%20de%20litro.jpeg",
+        "image": "foto%2044.jpeg",
         "flavors": [],
         "stock": 6
     },
@@ -835,7 +808,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 1290,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.05.52%20(3).jpeg",
+        "image": "cera%202%20litros.jpeg",
         "flavors": [],
         "stock": 2
     },
@@ -855,7 +828,7 @@ const catalogoProductos = [
         "marca": "AYE",
         "price": 2890,
         "category": "TODOS",
-        "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.13.08.jpeg",
+        "image": "limpia%205%20litros.jpeg",
         "flavors": [],
         "stock": 53
     },
@@ -887,17 +860,17 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo%20catalogo/WhatsApp%20Image%202026-06-22%20at%2018.06.58%20(1).jpeg",
         "flavors": [],
-        "stock": 118
+        "stock": 0
     },
     {
         "id": "7808304316093",
-        "name": "PA�O MICROFIBRA TEDDY TEDDY / unidad $435 / caja 25 unidades $10.880",
+        "name": "PAO MICROFIBRA TEDDY TEDDY / unidad $435 / caja 25 unidades $10.880",
         "marca": "TEDDY",
         "price": 435,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PA%C3%91O%20%20MICROFIBRA%20TEDDYTEDDY25.jpg",
         "flavors": [],
-        "stock": 1
+        "stock": 0
     },
     {
         "id": "7804673120118",
@@ -929,26 +902,8 @@ const catalogoProductos = [
         "flavors": [],
         "stock": 10
     },
-    {
-        "id": "7805020002989",
-        "name": "TRAPERO HUMEDO ABRILLANTADOR PISO FLOTANTE EXCELL EXCELL / unidad $3.108 / caja 10 unidades $31.080",
-        "marca": "EXCELL",
-        "price": 3108,
-        "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20ABRILLANTADOR%20PISO%20FLOTANTE%20EXCELLEXCELL10%20UNIDADES.webp",
-        "flavors": [],
-        "stock": 5
-    },
-    {
-        "id": "70805020002638",
-        "name": "TRAPERO HUMEDO PISO FLOTANTE DESINFECTANTE EXCELL EXCELL / unidad $1.430 / caja 10 unidades $14.300",
-        "marca": "EXCELL",
-        "price": 1430,
-        "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20PISO%20FLOTANTE%20DESINFECTANTE%20EXCELLEXCELL10%20UNIDADES.webp",
-        "flavors": [],
-        "stock": 77
-    },
+
+
     {
         "id": "7805020002637",
         "name": "TRAPERO HUMEDO CLASICO EXCELL / unidad $1.430 / caja 10 unidades $14.300",
@@ -989,23 +944,14 @@ const catalogoProductos = [
         "flavors": [],
         "stock": 48
     },
-    {
-        "id": "7805020003382",
-        "name": "TRAPERO HUMEDO 2 EN 1 [LIMPIADOR +ABRILLANTADOR ] EXCELL / unidad $1.950 / caja 10 unidades $19.500",
-        "marca": "EXCELL",
-        "price": 1950,
-        "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/TRAPERO%20HUMEDO%20%20HABRILLANTADOR%20MAS%20LIMPIADOR%20%2010%20UNIDADES%20%20EXCELL.jpg",
-        "flavors": [],
-        "stock": 7
-    },
+
     {
         "id": "7805020001913",
         "name": "CLORO GEL EXCELL EXCELL / unidad $850 / caja 12 unidades $10.200",
         "marca": "EXCELL",
         "price": 850,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/CLORO%20GEL%20EXCELLEXCELL900%20ML.jpg",
+        "image": "cloro%20gel.jpeg",
         "flavors": [],
         "stock": 148
     },
@@ -1021,11 +967,11 @@ const catalogoProductos = [
     },
     {
         "id": "7805020002859",
-        "name": "LIMPIADOR DE BA�O ULTRA PAWER PRFESIONAL GATILLO EXCELL / unidad $1.640 / caja 12 unidades $19.680",
+        "name": "LIMPIADOR DE BAO ULTRA POWER PRFESIONAL GATILLO EXCELL / unidad $1.640 / caja 12 unidades $19.680",
         "marca": "EXCELL",
         "price": 1640,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/LIMPIADOR%20DE%20BA%C3%91O%20ULTRA%20PAWERPRFESIONAL%20GATILLOEXCELL500%20ML.jpg",
+        "image": "limpia_banos.jpeg",
         "flavors": [],
         "stock": 20
     },
@@ -1095,7 +1041,7 @@ const catalogoProductos = [
         "marca": "WINNEX",
         "price": 1600,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/TOALLAS%20LIMPIAMUEBLES%20WINNEXSWINNEX80UNIDADES.webp",
+        "image": "pomo%20naranjo.jpeg",
         "flavors": [],
         "stock": 5
     },
@@ -1119,16 +1065,7 @@ const catalogoProductos = [
         "flavors": [],
         "stock": 76
     },
-    {
-        "id": "7791274196508",
-        "name": "SHAMPOO BABY ALGABO ALGABO / unidad $1.370 / caja 12 unidades $16.440",
-        "marca": "ALGABO",
-        "price": 1370,
-        "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/SHAMPOO%20BABY%20ALGABOALGABO444%20ML.jpg",
-        "flavors": [],
-        "stock": 13
-    },
+
     {
         "id": "7791274004391",
         "name": "ACONDICIONADOR KIDS ALGABO ALGABO / unidad $1.500 / caja 12 unidades $18.000",
@@ -1265,7 +1202,7 @@ const catalogoProductos = [
         "marca": "EXCELL",
         "price": 760,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/LIMPIAPISOS%20EXCELLEXCELL900%20ML.jpg",
+        "image": "excel%20limpia.jpeg",
         "flavors": [],
         "stock": 125
     },
@@ -1277,7 +1214,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/PALA%20PLASTICAULTRA%20CLEANULTRACLEAN1.webp",
         "flavors": [],
-        "stock": 2
+        "stock": 0
     },
     {
         "id": "7804673122999",
@@ -1287,7 +1224,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/escobillon%20economico%20uiltra%20clean%20x48%20unidULTRA%20CLEAN1.png",
         "flavors": [],
-        "stock": 1
+        "stock": 0
     },
     {
         "id": "7804673120095",
@@ -1527,7 +1464,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/ESPONJA%20ABRASIVA%20X3ULTRA%20CLEAN3%20UNIDADES.webp",
         "flavors": [],
-        "stock": 100
+        "stock": 0
     },
     {
         "id": "6976617700135",
@@ -1689,16 +1626,7 @@ const catalogoProductos = [
         "flavors": [],
         "stock": 30
     },
-    {
-        "id": "6920155211110",
-        "name": "set de ducha",
-        "marca": "",
-        "price": 970,
-        "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/set%20deducha.webp",
-        "flavors": [],
-        "stock": 15
-    },
+
     {
         "id": "6926370691003",
         "name": "esponja deluxe colores / unidad $74 / caja 12 unidades $890",
@@ -1707,7 +1635,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/esponja%20deluxe%20colores.webp",
         "flavors": [],
-        "stock": 20
+        "stock": 0
     },
     {
         "id": "6957136500154",
@@ -1715,7 +1643,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 850,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/pasta%20dental%20kids%20x12%2012%20unidades.webp",
+        "image": "pasta_nino.jpeg",
         "flavors": [],
         "stock": 6
     },
@@ -1727,7 +1655,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/TOALLA%20HUMEDA%20ADULTO%20ACTIVITY.webp",
         "flavors": [],
-        "stock": 7
+        "stock": 0
     },
     {
         "id": "7806500731177",
@@ -1739,16 +1667,7 @@ const catalogoProductos = [
         "flavors": [],
         "stock": 45
     },
-    {
-        "id": "7758676001670",
-        "name": "toalla humeda soft cloud animalito souft cloud / unidad $700 / caja 24 unidades $16.800",
-        "marca": "souft cloud",
-        "price": 700,
-        "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/toalla%20humeda%20soft%20cloud%20animalitosouft%20cloud72%20unidades.webp",
-        "flavors": [],
-        "stock": 25
-    },
+
     {
         "id": "1253696457200",
         "name": "velas peque�a winnex WINNEX / unidad $810 / caja 60 unidades $48.600",
@@ -1761,9 +1680,9 @@ const catalogoProductos = [
     },
     {
         "id": "12523338973",
-        "name": "vela grande winnex WINNEX / unidad $85 / caja 60 unidades $5.100",
+        "name": "vela grande winnex WINNEX / unidad $850 / caja 60 unidades $5.100",
         "marca": "WINNEX",
-        "price": 85,
+        "price": 850,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/vela%20grande%20winnexWINNEX4%20unidades.webp",
         "flavors": [],
@@ -1775,7 +1694,7 @@ const catalogoProductos = [
         "marca": "",
         "price": 3250,
         "category": "TODOS",
-        "image": "nuevo catalogo/stock productos/detergente%20para%20ropa%20negra1%20litro.jpg",
+        "image": "ropa%20negra.jpeg",
         "flavors": [],
         "stock": 10
     },
@@ -1881,13 +1800,13 @@ const catalogoProductos = [
     },
     {
         "id": "7806500507116",
-        "name": "confort confort x50 metros confort / unidad $2.031 / caja 8 unidades $16.250",
+        "name": "confort confort x50 metros confort / unidad $2.048 / caja 8 unidades $16.390",
         "marca": "confort",
-        "price": 2031,
+        "price": 2048,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/confort%20confort%20x50%20metrosconfortpacks%20x2.webp",
         "flavors": [],
-        "stock": 0
+        "stock": 10
     },
     {
         "id": "7804653341809",
@@ -1907,7 +1826,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/conforte%20ovella%2022%20metros%20ovellapacks%20x6.jpg",
         "flavors": [],
-        "stock": 2
+        "stock": 0
     },
     {
         "id": "7806500508533",
@@ -1937,7 +1856,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/nova%20suan%20ultra%20x70suan70%20metros.webp",
         "flavors": [],
-        "stock": 13
+        "stock": 0
     },
     {
         "id": "7804670070461",
@@ -1957,7 +1876,7 @@ const catalogoProductos = [
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/servilleta%20nova%20pack%20familiarnova%20300%20unidaes.webp",
         "flavors": [],
-        "stock": 5
+        "stock": 0
     },
     {
         "id": "7806500401339",
@@ -1971,13 +1890,13 @@ const catalogoProductos = [
     },
     {
         "id": "7806500406884",
-        "name": "nova clasica x3 nova / unidad $811 / caja 8 unidades $6.490",
+        "name": "nova clasica x3 nova / unidad $836 / caja 8 unidades $6.690",
         "marca": "nova",
-        "price": 811,
+        "price": 836,
         "category": "TODOS",
         "image": "nuevo%20catalogo/stock%20productos/D_NQ_NP_2X_928607-MLC76270852514_052024-F.webp",
         "flavors": [],
-        "stock": 0
+        "stock": 10
     },
     {
         "id": "7804670070522",
@@ -2021,9 +1940,9 @@ const catalogoProductos = [
     },
     {
         "id": "7804670490474",
-        "name": "sabanilla care up x8 care up / unidad $536 / caja 8 unidades $4.290",
+        "name": "sabanilla care up x8 care up / unidad $4.290 / caja 8 unidades $34.320",
         "marca": "care up",
-        "price": 536,
+        "price": 4290,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/sabanilla%20care%20up%20x8care%20up8%20unidades.webp",
         "flavors": [],
@@ -2031,9 +1950,9 @@ const catalogoProductos = [
     },
     {
         "id": "7804670490481",
-        "name": "aposito multiuso care up care up / unidad $140 / caja 20 unidades $2.790",
+        "name": "aposito multiuso care up care up / unidad $2.790 / caja 20 unidades $27.900",
         "marca": "care up",
-        "price": 140,
+        "price": 2790,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/aposito%20multiuso%20care%20upcare%20up20unidades.webp",
         "flavors": [],
