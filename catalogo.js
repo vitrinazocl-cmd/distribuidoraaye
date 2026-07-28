@@ -1967,6 +1967,76 @@ const catalogoProductos = [
         "image": "nuevo catalogo/stock productos/pa%C3%B1os%20amarillos360%20unidades.webp",
         "flavors": [],
         "stock": 11
+    },
+    {
+        "id": "PROD_CLORINDA_1L",
+        "name": "Clorinda 1 ltrs / unidad $990 / caja 15 unidades $14.890",
+        "marca": "Clorinda",
+        "price": 990,
+        "category": "TODOS",
+        "image": "clorinda.jpeg",
+        "flavors": [],
+        "stock": 10
+    },
+    {
+        "id": "PROD_BIO_FRESCURA_800G",
+        "name": "Bio Frescura 800g / unidad $1.090 / caja 18 unidades $19.620",
+        "marca": "Bio Frescura",
+        "price": 1090,
+        "category": "TODOS",
+        "image": "bio%20frescura.jpeg",
+        "flavors": [],
+        "stock": 10
+    },
+    {
+        "id": "PROD_ARIEL_700G",
+        "name": "Ariel 700g / unidad $1.590 / caja 14 unidades $22.260",
+        "marca": "Ariel",
+        "price": 1590,
+        "category": "TODOS",
+        "image": "ariel.jpeg",
+        "flavors": [],
+        "stock": 10
+    },
+    {
+        "id": "PROD_CLORO_5L",
+        "name": "Cloro 5 litros / unidad $990",
+        "marca": "",
+        "price": 990,
+        "category": "TODOS",
+        "image": "cloro%205%20litros.jpeg",
+        "flavors": [],
+        "stock": 10
+    },
+    {
+        "id": "PROD_OVELLA_6R",
+        "name": "Ovella 6 rollos / unidad $1.580 / manga $9.500",
+        "marca": "ovella",
+        "price": 1580,
+        "category": "TODOS",
+        "image": "ovella%205.jpeg",
+        "flavors": [],
+        "stock": 10
+    },
+    {
+        "id": "PROD_CONF_RINDE_PLUS",
+        "name": "Confort Rinde Plus / unidad $1.111 / caja 8 paquetes $8.890",
+        "marca": "confort",
+        "price": 1111,
+        "category": "TODOS",
+        "image": "rollo%20confort.jpeg",
+        "flavors": [],
+        "stock": 10
+    },
+    {
+        "id": "PROD_SERV_ELEGANTE",
+        "name": "Servilleta Elegante / unidad $750 / caja 10 unidades $7.500",
+        "marca": "",
+        "price": 750,
+        "category": "TODOS",
+        "image": "serv%20elegante.jpeg",
+        "flavors": [],
+        "stock": 10
     }
 ];
 
