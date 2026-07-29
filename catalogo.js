@@ -1168,9 +1168,9 @@ const catalogoProductos = [
     },
     {
         "id": "659525894009",
-        "name": "COTONITOS 300 UNID SOFT CLOUD SOFTCLOUD / unidad $24 / caja 48 unidades $1.150",
+        "name": "COTONITOS 300 UNID SOFT CLOUD SOFTCLOUD / unidad $1.150 / caja 48 unidades $55.200",
         "marca": "SOFTCLOUD",
-        "price": 24,
+        "price": 1150,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/COTONITOS%20300%20UNID%20SOFT%20CLOUDSOFTCLOUD300%20UNIDADES.jpg",
         "flavors": [],
