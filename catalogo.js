@@ -1007,9 +1007,9 @@ const catalogoProductos = [
     },
     {
         "id": "7702626204642",
-        "name": "VANISH POLVO VANISH / unidad $700 / caja 12 unidades $8.400",
+        "name": "VANISH POLVO VANISH / unidad $350 / caja 24 unidades $8.400",
         "marca": "VANISH",
-        "price": 700,
+        "price": 350,
         "category": "TODOS",
         "image": "nuevo catalogo/stock productos/VANISH%20POLVO%20VANISH30%20GRAMOS.jpg",
         "flavors": [],
