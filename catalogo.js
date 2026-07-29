@@ -2067,6 +2067,16 @@ const catalogoProductos = [
         "image": "limpia%20vidrios.jpeg",
         "flavors": [],
         "stock": 10
+    },
+    {
+        "id": "PROD_DETERGENTE_WINEX",
+        "name": "Detergente Winex / unidad $990 / caja 12 unidades $11.880",
+        "marca": "WINEX",
+        "price": 990,
+        "category": "TODOS",
+        "image": "detergente%20winex.jpeg",
+        "flavors": [],
+        "stock": 10
     }
 ];
 
