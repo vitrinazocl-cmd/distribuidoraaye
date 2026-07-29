@@ -2057,6 +2057,16 @@ const catalogoProductos = [
         "image": "abrasiva.jpeg",
         "flavors": [],
         "stock": 10
+    },
+    {
+        "id": "PROD_LIMPIA_VIDRIOS",
+        "name": "Limpia Vidrios Doypack Excell / unidad $850 / caja 12 unidades $10.200",
+        "marca": "EXCELL",
+        "price": 850,
+        "category": "TODOS",
+        "image": "limpia%20vidrios.jpeg",
+        "flavors": [],
+        "stock": 10
     }
 ];
 
