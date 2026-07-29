@@ -2047,6 +2047,16 @@ const catalogoProductos = [
         "image": "cotonito.jpeg",
         "flavors": [],
         "stock": 10
+    },
+    {
+        "id": "PROD_ESPONJA_ABRASIVA",
+        "name": "Esponja Abrasiva / unidad $800 / caja 24 unidades $19.200",
+        "marca": "",
+        "price": 800,
+        "category": "TODOS",
+        "image": "abrasiva.jpeg",
+        "flavors": [],
+        "stock": 10
     }
 ];
 
