@@ -2037,6 +2037,16 @@ const catalogoProductos = [
         "image": "serv%20elegante.jpeg",
         "flavors": [],
         "stock": 10
+    },
+    {
+        "id": "PROD_COTONITO_200",
+        "name": "Cotonito 200 / unidad $950 / caja 48 unidades $45.600",
+        "marca": "",
+        "price": 950,
+        "category": "TODOS",
+        "image": "cotonito.jpeg",
+        "flavors": [],
+        "stock": 10
     }
 ];
 
